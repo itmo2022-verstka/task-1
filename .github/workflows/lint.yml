@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
-  
+
 
 jobs:
   lint:
@@ -20,9 +20,6 @@ jobs:
       matrix:
         node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-    defaults:
-      run:
-        working-directory: ./about-cats
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
@@ -30,5 +27,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: 'about-cats/package-lock.json'
     - run: npm ci
+      working-directory: ./about-cats
     - run: npm run lint
+      working-directory: ./about-cats
