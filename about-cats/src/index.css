@@ -5,7 +5,7 @@
 body {
   margin: 0;
 }
-
+/* ====================== ГОЛОВА =============================*/
 header {
   position: sticky;
   top: 0;
@@ -21,17 +21,38 @@ header p {
   margin: 0;
 }
 
+/* ====================== КНОПКА =============================*/
+
+#button img{
+  margin: 20px 0 0 20px;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+#button img:hover {
+  cursor: pointer;
+}
+
+/* ====================== ТЕЛО =============================*/
+
+#gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+}
+
 .post {
   border: 1px solid #ddd;
   height: 400px;
-  width: 24.999%;
-  padding: 5px;
-  /*margin: 5px;*/
+  margin: 10px;
   float: left;
 }
 
 .post:hover {
-  border: 1px solid #999;
+  border: 2px solid #999;
+  cursor: pointer;
 }
 
 .post img {
@@ -52,32 +73,25 @@ header p {
   font-size: 30px;
 }
 
-
-@media only screen and (max-width: 800px) {
-  .post {
-    width: 49.999%;
+@media only screen and (max-width: 700px) {
+  #gallery {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .post {
-    width: 100%;
+@media only screen and (max-width: 460px) {
+  #gallery {
+    grid-template-columns: 1fr;
   }
 }
 
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
+/* ====================== НОГИ =============================*/
 
 footer {
   position: relative;
   bottom: 0;
-  padding: 10px;
-  color: #505050;
+  padding: 40px;
+  color: #888;
   font-size: 14px;
   font-family: "Arial", serif;
   border-top: 4px ridge lightgrey;
@@ -87,10 +101,17 @@ footer a {
   color: #4c4cd8;
 }
 
+footer p {
+  width: 50%;
+  margin: 0;
+}
+
 footer #OOO {
-  position: absolute;
+  position: relative;
   right: 0;
   bottom: 0;
+
+  color: #000;
 }
 
 footer img {
