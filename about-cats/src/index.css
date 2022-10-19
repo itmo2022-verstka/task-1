@@ -1,1 +1,553 @@
-/* TODO */
+:root {
+  --border-color: rgb(185, 185, 185);
+  --border-radius: 6px;
+  --black-color: #333;
+  --max-with: 400px;
+  --max-with-neg: -400px;
+
+  color: var(--black-color);
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  --background-color: #d8d8d8;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 4;
+
+  border-bottom: 1px solid var(--border-color);
+
+  background-color: white;
+}
+
+header h1 {
+  font-family: PT SansNarrow, sans-serif;
+  font-size: 32px;
+  text-align: center;
+}
+
+header h1:first-letter {
+  color: red; /* Красный цвет первой буквы */
+}
+
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+
+  padding: 15px;
+
+  border-top: 1px solid var(--border-color);
+
+  background-color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+.left {
+  text-align: start;
+}
+
+footer .left p {
+  margin-bottom: 0;
+
+  padding-left: 30px;
+}
+
+.lastLeft {
+  float: left;
+}
+
+footer .write_us {
+  padding-left: 0;
+}
+
+footer .mail1 {
+  position: absolute;
+  bottom: 58px;
+}
+
+footer .mail2 {
+  position: absolute;
+  bottom: 27px;
+}
+
+.right {
+  float: right;
+
+  text-align: end;
+}
+
+a {
+  color: #4c4cd8;
+}
+
+main {
+  margin-top: 85px;
+  margin-bottom: 170px;
+}
+
+.carusel {
+  text-align: center;
+}
+
+.list {
+  display: none;
+}
+
+.list_img {
+  text-align: left;
+}
+
+.list_img .img_check {
+  text-align: left;
+}
+
+.list:not(:checked) ~ .carusel .description {
+  position: absolute;
+  top: 200px;
+  z-index: 3;
+
+  display: block;
+
+  margin-left: 20px;
+
+  color: darkgrey;
+
+  text-align: left;
+}
+
+.list:not(:checked) ~ .carusel .cat {
+  display: inline-block;
+
+  width: 300px;
+  height: 400px;
+  margin: 15px;
+
+  border: 1px solid var(--border-color);
+}
+
+.list:not(:checked) ~ .carusel .name {
+  margin-bottom: 0;
+}
+
+.list:not(:checked) ~ .carusel p {
+  margin: 1px;
+}
+
+.list:not(:checked) ~ .carusel .status {
+  margin-top: 15px;
+}
+
+.list:not(:checked) ~ .carusel h3 {
+  margin-left: 0;
+  padding-bottom: 20px;
+  padding-left: 10px;
+
+  color: black;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.list:not(:checked) ~ .carusel .form {
+  text-align: left;
+}
+
+.list:not(:checked) ~ .carusel .cat label {
+  position: relative;
+
+  display: block;
+
+  width: 300px;
+
+  height: 400px;
+
+  /*overflow: hidden;*/
+}
+
+.list:not(:checked) ~ .carusel .box {
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  width: 300px;
+  height: 200px;
+}
+
+.list:not(:checked) ~ .carusel .carusel__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  margin-right: -50%;
+
+  transform: translate(-50%, -50%);
+
+  vertical-align: middle;
+}
+
+.list:not(:checked) ~ .carusel .cat .description {
+  padding-left: 10px;
+}
+
+.list:not(:checked) ~ .carusel input {
+  display: none;
+}
+
+.list:checked ~ .carusel input {
+  position: relative;
+  top: 400px;
+  left: 100px;
+  float: left;
+
+  display: inline-block;
+}
+
+.list:checked ~ .carusel {
+  position: relative;
+
+  max-width: var(--max-with);
+
+  height: 400px;
+  margin: 20px auto;
+
+  user-select: none;
+}
+
+.list:checked ~ .carusel .carusel__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  height: 100%;
+  margin-right: -50%;
+
+  transform: translate(-50%, -50%);
+
+  vertical-align: middle;
+}
+
+.list:checked ~ .carusel .carusel__item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+
+  display: none;
+  overflow: hidden;
+
+  width: var(--max-with);
+  height: 400px;
+
+  margin-right: auto;
+
+  /*width: 300px;
+
+   */
+  margin-left: auto;
+
+  transition: opacity 0.5s, left 0.5s, transform 0.5s;
+
+  backface-visibility: hidden;
+  background: center no-repeat;
+  background-size: contain;
+  opacity: 0;
+  text-align: center;
+  will-change: transform;
+}
+/*
+.list:checked ~ .carusel input {
+  position: absolute;
+  top: 400px;
+}
+*/
+.list:checked ~ .carusel input:checked + div .carusel__item {
+  left: calc(var(--max-with-neg) * 3.8 - 2px);
+
+  z-index: 0;
+
+  display: block;
+
+  transform: scale(0.8);
+
+  opacity: 0.7;
+}
+
+.list:checked ~ .carusel .radio_butn:nth-last-of-type(1),
+.list:checked ~ .carusel .radio_butn:nth-last-of-type(2) {
+  display: none;
+}
+
+.list:checked ~ .carusel input:checked + div + input + div .carusel__item {
+  left: calc(var(--max-with-neg) * 1.9 - 2px);
+  z-index: 1;
+
+  display: block;
+
+  transform: scale(0.8);
+
+  opacity: 0.7;
+}
+
+.list:checked ~ .carusel input:checked + div + input + div + input + div .carusel__item {
+  left: 0;
+  z-index: 2;
+
+  display: block;
+
+  transform: scale(1);
+
+  opacity: 1;
+}
+
+.list:checked
+  ~ .carusel
+  input:checked
+  + div
+  + input
+  + div
+  + input
+  + div
+  + input
+  + div
+  .carusel__item {
+  left: calc(var(--max-with) + 1px);
+  z-index: 1;
+
+  display: block;
+
+  transform: scale(0.8);
+
+  opacity: 0.7;
+}
+
+.switcher:checked + .window .label-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+}
+
+.list:checked
+  ~ .carusel
+  input:checked
+  + div
+  + input
+  + div
+  + input
+  + div
+  + input
+  + div
+  + input
+  + div
+  .carusel__item {
+  left: calc(var(--max-with) * 2 + 1px);
+
+  z-index: 0;
+
+  display: block;
+
+  transform: scale(0.8);
+
+  opacity: 0.7;
+}
+
+.list:checked
+  ~ .carusel
+  input:checked
+  + div
+  + input
+  + div
+  + input
+  + div
+  .carusel__item:hover
+  .carusel__img {
+  filter: brightness(0.6);
+}
+
+.list:checked
+  ~ .carusel
+  input:checked
+  + div
+  + input
+  + div
+  + input
+  + div
+  .carusel__item:hover
+  .description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+
+  display: block;
+
+  transform: translate(-50%, -50%);
+
+  color: white;
+}
+
+.list:checked
+  ~ .carusel
+  input:checked
+  + div
+  + input
+  + div
+  + input
+  + div
+  .carusel__item:hover
+  .description
+  .name {
+  display: block;
+
+  font-size: 30px;
+}
+
+.list:checked
+  ~ .carusel
+  input:checked
+  + div
+  + input
+  + div
+  + input
+  + div
+  .carusel__item:hover
+  .description
+  .descriptionFull {
+  display: none;
+}
+
+.list:checked
+  ~ .carusel
+  input:checked
+  + div
+  + input
+  + div
+  + input
+  + div
+  .carusel__item:hover
+  .description
+  .status {
+  display: none;
+}
+/*
+.list:checked ~ .carusel .label-modal {
+  display: none;
+}
+
+ */
+
+.list:checked
+  ~ .carusel
+  input:checked
+  + div
+  + input
+  + div
+  + input
+  + div
+  .carusel__item:hover
+  .label-modal {
+  display: block;
+}
+
+.window {
+  display: none;
+}
+
+.switcher:checked + .window {
+  /*weight: 100%;*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  /*opacity: 0.9;*/
+  z-index: 3;
+
+  display: block;
+
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+.switcher:checked + .window .modal_label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 1100px;
+  height: 400px;
+  margin: auto;
+
+  opacity: 1;
+  text-align: center;
+}
+
+.list:checked
+  ~ .carusel
+  input:checked
+  + div
+  + input
+  + div
+  + input
+  + div
+  .carusel__item:hover
+  .label-full {
+  position: relative;
+  z-index: 1;
+
+  display: inline-block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.switcher:checked + .window .relav {
+  position: relative;
+  top: 50%;
+}
+
+.switcher:checked + .window .modal_img {
+  float: left;
+
+  height: 400px;
+  margin-right: 20px;
+
+  opacity: 1;
+}
+
+.switcher:checked + .window .modal_description {
+  top: 0;
+  bottom: 0;
+
+  height: 400px;
+  margin: auto 0;
+
+  color: white;
+  opacity: 1;
+  text-align: left;
+}
+
+.switcher:checked + .window .modal_description h3 {
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.switcher {
+  display: none;
+}
