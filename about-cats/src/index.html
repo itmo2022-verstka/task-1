@@ -1,11 +1,200 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>01-about-cats</title>
-    <link rel="stylesheet" href="./index.css">
-  </head>
-  <body>
-    <!-- TODO -->
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>01-about-cats</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<header>
+  <b>М</b>урмаркет
+</header>
+<section>
+  <input type="radio" class="format" name="format" id="layout_icon">
+  <input type="radio" class="format" name="format" id="gallery_icon" checked>
+  <div class="layout_icon">
+    <label for="layout_icon">Сетка</label>
+  </div>
+  <div class="gallery_icon">
+    <label for="gallery_icon">Карусель</label>
+  </div>
+  <div class="layout">
+    <article>
+      <img src="cat1.jpg" alt="cat1">
+      <p>Барсик, 3 месяца. Веселый и задорный. Ищет хозяина</p>
+    </article>
+    <article>
+      <img src="cat2.jpg" alt="cat2">
+      <p>Мурзик, 4 месяца. Милый и добрый. Ищет хозяина</p>
+    </article>
+    <article>
+      <img src="cat3.jpg" alt="cat3">
+      <p>Котофей, 2 года. Дружелюбный. Ищет хозяина</p>
+    </article>
+    <article>
+      <img src="cat4.jpg" alt="cat1">
+      <p>Ася, 1 год. Рыжая бестия. Ищет хозяина</p>
+    </article>
+    <article>
+      <img src="cat5.jpg" alt="cat1">
+      <p>Дымок, 3 года. Хозяина не ищет, просто хвастаемся такой булочкой</p>
+    </article>
+  </div>
+  <div class="gallery">
+    <input type="radio" name="point" id="slide1">
+    <input type="radio" name="point" id="slide2">
+    <input type="radio" name="point" id="slide3" checked>
+    <input type="radio" name="point" id="slide4">
+    <input type="radio" name="point" id="slide5">
+    <div class="slider">
+      <div class="slides slide1">
+        <label for="slide1">
+          <img src="cat1.jpg" alt="cat1">
+          <a class="css-modal-open" href="#css-modal-target1">
+            <img src="cat1.jpg" alt="cat1">
+          </a>
+        </label>
+        <span class="name">Барсик</span>
+      </div>
+      <div class="slides slide2">
+        <label for="slide2">
+          <img src="cat2.jpg" alt="cat2">
+          <a class="css-modal-open" href="#css-modal-target2">
+            <img src="cat2.jpg" alt="cat2">
+          </a>
+        </label>
+        <span class="name">Мурзик</span>
+      </div>
+      <div class="slides slide3">
+        <label for="slide3">
+          <img src="cat3.jpg" alt="cat3">
+          <a class="css-modal-open" href="#css-modal-target3">
+            <img src="cat3.jpg" alt="cat3">
+          </a>
+        </label>
+        <span class="name">Котофей</span>
+      </div>
+      <div class="slides slide4">
+        <label for="slide4">
+          <img src="cat4.jpg" alt="cat4">
+          <a class="css-modal-open" href="#css-modal-target4">
+            <img src="cat4.jpg" alt="cat4">
+          </a>
+        </label>
+        <span class="name">Ася</span>
+      </div>
+      <div class="slides slide5">
+        <label for="slide5">
+          <img src="cat5.jpg" alt="cat5">
+          <a class="css-modal-open" href="#css-modal-target5">
+            <img src="cat5.jpg" alt="cat5">
+          </a>
+        </label>
+        <span class="name">Дымок</span>
+      </div>
+    </div>
+    <div class="controls">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+      <label for="slide5"></label>
+    </div>
+  </div>
+  <div class="css-modal-target" id="css-modal-target1">
+    <div class="cmt">
+      <div class="picture">
+        <img src="cat1.jpg" alt="cat1">
+      </div>
+      <div class="description">
+        <article>
+          <p>Барсик</p>
+          <p>Хороший кот</p>
+          <p>Ищет хозяина</p>
+        </article>
+      </div>
+    </div>
+    <a href="#close" class="css-modal-close"></a>
+  </div>
+  <div class="css-modal-target" id="css-modal-target2">
+    <div class="cmt">
+      <div class="picture">
+        <img src="cat2.jpg" alt="cat2">
+      </div>
+      <div class="description">
+        <article>
+          <p>Мурзик</p>
+          <p>Хороший кот</p>
+          <p>А главное, рыжий!</p>
+        </article>
+      </div>
+    </div>
+    <a href="#close" class="css-modal-close"></a>
+  </div>
+  <div class="css-modal-target" id="css-modal-target3">
+    <div class="cmt">
+      <div class="picture">
+        <img src="cat3.jpg" alt="cat3">
+      </div>
+      <div class="description">
+        <article>
+          <p>Котофей</p>
+          <p>Хороший кот</p>
+          <p>Любит молоко и мышей</p>
+          <p>Хорошо себя ведёт и не тыгыдыкает по ночам</p>
+        </article>
+      </div>
+    </div>
+    <a href="#close" class="css-modal-close"></a>
+  </div>
+  <div class="css-modal-target" id="css-modal-target4">
+    <div class="cmt">
+      <div class="picture">
+        <img src="cat4.jpg" alt="cat4">
+      </div>
+      <div class="description">
+        <article>
+          <p>Ася</p>
+          <p>Хорошая кошка</p>
+          <p>Вы посмотрите, какая статная и красивая</p>
+        </article>
+      </div>
+    </div>
+    <a href="#close" class="css-modal-close"></a>
+  </div>
+  <div class="css-modal-target" id="css-modal-target5">
+    <div class="cmt">
+      <div class="picture">
+        <img src="cat5.jpg" alt="cat5">
+      </div>
+      <div class="description">
+        <article>
+          <p>Дымок</p>
+          <p>Хороший кот</p>
+          <p>Как он грациозно лежит</p>
+        </article>
+      </div>
+    </div>
+    <a href="#close" class="css-modal-close"></a>
+  </div>
+</section>
+<footer>
+  <div class="left">
+    <p>Напишите нам:</p>
+    <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">cats@babuli.ru</a></p>
+    <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">vnuchek@babuli.ru</a></p>
+  </div>
+  <ul class="right">
+    <li>
+      <p>© 2018 ООО «</p>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Бабушкины котятки</a>
+    </li>
+    <li>
+      <p>»</p>
+    </li>
+  </ul>
+</footer>
+</body>
 </html>
