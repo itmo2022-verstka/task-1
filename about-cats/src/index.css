@@ -159,7 +159,37 @@ main {
   text-align: left;
 }
 
-.list:not(:checked) ~ .carusel .cat label {
+.list:checked ~ .carusel .carusel__item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+
+  display: none;
+  overflow: hidden;
+
+  width: var(--max-with);
+  height: 400px;
+
+  margin-right: auto;
+
+  /*width: 300px;
+
+   */
+  margin-left: auto;
+
+  transition: opacity 0.5s, left 0.5s, transform 0.5s;
+
+  backface-visibility: hidden;
+  background: center no-repeat;
+  background-size: contain;
+  opacity: 0;
+  text-align: center;
+  will-change: transform;
+}
+
+.list:not(:checked) ~ .carusel .cat .carusel__item {
   position: relative;
 
   display: block;
@@ -233,36 +263,6 @@ main {
   transform: translate(-50%, -50%);
 
   vertical-align: middle;
-}
-
-.list:checked ~ .carusel .carusel__item {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-
-  display: none;
-  overflow: hidden;
-
-  width: var(--max-with);
-  height: 400px;
-
-  margin-right: auto;
-
-  /*width: 300px;
-
-   */
-  margin-left: auto;
-
-  transition: opacity 0.5s, left 0.5s, transform 0.5s;
-
-  backface-visibility: hidden;
-  background: center no-repeat;
-  background-size: contain;
-  opacity: 0;
-  text-align: center;
-  will-change: transform;
 }
 /*
 .list:checked ~ .carusel input {
@@ -507,7 +507,18 @@ main {
   + input
   + div
   .carusel__item:hover
+  .box
   .label-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+}
+
+.list:checked ~ .carusel .carusel__arrow {
   position: relative;
   z-index: 1;
 
