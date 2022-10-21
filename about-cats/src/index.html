@@ -1,11 +1,271 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>01-about-cats</title>
-    <link rel="stylesheet" href="./index.css">
-  </head>
-  <body>
-    <!-- TODO -->
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>02-murmarket</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet'>
+		<link rel="stylesheet" href="./index.css">
+	</head>
+	
+	<body>
+		
+		<div class="header">Мурpp Mаркет</div>
+		<div class="empty-buffer"></div>
+		
+		<input type="checkbox" id="show">
+		<label for="show"><img class="change" src="change.png" alt="Смена режима отображения" title="Нажмите, чтобы сменить режим отображения"></label>	
+		
+		
+		<ul class="ul">
+		
+			<li class="li">
+				<img class="image kitty-img " src="1.jpg" alt="Маленькая Куся">
+				<p class="name" title="Маленькая Куся">Маленькая Куся<br></p>
+				<p class="card">
+					<b>Пол</b>: кошечка<br>
+					<b>Порода</b>: золотая шиншиллка<br>
+					<b>Возраст</b>: 1,5 месяца<br><br>
+					Хочет найти себе доброго, сильного и заботливого хозяина!
+					Ангелочек. Отлично ладит с другими котятами. Очень любознательная.<br>
+				</p>
+			</li>
+			
+			<li class="li">
+				<img class="image kitty-img " src="2.jpg" alt="Принцесса">
+				<p class="name" title="Принцесса">Принцесса<br></p>
+				<p class="card">
+					<b>Пол</b>: кошечка<br>
+					<b>Порода</b>: золотая шиншиллка<br>
+					<b>Возраст</b>: 2 месяца<br><br>
+					Прелестное чудо - вот кто такая Принцесса) 
+					Добрая и ласковая, устраивается на коленки и мурчит. Любит гулять по своим владениям.<br>
+				</p>
+			</li>
+			
+			<li class="li">
+				<img class="image kitty-img " src="3.jpg" alt="Кругляш">
+				<p class="name" title="Кругляш">Кругляш<br></p>
+				<p class="card">
+					<b>Пол</b>: котик<br>
+					<b>Порода</b>: золотой шиншилл<br>
+					<b>Возраст</b>: 2 месяца<br><br>
+					Милый игривый Кругляш станет лучшей компанией для вас!
+					Кусает только мышек, не агрессивный. Имеет пухленькие щёчки.<br>
+				</p>
+			</li>
+			
+			<li class="li">
+				<img class="image kitty-img " src="4.jpg" alt="Солнышко">
+				<p class="name" title="Солнышко">Солнышко<br></p>
+				<p class="card">
+					<b>Пол</b>: котик<br>
+					<b>Порода</b>: золотистый манчкин<br>
+					<b>Возраст</b>: 2 месяца<br><br>
+					Солнышко полностью оправдывает своё имя. Смирный и безумно ласковый! Любит гулять среди цветочков.<br>
+				</p>
+			</li>
+			
+			<li class="li">
+				<img class="image kitty-img " src="5.jpg" alt="Выпендрёжник">
+				<p class="name" title="Выпендрёжник">Выпендрёжник<br></p>
+				<p class="card">
+					<b>Пол</b>: котик<br>
+					<b>Порода</b>: шотландский щекастик<br>
+					<b>Возраст</b>: 3 месяца<br><br>
+					Вечно самодовольный, хозяин своей жизни, Выпендрёжник ищет друга! Обожает приключения и веселье.<br>
+				</p>
+			</li>
+			
+			<li class="li">
+				<img class="image kitty-img " src="6.jpg" alt="Жирняш">
+				<p class="name" title="Жирняш">Жирняш<br></p>
+				<p class="card">
+					<b>Пол</b>: котик<br>
+					<b>Порода</b>: шотландский щекастик<br>
+					<b>Возраст</b>: 3 месяца<br><br>
+					Хороший и воспитанный мальчик Жирняш ищет дом! Любит, когда ему чешут животик. Много, ооочень много ест :)
+					<br>
+				</p>
+			</li>
+			
+		</ul>
+		
+		
+		
+		<div class="window">
+			
+			<input type="radio" id="radio1" name="input-name" checked />
+			<input type="radio" id="radio2" name="input-name" />
+			<input type="radio" id="radio3" name="input-name" />
+			<input type="radio" id="radio4" name="input-name" />
+			<input type="radio" id="radio5" name="input-name" />
+			<input type="radio" id="radio6" name="input-name" />
+			
+			<input class="checkbox" type="checkbox" id="check1"/>
+			<input class="checkbox" type="checkbox" id="check2"/>
+			<input class="checkbox" type="checkbox" id="check3"/>
+			<input class="checkbox" type="checkbox" id="check4"/>
+			<input class="checkbox" type="checkbox" id="check5"/>
+			<input class="checkbox" type="checkbox" id="check6"/>
+			
+			
+			<div class="gallery">
+				
+				<div class="kitty kitty1">
+					<label class="radio" for="radio1"></label>
+					<label class="check" for="check1"></label>
+					<img class="image kitty-gallery-img" src="./1.jpg" alt="Маленькая Куся">
+					<p class="kitty-gallery-name">Маленькая Куся</p>
+					<div class="modal">
+						<div class="kitty-modal-info">
+							<img class="image kitty-modal-img" src="./1.jpg" alt="Маленькая Куся">
+							<label class= "exit-modal" for = "check1">&#x2715;</label>
+							<div class="card-modal">
+								<p class="card-modal-name">Маленькая Куся</p>
+								<p>
+									<b>Пол</b>: кошечка<br>
+									<b>Порода</b>: золотая шиншиллка<br>
+									<b>Возраст</b>: 1,5 месяца<br><br>
+									Хочет найти себе доброго, сильного и заботливого хозяина!
+									Ангелочек. Отлично ладит с другими котятами. Очень любознательная.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+        
+				<div class="kitty kitty2">
+					<label class="radio" for="radio2"></label>
+					<label class="check" for="check2"></label>
+					<img class="image kitty-gallery-img" src="./2.jpg" alt="Принцесса">
+					<p class="kitty-gallery-name">Принцесса</p>
+					<div class="modal">
+						<div class="kitty-modal-info">
+							<img class="image kitty-modal-img" src="./2.jpg" alt="Принцесса">
+							<label class= "exit-modal" for = "check2">&#x2715;</label>
+							<div class="card-modal">
+								<p class="card-modal-name">Принцесса</p>
+								<p>
+									<b>Пол</b>: кошечка<br>
+									<b>Порода</b>: золотая шиншиллка<br>
+									<b>Возраст</b>: 2 месяца<br><br>
+									Прелестное чудо - вот кто такая Принцесса) 
+									Добрая и ласковая, устраивается на коленки и мурчит. Любит гулять по своим владениям.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="kitty kitty3">
+					<label class="radio" for="radio3"></label>
+					<label class="check" for="check3"></label>
+					<img class="kitty-gallery-img" src="./3.jpg" alt="Кругляш">
+					<p class="image kitty-gallery-name">Кругляш</p>
+					<div class="modal">
+						<div class="kitty-modal-info">
+							<img class="image kitty-modal-img" src="./3.jpg" alt="Кругляш">
+							<label class= "exit-modal" for = "check3">&#x2715;</label>
+							<div class="card-modal">
+								<p class="card-modal-name">Кругляш</p>
+								<p>
+									<b>Пол</b>: котик<br>
+									<b>Порода</b>: золотой шиншилл<br>
+									<b>Возраст</b>: 2 месяца<br><br>
+									Милый игривый Кругляш станет лучшей компанией для вас!
+									Кусает только мышек, не агрессивный. Имеет пухленькие щёчки.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="kitty kitty4">
+					<label class="radio" for="radio4"></label>
+					<label class="check" for="check4"></label>
+					<img class="image kitty-gallery-img" src="./4.jpg" alt="Солнышко">
+					<p class="kitty-gallery-name">Солнышко</p>
+					<div class="modal">
+						<div class="kitty-modal-info">
+							<img class="image kitty-modal-img" src="./4.jpg" alt="Солнышко">
+							<label class= "exit-modal" for = "check4">&#x2715;</label>
+							<div class="card-modal">
+								<p class="card-modal-name">Солнышко</p>
+								<p>
+									<b>Пол</b>: котик<br>
+									<b>Порода</b>: золотистый манчкин<br>
+									<b>Возраст</b>: 2 месяца<br><br>
+									Солнышко полностью оправдывает своё имя. Смирный и безумно ласковый! Любит гулять среди цветочков.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="kitty kitty5">
+					<label class="radio" for="radio5"></label>
+					<label class="check" for="check5"></label>
+					<img class="image kitty-gallery-img" src="./5.jpg" alt="Выпендрёжник">
+					<p class="kitty-gallery-name">Выпендрёжник</p>
+					<div class="modal">
+						<div class="kitty-modal-info">
+							<img class="image kitty-modal-img" src="./5.jpg" alt="Выпендрёжник">
+							<label class= "exit-modal" for = "check5">&#x2715;</label>
+							<div class="card-modal">
+								<p class="card-modal-name">Выпендрёжник</p>
+								<p>
+									<b>Пол</b>: котик<br>
+									<b>Порода</b>: шотландский щекастик<br>
+									<b>Возраст</b>: 3 месяца<br><br>
+									Вечно самодовольный, хозяин своей жизни, Выпендрёжник ищет друга! Обожает приключения и веселье.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="kitty kitty6">
+					<label class="radio" for="radio6"></label>
+					<label class="check" for="check6"></label>
+					<img class="image kitty-gallery-img" src="./6.jpg" alt="Жирняш">
+					<p class="kitty-gallery-name">Жирняш</p>
+					<div class="modal">
+						<div class="kitty-modal-info">
+							<img class="image kitty-modal-img" src="./6.jpg" alt="Жирняш">
+							<label class= "exit-modal" for = "check6">&#x2715;</label>
+							<div class="card-modal">
+								<p class="card-modal-name">Жирняш</p>
+								<p>
+									<b>Пол</b>: котик<br>
+									<b>Порода</b>: шотландский щекастик<br>
+									<b>Возраст</b>: 3 месяца<br><br>
+									Хороший и воспитанный мальчик Жирняш ищет дом! Любит, когда ему чешут животик. Много, ооочень много ест :)
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+			</div>
+		</div>
+		
+		
+		<div class="footer">
+			<p class="contactinfo">По всем вопросам пишите нам:</p>
+			<span>
+				&nbsp;&#9993;
+				<a class="email" href="mailto:KoTeki@babuli.com">KoTeki@babuli.com</a>
+			</span>
+			<br>
+			<span>
+				&nbsp;&#9993;
+				<a class="email" href="mailto:vnuchek@babuli.com">vnuchek@babuli.com</a>
+			</span>
+			<span class="company">
+				&copy; 2022 ТOO <a class="email" href="./index.html">"Бабушкины котята"</a>
+			</span>
+		</div>
+	
+	</body>
 </html>
