@@ -2,12 +2,17 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
+
 /* ====================== ГОЛОВА =============================*/
 header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   background-color: white;
 
@@ -15,6 +20,7 @@ header {
   font-size: 32px;
   font-family: "PT SansNarrow", sans-serif;
   border-bottom: 4px ridge lightgrey;
+  z-index: 10;
 }
 
 header p {
@@ -23,41 +29,55 @@ header p {
 
 /* ====================== КНОПКА =============================*/
 
-#button img{
-  margin: 20px 0 0 20px;
-  width: 50px;
-  height: 50px;
+label img {
+  margin: 60px 0 0 3%;
+  width: 5%;
+  aspect-ratio: 1/1;
   object-fit: contain;
 }
 
-#button img:hover {
+label img:hover {
   cursor: pointer;
 }
 
-/* ====================== ТЕЛО =============================*/
+input[type="checkbox"] {
+  display: none;
+}
+
+/* ====================== ГАЛЕРЕЯ =============================*/
+
+#change_layout:not(:checked) ~ #gallery {
+  display: none;
+}
+
+#change_layout:not(:checked) ~ footer {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+}
 
 #gallery {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 10px;
+  padding: 0 2.5% 2.5%;
+  z-index: 1;
 }
 
 .post {
-  border: 1px solid #ddd;
-  height: 400px;
-  margin: 10px;
+  border: 1px double #ddd;
+  aspect-ratio: 3/4;
+  width: 23%;
+  margin: 1%;
   float: left;
 }
 
 .post:hover {
-  border: 2px solid #999;
+  box-shadow: 0 0 10px 2px gray;
   cursor: pointer;
 }
 
 .post img {
   width: 100%;
-  height: 200px;
+  aspect-ratio: 4/3;
   object-fit: cover;
   object-position: top;
 }
@@ -66,35 +86,343 @@ header p {
   padding: 0 10px 0 15px;
   text-align: left;
   font-family: "PT SansNarrow", sans-serif;
+  color: grey;
+  font-size: 1vmax;
 }
 
-.desc .name{
+.desc .name {
   margin: 5px 0 0 0;
-  font-size: 30px;
+  color: black;
+  font-size: 2vmax;
+}
+
+@media only screen and (max-width: 900px) {
+  .post {
+    width: 28.33333%;
+    margin: 2.5%;
+  }
+
+  .desc {
+    font-size: 1.5vmax;
+  }
+
+  .desc .name {
+    font-size: 3vmax;
+  }
 }
 
 @media only screen and (max-width: 700px) {
-  #gallery {
-    grid-template-columns: 1fr 1fr;
+  .post {
+    width: 45%;
+    margin: 2.5%;
+  }
+
+  .desc {
+    font-size: 2vmax;
+  }
+
+  .desc .name {
+    font-size: 4vmax;
   }
 }
 
-@media only screen and (max-width: 460px) {
-  #gallery {
-    grid-template-columns: 1fr;
+@media only screen and (max-width: 500px) {
+  .post {
+    width: 90%;
+    margin: 5%;
   }
+
+  .desc {
+    font-size: 4vmax;
+  }
+
+  .desc .name {
+    font-size: 7vmax;
+  }
+}
+
+/* ====================== КАРУСЕЛЬ =============================*/
+
+input[type="radio"] {
+  display: none;
+}
+
+#change_layout:checked ~ #slider {
+  display: none;
+}
+
+#slider {
+  position: fixed;
+  width: 100%;
+  height: 60%;
+  padding-bottom: 7%;
+}
+
+.slides {
+  position: relative;
+  height: 100%;
+  width: 40%;
+  margin: auto;
+}
+
+.slide {
+  position: absolute;
+  opacity: 0.7;
+  height: 80%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  border-radius: 10px;
+  background: black;
+}
+
+.slide p {
+  position: relative;
+  text-align: center;
+  width: 50%;
+  top: 45%;
+  margin: auto;
+  visibility: hidden;
+  color: white;
+  font-size: 32px;
+  font-family: "PT SansNarrow", serif;
+  pointer-events: none;
+}
+
+#slide_1 {
+  margin-left: 0;
+}
+
+#slide_2 {
+  margin-left: 110%;
+}
+
+#slide_3 {
+  margin-left: 220%;
+}
+
+#slide_4 {
+  margin-left: 330%;
+}
+
+#slide_5 {
+  margin-left: 440%;
+}
+
+#slide_6 {
+  margin-left: 550%;
+}
+
+.slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+}
+
+#slide1:checked ~ .slides #slide_1:hover .name,
+#slide2:checked ~ .slides #slide_2:hover .name,
+#slide3:checked ~ .slides #slide_3:hover .name,
+#slide4:checked ~ .slides #slide_4:hover .name,
+#slide5:checked ~ .slides #slide_5:hover .name,
+#slide6:checked ~ .slides #slide_6:hover .name {
+  visibility: visible;
+}
+
+#slide1:checked ~ .slides #slide_1,
+#slide2:checked ~ .slides #slide_2,
+#slide3:checked ~ .slides #slide_3,
+#slide4:checked ~ .slides #slide_4,
+#slide5:checked ~ .slides #slide_5,
+#slide6:checked ~ .slides #slide_6 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+#slide1:checked ~ .slides {
+  transform: translateX(0%);
+  transition: 1s;
+}
+
+#slide2:checked ~ .slides {
+  transform: translateX(-110%);
+  transition: 1s;
+}
+
+#slide3:checked ~ .slides {
+  transform: translateX(-220%);
+  transition: 1s;
+}
+
+#slide4:checked ~ .slides {
+  transform: translateX(-330%);
+  transition: 1s;
+}
+
+#slide5:checked ~ .slides {
+  transform: translateX(-440%);
+  transition: 1s;
+}
+
+#slide6:checked ~ .slides {
+  transform: translateX(-550%);
+  transition: 1s;
+}
+
+/* ====================== МОДАЛЬНОЕ ОКНО =============================*/
+
+.slide a {
+  visibility: hidden;
+  z-index: 2;
+}
+
+#slide1:checked ~ .slides #slide_1 a img,
+#slide2:checked ~ .slides #slide_2 a img,
+#slide3:checked ~ .slides #slide_3 a img,
+#slide4:checked ~ .slides #slide_4 a img,
+#slide5:checked ~ .slides #slide_5 a img,
+#slide6:checked ~ .slides #slide_6 a img {
+  visibility: visible;
+}
+
+#slide1:checked ~ .slides #slide_1 img,
+#slide2:checked ~ .slides #slide_2 img,
+#slide3:checked ~ .slides #slide_3 img,
+#slide4:checked ~ .slides #slide_4 img,
+#slide5:checked ~ .slides #slide_5 img,
+#slide6:checked ~ .slides #slide_6 img {
+  visibility: hidden;
+}
+
+
+#slide1:checked ~ .slides #slide_1 img:hover,
+#slide2:checked ~ .slides #slide_2 img:hover,
+#slide3:checked ~ .slides #slide_3 img:hover,
+#slide4:checked ~ .slides #slide_4 img:hover,
+#slide5:checked ~ .slides #slide_5 img:hover,
+#slide6:checked ~ .slides #slide_6 img:hover {
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+
+.modal_window {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 40px 0 125px 0;
+  padding: 10% 10% 10% 15%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal_window:target {
+  display: inline-block;
+}
+
+.modal_window img {
+  width: 40%;
+  height: 100%;
+  min-width: 200px;
+  min-height: 200px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: top;
+  float: left;
+}
+
+.modal_description {
+  color: white;
+  float: left;
+  margin-left: 3%;
+  font-size: 2vmax;
+  min-width: 200px;
+}
+
+.modal_description .modal_name {
+  font-size: 4vmax;
+}
+
+.modal-close img {
+  position: absolute;
+  min-width: 50px;
+  min-height: 50px;
+  width: 3%;
+  height: 3%;
+  right: 10%;
+  float: right;
+}
+
+/* ====================== НАВИГАЦИЯ =============================*/
+
+.navigation {
+  position: absolute;
+  width: 30%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 2.5%;
+  font-size: 0;
+}
+
+.navigation-btn {
+  position: relative;
+  display: inline-block;
+  width: 10%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #de6a23;
+  margin: 3.33333%;
+
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigation-btn:hover {
+  background: #ff8b44;
+}
+
+#slide1:checked ~ .navigation #n_slide1,
+#slide2:checked ~ .navigation #n_slide2,
+#slide3:checked ~ .navigation #n_slide3,
+#slide4:checked ~ .navigation #n_slide4,
+#slide5:checked ~ .navigation #n_slide5,
+#slide6:checked ~ .navigation #n_slide6 {
+  background: #ff8b44;
+}
+
+/* ====================== CLEARFIX =============================*/
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* ====================== НОГИ =============================*/
 
+
 footer {
   position: relative;
   bottom: 0;
-  padding: 40px;
   color: #888;
+  padding: 20px;
   font-size: 14px;
   font-family: "Arial", serif;
   border-top: 4px ridge lightgrey;
+  z-index: 1;
 }
 
 footer a {
@@ -102,14 +430,23 @@ footer a {
 }
 
 footer p {
-  width: 50%;
-  margin: 0;
+  margin: 5px;
 }
 
-footer #OOO {
+
+footer .left {
   position: relative;
+  left: 0;
+  bottom: 0;
+
+  color: #000;
+}
+
+footer .right {
+  position: absolute;
   right: 0;
   bottom: 0;
+  margin: 20px;
 
   color: #000;
 }
