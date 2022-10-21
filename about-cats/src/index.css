@@ -1,1 +1,370 @@
-/* TODO */
+body {
+	background: #FFFFFF;
+	margin: 0;
+}
+
+.header {
+	font-family: PT Sans Narrow;
+	font-size: 32px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	background: white;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 10px;
+	right: 0;
+	left: 0;
+	top: 0;
+	position: fixed;
+	z-index: 5000;
+}
+
+.header:first-letter {
+	color: red;
+}
+
+.footer {
+	height: auto;
+	width: 100%;
+	background: #FFFFFF;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	font-family: Arial;
+	font-size: 14px;
+	bottom: 0;
+	position: fixed;
+	z-index: 5000;
+}
+
+.contactinfo, .email, .company {
+	margin: 5px;
+}
+
+.email {
+	color: #4C4CD8;
+}
+
+.company {
+	float: right;
+}
+
+
+
+/**********************************************************************************/
+
+.image {
+	height: 300px;
+	width: auto;
+	object-fit: cover;
+	object-position: center;
+}
+
+
+.gallery {
+	margin-top: 50px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.window {
+	display: none;
+}
+
+
+/*********************************************************************************/
+
+.ul {
+	text-align: center;
+	margin-bottom: 90px;
+}
+
+.li {
+	display: inline-block;
+	width: 350px;
+	height: 620px;
+	text-align:center;
+	font-family: Verdana;
+	box-shadow: 0 0 7px rgba(0,0,0,0.6);
+	margin: 15px;
+	transition: 0.2s;
+}
+
+.li:hover {
+	box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+.empty-buffer {
+	width: 100%;
+	height: 75px;
+}
+
+#show {
+	display: none;
+}
+
+#show:checked ~ .ul {
+	display: none;
+}
+
+.change {
+	margin-left: 7px;
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+  object-position: center;
+  transition: 0.15s;
+}
+
+.change:hover {
+	transform: scale(1.05);
+}
+
+#show:checked ~ label .change {
+	transform: rotate(-90deg);
+}
+
+#show:checked ~ .window {
+	display: block;
+}
+
+#show:checked ~ .empty-buffer {
+	display: none;
+}
+
+
+#show:checked ~ label .change:hover {
+	transform: rotate(-90deg) scale(1.05);
+}
+
+.card {
+	max-width: 250px;
+	height: 50px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.kitty-img {
+	margin-top: 10px;
+	transition: 0.2s;
+}
+
+.kitty-img:hover {
+	display: inline-block;
+	overflow: hidden;
+	transform: scale(1.01);
+}
+
+.name {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: x-large;
+}
+
+.name:hover {
+	font-weight: bold;
+}
+
+.card:hover {
+	text-decoration: underline;
+}
+
+.info {
+	height: 70px;
+	width: auto;
+	display: none;
+	transition: 0.2s;
+}
+
+
+/*********************************************************************************/
+
+
+.kitty {
+	position: relative;
+	display: inline-block;
+	margin-right: 45px;
+	opacity: 0.7;
+	transition: left 0.7s;
+}
+
+.kitty-gallery-img {
+	height: 240px;
+	width: 240px;
+	margin-bottom: -5px;
+}
+
+.kitty-gallery-name {
+	position: absolute;
+	width: 300px;
+	height: auto;
+	left: 0;
+	bottom: 10%;
+	color: white;
+	text-align: center;
+	display: none;
+	font-family: Verdana;
+	font-size: xx-large;
+}
+
+.check,
+.radio {
+	position: absolute;
+	inset: 0px 0px 0px 0px;
+}
+
+#check1,
+#check2,
+#check3,
+#check4,
+#check5,
+#check6,
+#radio1,
+#radio2,
+#radio3,
+#radio4,
+#radio5,
+#radio6 {
+	display: none;
+}
+
+#radio1:checked ~ .gallery .kitty1,
+#radio2:checked ~ .gallery .kitty2,
+#radio3:checked ~ .gallery .kitty3,
+#radio4:checked ~ .gallery .kitty4,
+#radio5:checked ~ .gallery .kitty5,
+#radio6:checked ~ .gallery .kitty6 {
+	opacity: 1;
+}
+
+#radio1:checked ~ .gallery .kitty1 .kitty-gallery-img,
+#radio2:checked ~ .gallery .kitty2 .kitty-gallery-img,
+#radio3:checked ~ .gallery .kitty3 .kitty-gallery-img,
+#radio4:checked ~ .gallery .kitty4 .kitty-gallery-img,
+#radio5:checked ~ .gallery .kitty5 .kitty-gallery-img,
+#radio6:checked ~ .gallery .kitty6 .kitty-gallery-img {
+	height: 300px;
+	width: auto;
+}
+
+#radio1:checked ~ .gallery .kitty1:hover,
+#radio2:checked ~ .gallery .kitty2:hover,
+#radio3:checked ~ .gallery .kitty3:hover,
+#radio4:checked ~ .gallery .kitty4:hover,
+#radio5:checked ~ .gallery .kitty5:hover,
+#radio6:checked ~ .gallery .kitty6:hover {
+	background-color: black;
+}
+
+#radio1:checked ~ .gallery .kitty1:hover .kitty-gallery-img,
+#radio2:checked ~ .gallery .kitty2:hover .kitty-gallery-img,
+#radio3:checked ~ .gallery .kitty3:hover .kitty-gallery-img,
+#radio4:checked ~ .gallery .kitty4:hover .kitty-gallery-img,
+#radio5:checked ~ .gallery .kitty5:hover .kitty-gallery-img,
+#radio6:checked ~ .gallery .kitty6:hover .kitty-gallery-img {
+	opacity: 0.7;
+}
+
+#radio1:checked ~ .gallery .kitty1:hover .kitty-gallery-name,
+#radio2:checked ~ .gallery .kitty2:hover .kitty-gallery-name,
+#radio3:checked ~ .gallery .kitty3:hover .kitty-gallery-name,
+#radio4:checked ~ .gallery .kitty4:hover .kitty-gallery-name,
+#radio5:checked ~ .gallery .kitty5:hover .kitty-gallery-name,
+#radio6:checked ~ .gallery .kitty6:hover .kitty-gallery-name {
+	display: block;
+}
+
+#radio1:checked ~ .gallery .kitty {
+	left: calc(50% - 137.5px);
+}
+
+#radio2:checked ~ .gallery .kitty {
+	left: calc(50% - 135px - 240px - 50px);
+}
+
+#radio3:checked ~ .gallery .kitty {
+	left: calc(50% - 135px - 240px - 240px - 100px);
+}
+
+#radio4:checked ~ .gallery .kitty {
+	left: calc(50% - 135px - 240px - 240px - 240px - 150px);
+}
+
+#radio5:checked ~ .gallery .kitty {
+	left: calc(50% - 135px - 240px - 240px - 240px - 240px - 200px);
+}
+
+#radio6:checked ~ .gallery .kitty {
+	left: calc(50% - 135px - 240px - 240px - 240px - 240px - 240px - 250px);
+}
+
+.check {
+	display: none;
+}
+
+#radio1:checked ~ .gallery .kitty1 .check,
+#radio2:checked ~ .gallery .kitty2 .check,
+#radio3:checked ~ .gallery .kitty3 .check,
+#radio4:checked ~ .gallery .kitty4 .check,
+#radio5:checked ~ .gallery .kitty5 .check,
+#radio6:checked ~ .gallery .kitty6 .check {
+	display: block;
+	z-index: 1;
+}
+
+#check1:checked ~ .gallery .kitty1 .modal,
+#check2:checked ~ .gallery .kitty2 .modal,
+#check3:checked ~ .gallery .kitty3 .modal,
+#check4:checked ~ .gallery .kitty4 .modal,
+#check5:checked ~ .gallery .kitty5 .modal,
+#check6:checked ~ .gallery .kitty6 .modal {
+	visibility: visible;
+}
+
+.modal {
+	position: fixed;
+	margin-top: 0;
+	inset: 0px 0px 0px 0px;
+	z-index: 1000;
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	white-space: normal;
+}
+
+.kitty-modal-info {
+	margin-top: 125px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 650px;
+	height: auto;
+	color: white;
+	font-family: Verdana;
+}
+
+.kitty-modal-img {
+	margin-right: 45px;
+	float: left;
+}
+
+.card-modal-name {
+	font-size: x-large;
+	font-weight: bold;
+}
+
+.exit-modal {
+	margin-top: -11px;
+	font-size: xx-large;
+	float: right;
+}
+
+.exit-modal:hover {
+	font-weight: bold;
+}
+
+.card-modal {
+	padding: 5px;
+}
