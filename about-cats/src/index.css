@@ -76,18 +76,14 @@ li {
 
 .cat-list {
   display: none;
-  visibility: hidden;
-
-  transition: all 0.5s;
-
-  opacity: 1;
 }
 
-.cat-list:target {
-  display: block;
-  visibility: visible;
+.to-list {
+  display: none;
+}
 
-  opacity: 1;
+.to-gallery {
+  display: none;
 }
 
 .cat-passports li {
@@ -242,6 +238,8 @@ li {
 .carousel-wrapper {
   position: absolute;
 
+  display: none;
+
   width: 95%;
   margin: 0 20px;
 
@@ -253,22 +251,9 @@ li {
 
   display: none;
 
-  visibility: hidden;
-
   width: 100%;
 
-  transition: all 0.5s;
-
   font-size: 0;
-
-  opacity: 0;
-}
-
-.cat-gallery:target .first {
-  display: block;
-  visibility: visible;
-
-  opacity: 1;
 }
 
 .carousel-item .mid-content {
@@ -306,29 +291,17 @@ li {
   margin-right: 4%;
 }
 
-.carousel-item:target {
-  display: block;
-  visibility: visible;
-
-  opacity: 1;
-}
-
 .show-item {
   position: absolute;
 
   display: none;
 
-  visibility: hidden;
-
   width: 70%;
   padding: 5% 15%;
-
-  transition: all 0.5s;
 
   aspect-ratio: 2/1;
 
   background-color: rgba(0, 0, 0, 0.9);
-  opacity: 0;
 }
 
 .show-item .img-container {
@@ -355,16 +328,58 @@ li {
   width: 15%;
 }
 
-.full-item:target .show-item {
+.show-list:target .cat-list {
   display: block;
-  visibility: visible;
-
-  opacity: 1;
 }
 
-.full-item:target .carousel-item {
+.show-list:target .to-gallery {
   display: block;
-  visibility: visible;
+}
 
-  opacity: 1;
+.show-gallery:target .to-list {
+  display: block;
+}
+
+.show-gallery:target .carousel-wrapper {
+  display: block;
+}
+
+.to-item-1:target .item-1 .carousel-item {
+  display: block;
+}
+
+.to-item-2:target .item-2 .carousel-item {
+  display: block;
+}
+
+.to-item-3:target .item-3 .carousel-item {
+  display: block;
+}
+
+.to-item-4:target .item-4 .carousel-item {
+  display: block;
+}
+
+.to-item-5:target .item-5 .carousel-item {
+  display: block;
+}
+
+.to-show-item-1:target .item-1 .show-item {
+  display: block;
+}
+
+.to-show-item-2:target .item-2 .show-item {
+  display: block;
+}
+
+.to-show-item-3:target .item-3 .show-item {
+  display: block;
+}
+
+.to-show-item-4:target .item-4 .show-item {
+  display: block;
+}
+
+.to-show-item-5:target .item-5 .show-item {
+  display: block;
 }
