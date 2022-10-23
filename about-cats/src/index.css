@@ -75,7 +75,7 @@ li {
 }
 
 .cat-list {
-  display: none;
+  display: block;
 }
 
 .to-list {
@@ -83,7 +83,7 @@ li {
 }
 
 .to-gallery {
-  display: none;
+  display: block;
 }
 
 .cat-passports li {
@@ -342,6 +342,14 @@ li {
 
 .show-gallery:target .carousel-wrapper {
   display: block;
+}
+
+.show-gallery:target .cat-list {
+  display: none;
+}
+
+.show-gallery:target .to-gallery {
+  display: none;
 }
 
 .to-item-1:target .item-1 .carousel-item {
