@@ -4,8 +4,191 @@
     <meta charset="utf-8">
     <title>01-about-cats</title>
     <link rel="stylesheet" href="./index.css">
+    <link href='https://fonts.googleapis.com/css?family=PT Sans Narrow' rel='stylesheet'>
   </head>
   <body>
-    <!-- TODO -->
+
+    <div class="header-nav">
+      <p>Мурмаркет</p>  
+    </div>
+
+      <input type="checkbox" id="toggle-view">
+      <label class="toggle-btn" for="toggle-view">Переключить вид</label>
+
+
+      <div class="gallery-block">
+        <div class="gallery">
+          <img src="cats/cat1.jpg" alt="cat1">
+          <div class="desc">Музыкальный кот</div>
+        </div>
+      
+        <div class="gallery">
+          <img src="cats/cat2.jpg" alt="cat2">
+          <div class="desc">Потревоженный кот</div>
+        </div>
+        
+        <div class="gallery">
+          <img src="cats/cat3.jpg" alt="cat3">
+          <div class="desc">Персик</div>
+        </div>
+        
+        <div class="gallery">
+          <img src="cats/cat4.jpg" alt="cat4">
+          <div class="desc">Сжатый кот</div>
+        </div>
+
+        <div class="gallery">
+          <img src="cats/cat5.jpg" alt="cat5">
+          <div class="desc">Кот в мешке</div>
+        </div>
+      </div>
+
+
+
+      <div class="gallery-slider">
+        <label>
+          <input type="radio" name="cat-select">
+          <div class="slider-cat">
+
+            <img src="cats/cat1.jpg" alt="cat1">
+
+            <a class="button" href="#popup1">
+              <div class="cat-overlay">
+                <div class="desc">
+                  Музыкальный кот
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </label>
+        
+        <label>
+          <input type="radio" name="cat-select">
+          <div class="slider-cat">
+            <img src="cats/cat2.jpg" alt="cat2">
+            <a class="button" href="#popup2">
+              <div class="cat-overlay">
+                <div class="desc">
+                  Потревоженный кот
+                </div>
+              </div>
+            </a>
+          </div>
+        </label>
+
+        <label>
+          <input type="radio" name="cat-select" checked>
+          <div class="slider-cat">
+            <img src="cats/cat3.jpg" alt="cat3">
+            <a class="button" href="#popup3">
+              <div class="cat-overlay">
+                <div class="desc">
+                  Персик
+                </div>
+              </div>
+            </a>
+          </div>
+        </label>
+
+        <label>
+          <input type="radio" name="cat-select">
+          <div class="slider-cat">
+            <img src="cats/cat4.jpg" alt="cat4">
+            <a class="button" href="#popup4">
+              <div class="cat-overlay">
+                <div class="desc">
+                  Сжатый кот
+                </div>
+              </div>
+            </a>
+          </div>
+        </label>
+
+        <label>
+          <input type="radio" name="cat-select">
+          <div class="slider-cat">
+            <img src="cats/cat5.jpg" alt="cat5">
+            <a class="button" href="#popup5">
+              <div class="cat-overlay">
+                <div class="desc">
+                  Кот в мешке
+                </div>
+              </div>
+            </a>
+          </div>
+        </label>
+      </div>
+
+      <div id="popup1" class="overlay">
+        <div class="popup">
+          <h2>Музыкальный кот</h2>
+          <a class="close" href="#">&times;</a>
+          <img src="cats/cat1.jpg" alt="cat1">
+          <div class="content">
+            Заряженный музыкальный кот, с которым точно не будет скучно.
+          </div>
+        </div>
+      </div>
+
+      <div id="popup2" class="overlay">
+        <div class="popup">
+          <h2>Потревоженный кот</h2>
+          <a class="close" href="#">&times;</a>
+          <img src="cats/cat2.jpg" alt="cat2">
+          <div class="content">
+            Кажется его нельзя гладить.<br>
+            Или вернее можно, но в очень специфичных случаях.
+          </div>
+        </div>
+      </div>
+
+      <div id="popup3" class="overlay">
+        <div class="popup">
+          <h2>Персик</h2>
+          <a class="close" href="#">&times;</a>
+          <img src="cats/cat3.jpg" alt="cat3">
+          <div class="content">
+            Компактный порядочный кот, который очень любит персиковый сок и meme.
+          </div>
+        </div>
+      </div>
+
+      <div id="popup4" class="overlay">
+        <div class="popup">
+          <h2>Сжатый кот</h2>
+          <a class="close" href="#">&times;</a>
+          <img src="cats/cat4.jpg" alt="cat4">
+          <div class="content">
+            Он обременён тяжелой ношей и скован обстоятельствами.
+          </div>
+        </div>
+      </div>
+
+      <div id="popup5" class="overlay">
+        <div class="popup">
+          <h2>Кот в мешке</h2>
+          <a class="close" href="#">&times;</a>
+          <img src="cats/cat5.jpg" alt="cat5">
+          <div class="content">
+            Большой и толстый (по фото не скажешь) кот Шлёпа.<br>
+            Очень удобен в переноске, машине, на даче или отдыхе.<br>
+            Мешок (носок) для транспортировки в комплекте не поставляется!
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <p class="contacts">
+          Контакты: <br>
+          <a href="mailto: cats@babuli.ru">cats@babuli.ru</a><br>
+          <a href="mailto: vnuchek@babuli.ru">vnuchek@babuli.ru</a><br>
+        </p>
+        <p class="copyright">
+          ООО "<a href="https://www.youtube.com/c/pavelmavrin">Котятки</a>"<br>
+          Все права котов и не только защищены.
+        </p>
+      </footer>
+      
   </body>
 </html>
