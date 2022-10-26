@@ -1,11 +1,425 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>01-about-cats</title>
     <link rel="stylesheet" href="./index.css">
-  </head>
-  <body>
-    <!-- TODO -->
-  </body>
+</head>
+
+<body>
+<header>
+    <p class="name">Мурмаркет</p>
+</header>
+<input type="checkbox" id="to-gallery-input" class="view hide-on-default" checked>
+<label for="to-gallery-input" class="to-gallery">≡</label>
+<main>
+    <input type="radio" class="slide1 view-in-gallery" name="slider" id="slide1" checked>
+    <input type="radio" class="slide2 view-in-gallery" name="slider" id="slide2">
+    <input type="radio" class="slide3 view-in-gallery" name="slider" id="slide3">
+    <input type="radio" class="slide4 view-in-gallery" name="slider" id="slide4">
+    <input type="radio" class="slide5 view-in-gallery" name="slider" id="slide5">
+    <input type="radio" class="slide6 view-in-gallery" name="slider" id="slide6">
+    <input type="radio" class="slide7 view-in-gallery" name="slider" id="slide7">
+    <input type="radio" class="slide8 view-in-gallery" name="slider" id="slide8">
+    <input type="checkbox" class="open-modal1 hide-on-default" name="modal" id="open-modal1">
+    <input type="checkbox" class="open-modal2 hide-on-default" name="modal" id="open-modal2">
+    <input type="checkbox" class="open-modal3 hide-on-default" name="modal" id="open-modal3">
+    <input type="checkbox" class="open-modal4 hide-on-default" name="modal" id="open-modal4">
+    <input type="checkbox" class="open-modal5 hide-on-default" name="modal" id="open-modal5">
+    <input type="checkbox" class="open-modal6 hide-on-default" name="modal" id="open-modal6">
+    <input type="checkbox" class="open-modal7 hide-on-default" name="modal" id="open-modal7">
+    <input type="checkbox" class="open-modal8 hide-on-default" name="modal" id="open-modal8">
+    <div class="box-container">
+        <div class="box hide-on-default" id="box1">
+            <div class="img-wrapper">
+                <div class="name hide-on-default">Леопольд</div>
+                <label class="model hide-on-default" for="open-modal1"><img class="cat-images"
+                                                                            src="Resources/Images/1.jpg"
+                                                                            alt="Кот"></label>
+                <label class="slide" for="slide1"><img class="cat-images" src="Resources/Images/1.jpg"
+                                                       alt="Кот"></label>
+            </div>
+            <h1 class="description view-in-blocks">
+                Леопольд
+            </h1>
+            <div class="description view-in-blocks">
+                Возраст: 1 год
+            </div>
+            <div class="description view-in-blocks">
+                Порода: без породы
+            </div>
+            <div class="description view-in-blocks">
+                Болезни: не может жить без валерьянки
+            </div>
+            <p class="description view-in-blocks">
+                Статус: ищет хозяина
+            </p>
+        </div>
+        <div class="box hide-on-default" id="box2">
+            <div class="img-wrapper">
+                <div class="name hide-on-default">Байрон</div>
+                <label class="model hide-on-default" for="open-modal2"><img class="cat-images"
+                                                                            src="Resources/Images/2.jpg"
+                                                                            alt="Кот"></label>
+                <label class="slide" for="slide2"><img class="cat-images" src="Resources/Images/2.jpg"
+                                                       alt="Кот"></label>
+            </div>
+            <h1 class="description view-in-blocks">
+                Байрон
+            </h1>
+            <div class="description view-in-blocks">
+                Возраст: 2 год
+            </div>
+            <div class="description view-in-blocks">
+                Порода: серый британский
+            </div>
+            <div class="description view-in-blocks">
+                Болезни: нет
+            </div>
+            <p class="description view-in-blocks">
+                Статус: уже нашёл нового хозяина
+            </p>
+        </div>
+        <div class="box hide-on-default" id="box3">
+            <div class="img-wrapper">
+                <div class="name hide-on-default">Гризли</div>
+                <label class="model hide-on-default" for="open-modal3"><img class="cat-images"
+                                                                            src="Resources/Images/3.jpg"
+                                                                            alt="Кот"></label>
+                <label class="slide" for="slide3"><img class="cat-images" src="Resources/Images/3.jpg"
+                                                       alt="Кот"></label>
+            </div>
+            <h1 class="description view-in-blocks">
+                Гризли
+            </h1>
+            <div class="description view-in-blocks">
+                Возраст: 2 года
+            </div>
+            <div class="description view-in-blocks">
+                Порода: рыжик
+            </div>
+            <div class="description view-in-blocks">
+                Болезни: агрессивно смотрит
+            </div>
+            <p class="description view-in-blocks">
+                Статус: ищет хозяина
+            </p>
+        </div>
+        <div class="box hide-on-default" id="box4">
+            <div class="img-wrapper">
+                <div class="name hide-on-default">Гарри</div>
+                <label class="model hide-on-default" for="open-modal4"><img class="cat-images"
+                                                                            src="Resources/Images/4.jpg"
+                                                                            alt="Кот"></label>
+                <label class="slide" for="slide4"><img class="cat-images" src="Resources/Images/4.jpg"
+                                                       alt="Кот"></label>
+            </div>
+            <h1 class="description view-in-blocks">
+                Гарри
+            </h1>
+            <div class="description view-in-blocks">
+                Возраст: 2 года
+            </div>
+            <div class="description view-in-blocks">
+                Порода: полосатый
+            </div>
+            <div class="description view-in-blocks">
+                Болезни: нет
+            </div>
+            <p class="description view-in-blocks">
+                Статус: ищет хозяина
+            </p>
+        </div>
+        <div class="box hide-on-default" id="box5">
+            <div class="img-wrapper">
+                <div class="name hide-on-default">Каспер</div>
+                <label class="model hide-on-default" for="open-modal5"><img class="cat-images"
+                                                                            src="Resources/Images/5.jpg"
+                                                                            alt="Кот"></label>
+                <label class="slide" for="slide5"><img class="cat-images" src="Resources/Images/5.jpg"
+                                                       alt="Кот"></label>
+            </div>
+            <h1 class="description view-in-blocks">
+                Каспер
+            </h1>
+            <div class="description view-in-blocks">
+                Возраст: 6 месяцев
+            </div>
+            <div class="description view-in-blocks">
+                Порода: черный разноглазый
+            </div>
+            <div class="description view-in-blocks">
+                Болезни: нет
+            </div>
+            <p class="description view-in-blocks">
+                Статус: ищет хозяина
+            </p>
+        </div>
+        <div class="box hide-on-default" id="box6">
+            <div class="img-wrapper">
+                <div class="name hide-on-default">Найт</div>
+                <label class="model hide-on-default" for="open-modal6"><img class="cat-images"
+                                                                            src="Resources/Images/6.jpg"
+                                                                            alt="Кот"></label>
+                <label class="slide" for="slide6"><img class="cat-images" src="Resources/Images/6.jpg"
+                                                       alt="Кот"></label>
+            </div>
+            <h1 class="description view-in-blocks">
+                Найт
+            </h1>
+            <div class="description view-in-blocks">
+                Возраст: 3 месяца
+            </div>
+            <div class="description view-in-blocks">
+                Порода: серый
+            </div>
+            <div class="description view-in-blocks">
+                Болезни: нет
+            </div>
+            <p class="description view-in-blocks">
+                Статус: ищет мячик
+            </p>
+        </div>
+        <div class="box hide-on-default" id="box7">
+            <div class="img-wrapper">
+                <div class="name hide-on-default">Пират</div>
+                <label class="model hide-on-default" for="open-modal7"><img class="cat-images"
+                                                                            src="Resources/Images/7.jpg"
+                                                                            alt="Кот"></label>
+                <label class="slide" for="slide7"><img class="cat-images" src="Resources/Images/7.jpg"
+                                                       alt="Кот"></label>
+            </div>
+            <h1 class="description view-in-blocks">
+                Пират
+            </h1>
+            <div class="description view-in-blocks">
+                Возраст: 2 года
+            </div>
+            <div class="description view-in-blocks">
+                Порода: рыжик
+            </div>
+            <div class="description view-in-blocks">
+                Болезни: нет
+            </div>
+            <p class="description view-in-blocks">
+                Статус: ищет клад
+            </p>
+        </div>
+        <div class="box hide-on-default" id="box8">
+            <div class="img-wrapper">
+                <div class="name hide-on-default">Пушок</div>
+                <label class="model hide-on-default" for="open-modal8"><img class="cat-images"
+                                                                            src="Resources/Images/8.jpg"
+                                                                            alt="Кот"></label>
+                <label class="slide" for="slide8"><img class="cat-images" src="Resources/Images/8.jpg"
+                                                       alt="Кот"></label>
+            </div>
+            <h1 class="description view-in-blocks">
+                Пушок
+            </h1>
+            <div class="description view-in-blocks">
+                Возраст: 1 год
+            </div>
+            <div class="description view-in-blocks">
+                Порода: серый
+            </div>
+            <div class="description view-in-blocks">
+                Болезни: нет
+            </div>
+            <p class="description view-in-blocks">
+                Статус: готовится к атаке
+            </p>
+        </div>
+    </div>
+    <div class="model-boxes model-box1">
+        <div class="card">
+            <label for="open-modal1">
+                ✖
+            </label>
+            <div class="img-wrapper">
+                <img class="cat-images" src="Resources/Images/1.jpg" alt="Кот">
+            </div>
+            <div class="text-block">
+                <h1 class="name view-in-blocks">
+                    Леопольд
+                </h1>
+                <div class="description view-in-blocks">
+                    Возраст: 1 год
+                </div>
+                <div class="description view-in-blocks">
+                    Описание кота: черный, пушистый, глаза зеленые, уши розовые, хвост красный, лапы желтые, нос
+                    розовый, усы голубые, губы фиолетовые, зубы белые, когти черные.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model-boxes model-box2">
+        <div class="card">
+            <label for="open-modal2">
+                ✖
+            </label>
+            <div class="img-wrapper">
+                <img class="cat-images" src="Resources/Images/2.jpg" alt="Кот">
+            </div>
+            <div class="text-block">
+                <h1 class="name view-in-blocks">
+                    Байрон
+                </h1>
+                <div class="description view-in-blocks">
+                    Возраст: 2 года
+                </div>
+                <div class="description view-in-blocks">
+                    Описание кота: — Мяу! — мяукает он. — Как дела? — спрашивает его хозяин. — Почему не мурлычешь? —
+                    мурчит кот. — Ты ведь мне не мешаешь, — говорит ему хозяин...
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model-boxes model-box3">
+        <div class="card">
+            <label for="open-modal3">
+                ✖
+            </label>
+            <div class="img-wrapper">
+                <img class="cat-images" src="Resources/Images/3.jpg" alt="Кот">
+            </div>
+            <div class="text-block">
+                <h1 class="name view-in-blocks">
+                    Гризли
+                </h1>
+                <div class="description view-in-blocks">
+                    Возраст: 2 года
+                </div>
+                <div class="description view-in-blocks">
+                    Описание кота — это текст, в котором есть описание кота, а описание кота есть текст, в который
+                    входит описание кота.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model-boxes model-box4">
+        <div class="card">
+            <label for="open-modal4">
+                ✖
+            </label>
+            <div class="img-wrapper">
+                <img class="cat-images" src="Resources/Images/4.jpg" alt="Кот">
+            </div>
+            <div class="text-block">
+                <h1 class="name view-in-blocks">
+                    Гарри
+                </h1>
+                <div class="description view-in-blocks">
+                    Возраст: 2 года
+                </div>
+                <div class="description view-in-blocks">
+                    Описание кота:" Котик — ласковый, умный, пушистый, любит спать на мягкой кровати, есть сметану и
+                    спать в обнимку с хозяином".
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model-boxes model-box5">
+        <div class="card">
+            <label for="open-modal5">
+                ✖
+            </label>
+            <div class="img-wrapper">
+                <img class="cat-images" src="Resources/Images/5.jpg" alt="Кот">
+            </div>
+            <div class="text-block">
+                <h1 class="name view-in-blocks">
+                    Каспер
+                </h1>
+                <div class="description view-in-blocks">
+                    Возраст: 6 месяцев
+                </div>
+                <div class="description view-in-blocks">
+                    Описание кота в пословице: "Глаза — как два бриллианта, нос — пятачок, а хвост трубой".
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model-boxes model-box6">
+        <div class="card">
+            <label for="open-modal6">
+                ✖
+            </label>
+            <div class="img-wrapper">
+                <img class="cat-images" src="Resources/Images/6.jpg" alt="Кот">
+            </div>
+            <div class="text-block">
+                <h1 class="name view-in-blocks">
+                    Найт
+                </h1>
+                <div class="description view-in-blocks">
+                    Возраст: 3 месяца
+                </div>
+                <div class="description view-in-blocks">
+                    Описание кота — это рассказ о том, что коту очень хочется есть, но он не может сформулировать, чего
+                    именно.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model-boxes model-box7">
+        <div class="card">
+            <label for="open-modal7">
+                ✖
+            </label>
+            <div class="img-wrapper">
+                <img class="cat-images" src="Resources/Images/7.jpg" alt="Кот">
+            </div>
+            <div class="text-block">
+                <h1 class="name view-in-blocks">
+                    Пират
+                </h1>
+                <div class="description view-in-blocks">
+                    Возраст: 2 года
+                </div>
+                <div class="description view-in-blocks">
+                    Описание кота:" Сидит, мяукает, просит кушать".
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model-boxes model-box8">
+        <div class="card">
+            <label for="open-modal8">
+                ✖
+            </label>
+            <div class="img-wrapper">
+                <img class="cat-images" src="Resources/Images/8.jpg" alt="Кот">
+            </div>
+            <div class="text-block">
+                <h1 class="name view-in-blocks">
+                    Пушок
+                </h1>
+                <div class="description view-in-blocks">
+                    Возраст: 1 год
+                </div>
+                <div class="description view-in-blocks">
+                    Описание кота:" Упитанный, мордатый котяра рыжего цвета, весом около пяти килограмм. Поведение: не
+                    очень дружелюбное. На всех кидается, даже на хозяина. Мяукает, мурлычет, спит в обнимку с хозяином.
+                    Очень любит играть с хозяйкой, но, к сожалению, не умеет плавать".
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="left email-us">
+        Напишите нам:
+    </div>
+    <div class="left">
+        &#9993;<a class="link" href="mailto:cats@babuli.ru">cats@babuli.ru</a>
+    </div>
+    <div class="left">
+        &#9993;<a class="link" href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+    </div>
+    <div class="right">
+        © 2022 ООО "Кот в каждый дом"
+    </div>
+</footer>
+</body>
 </html>
