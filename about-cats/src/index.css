@@ -1,5 +1,6 @@
 :root {
-  --standart-border: 1px solid #dadada;
+  --border-color: #dadada;
+  --standart-border: 1px solid var(--border-color);
   font-family: Verdana, sans-serif;
   font-size: 16px;
 }
@@ -46,16 +47,21 @@ main {
   flex-wrap: wrap;
 }
 
-.cats-block .cats-list .cat-in-list {
+.cats-block .cats-list .cat {
   border: var(--standart-border);
   margin: 0.5rem 1rem 0.5rem 0;
 }
 
-.cats-block .cats-list .cat-in-list .cat-resume {
+.cats-block .cats-list .cat:hover {
+  box-shadow: 0 0 3px 3px  var(--border-color);
+}
+
+.cats-block .cats-list .cat .photo {
+  width: 100%;
+}
+
+.cats-block .cats-list .cat .cat-resume {
   margin: 0.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 
 .cats-block .gallery-mode-choose:not(:checked) ~ .cats-gallery {
@@ -74,61 +80,61 @@ main {
   padding-left: 50%;
 }
 
-.gallery-block .cat-in-gallery {
+.gallery-block .cat {
   margin-right: 1rem;
 }
 
 /*There and after there using id-selectors for input-tags*/
-.cats-gallery #gallery-cat-1:checked ~ .gallery-block .cat-in-gallery .active,
-.cats-gallery #gallery-cat-1:checked ~ .gallery-block .cat-in-gallery .passive {
+.cats-gallery #gallery-cat-1:checked ~ .gallery-block .cat .active,
+.cats-gallery #gallery-cat-1:checked ~ .gallery-block .cat .passive {
   margin-left: calc(-50% + (-100% - 1rem) * 0);
   margin-right: calc(1rem * 0);
 }
 
-.cats-gallery #gallery-cat-2:checked ~ .gallery-block .cat-in-gallery .active,
-.cats-gallery #gallery-cat-2:checked ~ .gallery-block .cat-in-gallery .passive {
+.cats-gallery #gallery-cat-2:checked ~ .gallery-block .cat .active,
+.cats-gallery #gallery-cat-2:checked ~ .gallery-block .cat .passive {
   margin-left: calc(-50% + (-100% - 1rem) * 1);
   margin-right: calc(1rem * 1);
 }
 
-.cats-gallery #gallery-cat-3:checked ~ .gallery-block .cat-in-gallery .active,
-.cats-gallery #gallery-cat-3:checked ~ .gallery-block .cat-in-gallery .passive {
+.cats-gallery #gallery-cat-3:checked ~ .gallery-block .cat .active,
+.cats-gallery #gallery-cat-3:checked ~ .gallery-block .cat .passive {
   margin-left: calc(-50% + (-100% - 1rem) * 2);
   margin-right: calc(1rem * 2);
 }
 
-.cats-gallery #gallery-cat-1:checked ~ .gallery-block .cat-in-gallery.for-gallery-cat-1 .passive,
-.cats-gallery #gallery-cat-2:checked ~ .gallery-block .cat-in-gallery.for-gallery-cat-2 .passive,
-.cats-gallery #gallery-cat-3:checked ~ .gallery-block .cat-in-gallery.for-gallery-cat-3 .passive {
+.cats-gallery #gallery-cat-1:checked ~ .gallery-block .cat.for-gallery-cat-1 .passive,
+.cats-gallery #gallery-cat-2:checked ~ .gallery-block .cat.for-gallery-cat-2 .passive,
+.cats-gallery #gallery-cat-3:checked ~ .gallery-block .cat.for-gallery-cat-3 .passive {
   display: none;
 }
 
-.cats-gallery #gallery-cat-1:not(:checked) ~ .gallery-block .cat-in-gallery.for-gallery-cat-1 .active,
-.cats-gallery #gallery-cat-2:not(:checked) ~ .gallery-block .cat-in-gallery.for-gallery-cat-2 .active,
-.cats-gallery #gallery-cat-3:not(:checked) ~ .gallery-block .cat-in-gallery.for-gallery-cat-3 .active {
+.cats-gallery #gallery-cat-1:not(:checked) ~ .gallery-block .cat.for-gallery-cat-1 .active,
+.cats-gallery #gallery-cat-2:not(:checked) ~ .gallery-block .cat.for-gallery-cat-2 .active,
+.cats-gallery #gallery-cat-3:not(:checked) ~ .gallery-block .cat.for-gallery-cat-3 .active {
   display: none;
 }
 
-.gallery-block .cat-in-gallery .passive .photo-unit {
+.gallery-block .cat .passive .photo {
   opacity: 0.7;
   transform: scaleY(0.8);
 }
 
-.gallery-block .cat-in-gallery .active {
+.gallery-block .cat .active {
   position: relative;
   display: block;
   width: max-content;
 }
 
-.gallery-block .cat-in-gallery .active:hover .photo-unit {
+.gallery-block .cat .active:hover .photo {
   filter: brightness(0.4);
 }
 
-.gallery-block .cat-in-gallery .active:not(:hover) .name {
+.gallery-block .cat .active:not(:hover) .name {
   display: none;
 }
 
-.gallery-block .cat-in-gallery .active:hover .name {
+.gallery-block .cat .active:hover .name {
   position: absolute;
   z-index: 1;
   top: 50%;
