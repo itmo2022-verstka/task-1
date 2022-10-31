@@ -1,1 +1,374 @@
-/* TODO */
+.main-wrapper {
+  width: 1000px;
+  height: 100%;
+  margin: auto;
+  border: 1px solid grey;
+}
+
+
+.mur-header {
+  font-family: "PT SansNarrow", serif;
+  font-size: 32px;
+  text-align: center;
+  border-bottom: 1px solid grey;
+  padding: 10px;
+}
+
+.mur-header .M-letter {
+  color: red;
+}
+
+.cat-blocks-wrapper {
+  min-height: 100vh;
+  width: 700px;
+  padding-left: 150px;
+  padding-right: 150px;
+  margin: auto;
+  border-bottom: 1px solid grey;
+}
+
+.cat-box1:hover {
+  box-shadow: -2px 2px 2px grey;
+  transition: box-shadow 0.3s ease-in-out
+}
+
+.cat-box1 {
+  box-sizing: border-box;
+  margin: 20px;
+  display: inline-block;
+  width: 300px;
+}
+
+.cat-info-wrapper {
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+
+.cat-box1 .cat-info {
+  padding-top: 15px;
+  margin: 0 15px 15px 15px;
+  color: grey;
+}
+
+.cat-box1 .cat-name {
+  color: black;
+  font-size: 24px;
+}
+
+.cat img {
+  display: block;
+  width: 100%;
+  height: 250px;
+}
+
+.footer-wrapper {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin: 20px;
+}
+
+.footer-wrapper a {
+  color: #4c4cd8;
+}
+
+.footer-wrapper div {
+  margin-bottom: 5px;
+}
+
+.footer-wrapper .footer-header {
+  color: grey;
+}
+
+.carousel-wrapper {
+  padding-top: 200px;
+  height: 700px;
+  display: none;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid grey;
+}
+
+
+/*.carousel-img:hover img {*/
+/*  box-shadow: -2px 2px 2px grey;*/
+/*  opacity: 0.5;*/
+/*}*/
+
+.carousel-img1,
+.carousel-img2,
+.carousel-img3,
+.carousel-img4,
+.carousel-img5 {
+  background: black;
+  position: relative;
+  text-align: center;
+  opacity: 1;
+  margin: 20px;
+  display: inline-block;
+  width: 300px;
+}
+
+.carousel-img1 img,
+.carousel-img2 img,
+.carousel-img3 img,
+.carousel-img4 img,
+.carousel-img5 img {
+  opacity: 0.7;
+  height: 200px;
+  display: block;
+  width: 100%;
+}
+
+.cat-card-name1,
+.cat-card-name2,
+.cat-card-name3,
+.cat-card-name4,
+.cat-card-name5 {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+/*.carousel-img:active .cat-card-name {*/
+/*  opacity: 1;*/
+/*}*/
+
+
+.firstCat,
+.secondCat,
+.thirdCat,
+.fourthCat,
+.fifthCat {
+  display: none;
+}
+
+.firstCat:checked ~ .carousel-wrapper div {
+  left: 360px;
+  transition: left 0.3s ease-in-out;
+}
+
+.secondCat:checked ~ .carousel-wrapper div {
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+
+.thirdCat:checked ~ .carousel-wrapper div {
+  left: -360px;
+  transition: left 0.3s ease-in-out;
+}
+
+.fourthCat:checked ~ .carousel-wrapper div {
+  left: -720px;
+  transition: left 0.3s ease-in-out;
+}
+
+.fifthCat:checked ~ .carousel-wrapper div{
+  left: -1080px;
+  transition: left 0.3s ease-in-out;
+}
+
+
+.firstCat:checked ~ .carousel-wrapper .carousel-img1 img {
+  opacity: 1;
+  height: 250px;
+}
+.secondCat:checked ~ .carousel-wrapper .carousel-img2 img {
+  opacity: 1;
+  height: 250px;
+}
+.thirdCat:checked ~ .carousel-wrapper .carousel-img3 img {
+  opacity: 1;
+  height: 250px;
+}
+.fourthCat:checked ~ .carousel-wrapper .carousel-img4 img {
+  opacity: 1;
+  height: 250px;
+}
+.fifthCat:checked ~ .carousel-wrapper .carousel-img5 img {
+  opacity: 1;
+  height: 250px;
+}
+
+
+.firstCat:checked ~ .carousel-wrapper .carousel-img1:hover .cat-card-name1{
+  opacity: 1;
+}
+
+.firstCat:checked ~ .carousel-wrapper .carousel-img1:hover{
+  filter: brightness(60%);
+}
+
+.secondCat:checked ~ .carousel-wrapper .carousel-img2:hover .cat-card-name2{
+  opacity: 1;
+}
+
+.secondCat:checked ~ .carousel-wrapper .carousel-img2:hover{
+  filter: brightness(60%);
+}
+
+.thirdCat:checked ~ .carousel-wrapper .carousel-img3:hover .cat-card-name3{
+  opacity: 1;
+}
+
+.thirdCat:checked ~ .carousel-wrapper .carousel-img3:hover{
+  filter: brightness(60%);
+}
+
+.fourthCat:checked ~ .carousel-wrapper .carousel-img4:hover .cat-card-name4{
+  opacity: 1;
+}
+
+.fourthCat:checked ~ .carousel-wrapper .carousel-img4:hover{
+  filter: brightness(60%);
+}
+
+.fifthCat:checked ~ .carousel-wrapper .carousel-img5:hover .cat-card-name5{
+  opacity: 1;
+}
+
+.fifthCat:checked ~ .carousel-wrapper .carousel-img5:hover{
+  filter: brightness(60%);
+}
+
+
+.cat-info-common-wrapper {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.cat-info-common-wrapper:target {
+  display: inline-block;
+}
+
+.cat-info-common-wrapper:not(:target) {
+  display: none;
+}
+
+.close-btn {
+  text-decoration: none;
+  font-size: 30px;
+  float: right;
+  color: white;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+.close-btn:hover {
+  color: darkkhaki;
+  text-decoration: rgba(205, 92, 92, 0.5) underline;
+  transition-duration: 0s;
+}
+
+
+.cat-info-common-wrapper {
+  display: inline-block;
+}
+
+.cat-info-image {
+  margin-top: 150px;
+  margin-left: 100px;
+  width: 500px;
+  height: 500px;
+  background: blue;
+  display: inline-block;
+}
+
+.cat-info-image img {
+  width: 500px;
+  height: 500px;
+}
+
+.cat-description {
+  margin: 30px;
+  font-size: 24px;
+  color: white;
+  width: 500px;
+  height: 800px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cat-description div {
+  margin: 15px;
+}
+
+.switch {
+  margin: 20px;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch-input:checked ~ .carousel-wrapper {
+  display: block;
+}
+
+.switch-input:checked ~ .cat-blocks-wrapper {
+  display: none;
+}
+
+
+
