@@ -5,7 +5,161 @@
     <title>01-about-cats</title>
     <link rel="stylesheet" href="./index.css">
   </head>
-  <body>
-    <!-- TODO -->
+  <body class="body">
+    <header class="header">
+      <h1 class="market-name">Мурмаркет</h1>
+    </header>
+
+    <main>
+      <input type="checkbox" id="view-type-changer" class="view-type-changer" checked>
+      <label for="view-type-changer" class="view-changer-label clickable"></label>
+
+      <div class="gallery-all-items">
+
+        <div class="gallery-item shadow-on-hover">
+          <img class="gallery-item-image" src="assets/img/Ginger.jpg" alt="Рыжик">
+          <div class="gallery-item-description">
+            <h2 class="gallery-item-name">Рыжик</h2>
+            <p>Возраст: около 6 месяцев.</p>
+            <p>Порода: нет.</p>
+            <p>Особенности: ленивость.</p>
+            <p>Статус: ищет хозяина.<p>
+          </div>
+        </div>
+
+        <div class="gallery-item shadow-on-hover">
+          <img class="gallery-item-image" src="assets/img/Gera.jpg" alt="Гера">
+          <div class="gallery-item-description">
+            <h2 class="gallery-item-name">Гера</h2>
+            <p>Возраст: 1 год.</p>
+            <p>Порода: нет.</p>
+            <p>Особенности: излишняя милота.</p>
+            <p>Статус: ищет хозяина.<p>
+          </div>
+        </div>
+
+        <div class="gallery-item shadow-on-hover">
+          <img class="gallery-item-image" src="assets/img/Busia.jpg" alt="Буся">
+          <div class="gallery-item-description">
+            <h2 class="gallery-item-name">Буся</h2>
+            <p>Возраст: около 8 месяцев.</p>
+            <p>Порода: нет.</p>
+            <p>Особенности: гиперактивность.</p>
+            <p>Статус: ищет хозяина.<p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="carousel">
+        <input type="radio" class="item-switcher item-switcher-1" id="item-switcher-1" name="item-switcher">
+        <input type="radio" class="item-switcher item-switcher-2" id="item-switcher-2" name="item-switcher" checked>
+        <input type="radio" class="item-switcher item-switcher-3" id="item-switcher-3" name="item-switcher">
+
+        <input type="checkbox" class="item-modal item-modal-1" id="item-modal-1" name="item-modal">
+        <input type="checkbox" class="item-modal item-modal-2" id="item-modal-2" name="item-modal">
+        <input type="checkbox" class="item-modal item-modal-3" id="item-modal-3" name="item-modal">
+
+        <div class="carousel-all-items">
+
+          <div class="carousel-item carousel-item-1">
+            <div class="carousel-item-name">Рыжик</div>
+            <img class="carousel-item-image" src="assets/img/Ginger.jpg" alt="Рыжик">
+            <label class="label-item-modal label-item-modal-1" for="item-modal-1"></label>
+            <label class="label-item-switcher label-item-switcher-1" for="item-switcher-1"></label>
+          </div>
+
+          <div class="carousel-item carousel-item-2">
+            <div class="carousel-item-name">Гера</div>
+            <img class="carousel-item-image" src="assets/img/Gera.jpg" alt="Гера">
+            <label class="label-item-modal label-item-modal-2" for="item-modal-2"></label>
+            <label class="label-item-switcher label-item-switcher-2" for="item-switcher-2"></label>
+          </div>
+
+          <div class="carousel-item carousel-item-3">
+            <div class="carousel-item-name">Буся</div>
+            <img class="carousel-item-image" src="assets/img/Busia.jpg" alt="Буся">
+            <label class="label-item-modal label-item-modal-3" for="item-modal-3"></label>
+            <label class="label-item-switcher label-item-switcher-3" for="item-switcher-3"></label>
+          </div>
+
+        </div>
+
+        <div class="carousel-slider">
+          <label class="carousel-slider-dot carousel-slider-dot-1 clickable" for="item-switcher-1"></label>
+          <label class="carousel-slider-dot carousel-slider-dot-2 clickable" for="item-switcher-2"></label>
+          <label class="carousel-slider-dot carousel-slider-dot-3 clickable" for="item-switcher-3"></label>
+        </div>
+
+        <div class="carousel-all-modals">
+          <div class="carousel-modal carousel-modal-1">
+            <div class="carousel-modal-content">
+              <label class="carousel-modal-close clickable" for="item-modal-1"></label>
+              <img class="carousel-modal-image" src="assets/img/Ginger.jpg" alt="Рыжик">
+              <div class="carousel-modal-article">
+                <h1 class="carousel-modal-name">Рыжик</h1>
+                <div class="carousel-modal-description">
+                  <p>Возраст: около 6 месяцев.</p>
+                  <p>Порода: нет.</p>
+                  <p>Особенности: ленивость.</p>
+                  <p>Статус: ищет хозяина.<p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-modal carousel-modal-2">
+            <div class="carousel-modal-content">
+              <label class="carousel-modal-close clickable" for="item-modal-2"></label>
+              <img class="carousel-modal-image" src="assets/img/Gera.jpg" alt="Гера">
+              <div class="carousel-modal-article">
+                <h1 class="carousel-modal-name">Гера</h1>
+                <div class="carousel-modal-description">
+                  <p>Возраст: 1 год.</p>
+                  <p>Порода: нет.</p>
+                  <p>Особенности: излишняя милота.</p>
+                  <p>Статус: ищет хозяина.<p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-modal carousel-modal-3">
+            <div class="carousel-modal-content">
+              <label class="carousel-modal-close clickable" for="item-modal-3"></label>
+              <img class="carousel-modal-image" src="assets/img/Busia.jpg" alt="Буся">
+              <div class="carousel-modal-article">
+                <h1 class="carousel-modal-name">Буся</h1>
+                <div class="carousel-modal-description">
+                  <p>Возраст: около 8 месяцев.</p>
+                  <p>Порода: нет.</p>
+                  <p>Особенности: гиперактивность.</p>
+                  <p>Статус: ищет хозяина.<p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="contacts">
+        <a>Напишите нам:</a>
+        <ul>
+          <li>
+            <a href="mailto:cats@babuli.ru" class="email">cats@babuli.ru</a>
+          </li>
+          <li>
+            <a href="mailto:vnuchek@babuli.ru" class="email">vnuchek@babuli.ru</a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>© 2018 OOO <a href="#">"Бабушкины котятки"</a></p>
+      </div>
+    </footer>
   </body>
 </html>
