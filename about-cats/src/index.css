@@ -42,7 +42,7 @@ header {
   z-index: 10;
 }
 
-header b {
+header .red-letter {
   color: red;
 }
 
@@ -91,17 +91,19 @@ footer :last-child > * {
   bottom: 0;
 }
 
-.gallery_icon {
-  position: fixed;
+.gallery_view {
   right: 100px;
-  top: 0;
-  z-index: 3;
 }
 
-.layout_icon{
-  position: fixed;
+.layout_view{
   right: 10px;
-  top: 0;
+}
+
+.gallery_view,
+.layout_view {
+  top: 65px;
+  height: 50px;
+  position: fixed;
   z-index: 3;
 }
 
@@ -109,47 +111,42 @@ footer :last-child > * {
   visibility: hidden;
 }
 
-.gallery_icon,
-.layout_icon {
-  top: 65px;
-  height: 50px;
-}
-
-.gallery_icon label,
-.layout_icon label {
+.gallery_view label,
+.layout_view label {
   cursor: pointer;
 }
 
-section:has(#gallery_icon:checked) {
+section:has(#gallery_view:checked) {
   position: fixed;
 }
 
-#gallery_icon:checked ~ .gallery {
+#gallery_view:checked ~ .gallery {
   visibility: visible;
 }
 
-#gallery_icon:checked ~ .layout {
+#gallery_view:checked ~ .layout {
   visibility: hidden;
 }
 
-#gallery_icon:checked ~ .gallery_icon {
+#gallery_view:checked ~ .gallery_view {
   color: chartreuse;
 }
 
-#layout_icon:checked ~ .layout {
+#layout_view:checked ~ .layout {
   visibility: visible;
 }
 
-#layout_icon:checked ~ .gallery {
+#layout_view:checked ~ .gallery {
   visibility: hidden;
 }
 
-#layout_icon:checked ~ .layout_icon {
+#layout_view:checked ~ .layout_view {
   color: chartreuse;
 }
 
 .layout {
   visibility: hidden;
+  margin-bottom: 126px; /* 56 px (footer) + 70 px (space between cards) */
 }
 
 .layout article {
@@ -374,7 +371,7 @@ section:has(#gallery_icon:checked) {
   opacity: 0.6;
 }
 
-.css-modal-target {
+.modal-target {
   display: none;
 }
 
@@ -398,7 +395,7 @@ section:has(#gallery_icon:checked) {
   visibility: inherit;
 }
 
-.css-modal-target:target {
+.modal-target:target {
   display: block;
   align-items: center;
   justify-content: center;
@@ -413,7 +410,7 @@ section:has(#gallery_icon:checked) {
   background: rgba(0,0,0,0.9);
 }
 
-.css-modal-target .cmt {
+.modal-target .cmt {
   font-size: 16px;
   padding: 50px;
   width: 100%;
@@ -425,7 +422,7 @@ section:has(#gallery_icon:checked) {
   vertical-align: middle;
 }
 
-.css-modal-target .cmt .picture {
+.modal-target .cmt .modal-picture {
   position: relative;
   width: 50%;
   height: 100%;
@@ -434,7 +431,7 @@ section:has(#gallery_icon:checked) {
   padding-right: 5px;
 }
 
-.css-modal-target .cmt .picture img {
+.modal-target .cmt .modal-picture img {
   position: relative;
   left: 0;
   max-height: 100%;
@@ -445,7 +442,7 @@ section:has(#gallery_icon:checked) {
   transform: translateY(-50%);
 }
 
-.css-modal-target .cmt .description {
+.modal-target .cmt .modal-description {
   font-size: 2rem;
   width: 50%;
   height: 100%;
@@ -457,23 +454,23 @@ section:has(#gallery_icon:checked) {
   padding-left: 5px;
 }
 
-.css-modal-target .cmt .description article {
+.modal-target .cmt .modal-description article {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.css-modal-target .cmt .description article :first-child {
+.modal-target .cmt .description article :first-child {
   font-size: 4rem;
   margin-bottom: 10px;
 }
 
-.css-modal-close {
+.modal-close {
   position: relative;
   display: block;
 }
 
-.css-modal-close:after {
+.modal-close:after {
   content: "╳";
   width: 50px;
   height: 50px;
@@ -485,7 +482,7 @@ section:has(#gallery_icon:checked) {
   background-size: cover;
 }
 
-.css-modal-close:before {
+.modal-close:before {
   left: 0;
   top: 0;
   width: 100%;

@@ -7,16 +7,16 @@
 </head>
 <body>
 <header>
-  <b>М</b>урмаркет
+  <b class="red-letter">М</b>урмаркет
 </header>
 <section>
-  <input type="radio" class="format" name="format" id="layout_icon">
-  <input type="radio" class="format" name="format" id="gallery_icon" checked>
-  <div class="layout_icon">
-    <label for="layout_icon">Сетка</label>
+  <input type="radio" class="format" name="format" id="layout_view">
+  <input type="radio" class="format" name="format" id="gallery_view" checked>
+  <div class="layout_view">
+    <label for="layout_view">Сетка</label>
   </div>
-  <div class="gallery_icon">
-    <label for="gallery_icon">Карусель</label>
+  <div class="gallery_view">
+    <label for="gallery_view">Карусель</label>
   </div>
   <div class="layout">
     <article>
@@ -50,47 +50,47 @@
       <div class="slides slide1">
         <label for="slide1">
           <img src="cat1.jpg" alt="cat1">
-          <a class="css-modal-open" href="#css-modal-target1">
+          <a class="modal-open" href="#modal-target1">
             <img src="cat1.jpg" alt="cat1">
           </a>
+          <span class="name">Барсик</span>
         </label>
-        <span class="name">Барсик</span>
       </div>
       <div class="slides slide2">
         <label for="slide2">
           <img src="cat2.jpg" alt="cat2">
-          <a class="css-modal-open" href="#css-modal-target2">
+          <a class="modal-open" href="#modal-target2">
             <img src="cat2.jpg" alt="cat2">
           </a>
+          <span class="name">Мурзик</span>
         </label>
-        <span class="name">Мурзик</span>
       </div>
       <div class="slides slide3">
         <label for="slide3">
           <img src="cat3.jpg" alt="cat3">
-          <a class="css-modal-open" href="#css-modal-target3">
+          <a class="modal-open" href="#modal-target3">
             <img src="cat3.jpg" alt="cat3">
           </a>
+          <span class="name">Котофей</span>
         </label>
-        <span class="name">Котофей</span>
       </div>
       <div class="slides slide4">
         <label for="slide4">
           <img src="cat4.jpg" alt="cat4">
-          <a class="css-modal-open" href="#css-modal-target4">
+          <a class="modal-open" href="#modal-target4">
             <img src="cat4.jpg" alt="cat4">
           </a>
+          <span class="name">Ася</span>
         </label>
-        <span class="name">Ася</span>
       </div>
       <div class="slides slide5">
         <label for="slide5">
           <img src="cat5.jpg" alt="cat5">
-          <a class="css-modal-open" href="#css-modal-target5">
+          <a class="modal-open" href="#modal-target5">
             <img src="cat5.jpg" alt="cat5">
           </a>
+          <span class="name">Дымок</span>
         </label>
-        <span class="name">Дымок</span>
       </div>
     </div>
     <div class="controls">
@@ -101,12 +101,12 @@
       <label for="slide5"></label>
     </div>
   </div>
-  <div class="css-modal-target" id="css-modal-target1">
+  <div class="modal-target" id="modal-target1">
     <div class="cmt">
-      <div class="picture">
+      <div class="modal-picture">
         <img src="cat1.jpg" alt="cat1">
       </div>
-      <div class="description">
+      <div class="modal-description">
         <article>
           <p>Барсик</p>
           <p>Хороший кот</p>
@@ -114,14 +114,14 @@
         </article>
       </div>
     </div>
-    <a href="#close" class="css-modal-close"></a>
+    <a href="#close" class="modal-close"></a>
   </div>
-  <div class="css-modal-target" id="css-modal-target2">
+  <div class="modal-target" id="modal-target2">
     <div class="cmt">
-      <div class="picture">
+      <div class="modal-picture">
         <img src="cat2.jpg" alt="cat2">
       </div>
-      <div class="description">
+      <div class="modal-description">
         <article>
           <p>Мурзик</p>
           <p>Хороший кот</p>
@@ -129,14 +129,14 @@
         </article>
       </div>
     </div>
-    <a href="#close" class="css-modal-close"></a>
+    <a href="#close" class="modal-close"></a>
   </div>
-  <div class="css-modal-target" id="css-modal-target3">
+  <div class="modal-target" id="modal-target3">
     <div class="cmt">
-      <div class="picture">
+      <div class="modal-picture">
         <img src="cat3.jpg" alt="cat3">
       </div>
-      <div class="description">
+      <div class="modal-description">
         <article>
           <p>Котофей</p>
           <p>Хороший кот</p>
@@ -145,14 +145,14 @@
         </article>
       </div>
     </div>
-    <a href="#close" class="css-modal-close"></a>
+    <a href="#close" class="modal-close"></a>
   </div>
-  <div class="css-modal-target" id="css-modal-target4">
+  <div class="modal-target" id="modal-target4">
     <div class="cmt">
-      <div class="picture">
+      <div class="modal-picture">
         <img src="cat4.jpg" alt="cat4">
       </div>
-      <div class="description">
+      <div class="modal-description">
         <article>
           <p>Ася</p>
           <p>Хорошая кошка</p>
@@ -160,14 +160,14 @@
         </article>
       </div>
     </div>
-    <a href="#close" class="css-modal-close"></a>
+    <a href="#close" class="modal-close"></a>
   </div>
-  <div class="css-modal-target" id="css-modal-target5">
+  <div class="modal-target" id="modal-target5">
     <div class="cmt">
-      <div class="picture">
+      <div class="modal-picture">
         <img src="cat5.jpg" alt="cat5">
       </div>
-      <div class="description">
+      <div class="modal-description">
         <article>
           <p>Дымок</p>
           <p>Хороший кот</p>
@@ -175,21 +175,21 @@
         </article>
       </div>
     </div>
-    <a href="#close" class="css-modal-close"></a>
+    <a href="#close" class="modal-close"></a>
   </div>
 </section>
 <footer>
   <div class="left">
     <p>Напишите нам:</p>
-    <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">cats@babuli.ru</a></p>
-    <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">vnuchek@babuli.ru</a></p>
+    <p><a href="mailto:cats@babuli.ru">cats@babuli.ru</a></p>
+    <p><a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a></p>
   </div>
   <ul class="right">
     <li>
       <p>© 2018 ООО «</p>
     </li>
     <li>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Бабушкины котятки</a>
+      <a href="index.html">Бабушкины котятки</a>
     </li>
     <li>
       <p>»</p>
