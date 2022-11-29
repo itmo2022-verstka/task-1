@@ -68,16 +68,6 @@ footer .write_us {
   padding-left: 0;
 }
 
-footer .mail1 {
-  position: absolute;
-  bottom: 58px;
-}
-
-footer .mail2 {
-  position: absolute;
-  bottom: 27px;
-}
-
 .right {
   float: right;
 
@@ -97,7 +87,7 @@ main {
   text-align: center;
 }
 
-.list {
+.list-switcher {
   display: none;
 }
 
@@ -109,7 +99,7 @@ main {
   text-align: left;
 }
 
-.list:not(:checked) ~ .carusel .description {
+.list-switcher:not(:checked) ~ .carusel .description {
   position: absolute;
   top: 200px;
   z-index: 3;
@@ -123,7 +113,7 @@ main {
   text-align: left;
 }
 
-.list:not(:checked) ~ .carusel .cat {
+.list-switcher:not(:checked) ~ .carusel .carusel__item {
   display: inline-block;
 
   width: 300px;
@@ -133,33 +123,29 @@ main {
   border: 1px solid var(--border-color);
 }
 
-.list:not(:checked) ~ .carusel .name {
+.list-switcher:not(:checked) ~ .carusel .name {
   margin-bottom: 0;
 }
 
-.list:not(:checked) ~ .carusel p {
+.list-switcher:not(:checked) ~ .carusel p {
   margin: 1px;
 }
 
-.list:not(:checked) ~ .carusel .status {
+.list-switcher:not(:checked) ~ .carusel .status {
   margin-top: 15px;
 }
 
-.list:not(:checked) ~ .carusel h3 {
-  margin-left: 0;
-  padding-bottom: 20px;
-  padding-left: 10px;
-
+.list-switcher:not(:checked) ~ .carusel h3 {
   color: black;
   font-size: 24px;
   font-weight: normal;
 }
 
-.list:not(:checked) ~ .carusel .form {
+.list-switcher:not(:checked) ~ .carusel .form {
   text-align: left;
 }
 
-.list:checked ~ .carusel .carusel__item {
+.list-switcher:checked ~ .carusel .cat {
   position: absolute;
   top: 0;
   right: 0;
@@ -189,7 +175,7 @@ main {
   will-change: transform;
 }
 
-.list:not(:checked) ~ .carusel .cat .carusel__item {
+.list-switcher:not(:checked) ~ .carusel .carusel__item .cat {
   position: relative;
 
   display: block;
@@ -201,7 +187,7 @@ main {
   /*overflow: hidden;*/
 }
 
-.list:not(:checked) ~ .carusel .box {
+.list-switcher:not(:checked) ~ .carusel .box {
   position: relative;
 
   display: block;
@@ -211,7 +197,7 @@ main {
   height: 200px;
 }
 
-.list:not(:checked) ~ .carusel .carusel__img {
+.list-switcher:not(:checked) ~ .carusel .carusel__img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -224,15 +210,15 @@ main {
   vertical-align: middle;
 }
 
-.list:not(:checked) ~ .carusel .cat .description {
+.list-switcher:not(:checked) ~ .carusel .carusel__item .description {
   padding-left: 10px;
 }
 
-.list:not(:checked) ~ .carusel input {
+.list-switcher:not(:checked) ~ .carusel input {
   display: none;
 }
 
-.list:checked ~ .carusel input {
+.list-switcher:checked ~ .carusel input {
   position: relative;
   top: 400px;
   left: 100px;
@@ -241,7 +227,7 @@ main {
   display: inline-block;
 }
 
-.list:checked ~ .carusel {
+.list-switcher:checked ~ .carusel {
   position: relative;
 
   max-width: var(--max-with);
@@ -252,7 +238,7 @@ main {
   user-select: none;
 }
 
-.list:checked ~ .carusel .carusel__img {
+.list-switcher:checked ~ .carusel .carusel__img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -270,7 +256,7 @@ main {
   top: 400px;
 }
 */
-.list:checked ~ .carusel input:checked + div .carusel__item {
+.list-switcher:checked ~ .carusel input:checked + div .cat {
   left: calc(var(--max-with-neg) * 3.8 - 2px);
 
   z-index: 0;
@@ -282,12 +268,12 @@ main {
   opacity: 0.7;
 }
 
-.list:checked ~ .carusel .radio_butn:nth-last-of-type(1),
-.list:checked ~ .carusel .radio_butn:nth-last-of-type(2) {
+.list-switcher:checked ~ .carusel .radio_butn:nth-last-of-type(1),
+.list-switcher:checked ~ .carusel .radio_butn:nth-last-of-type(2) {
   display: none;
 }
 
-.list:checked ~ .carusel input:checked + div + input + div .carusel__item {
+.list-switcher:checked ~ .carusel input:checked + div + input + div .cat {
   left: calc(var(--max-with-neg) * 1.9 - 2px);
   z-index: 1;
 
@@ -298,7 +284,7 @@ main {
   opacity: 0.7;
 }
 
-.list:checked ~ .carusel input:checked + div + input + div + input + div .carusel__item {
+.list-switcher:checked ~ .carusel input:checked + div + input + div + input + div .cat {
   left: 0;
   z-index: 2;
 
@@ -309,7 +295,7 @@ main {
   opacity: 1;
 }
 
-.list:checked
+.list-switcher:checked
   ~ .carusel
   input:checked
   + div
@@ -319,7 +305,7 @@ main {
   + div
   + input
   + div
-  .carusel__item {
+  .cat {
   left: calc(var(--max-with) + 1px);
   z-index: 1;
 
@@ -338,7 +324,7 @@ main {
   display: block;
 }
 
-.list:checked
+.list-switcher:checked
   ~ .carusel
   input:checked
   + div
@@ -350,7 +336,7 @@ main {
   + div
   + input
   + div
-  .carusel__item {
+  .cat {
   left: calc(var(--max-with) * 2 + 1px);
 
   z-index: 0;
@@ -362,7 +348,7 @@ main {
   opacity: 0.7;
 }
 
-.list:checked
+.list-switcher:checked
   ~ .carusel
   input:checked
   + div
@@ -370,12 +356,12 @@ main {
   + div
   + input
   + div
-  .carusel__item:hover
+  .cat:hover
   .carusel__img {
   filter: brightness(0.6);
 }
 
-.list:checked
+.list-switcher:checked
   ~ .carusel
   input:checked
   + div
@@ -383,7 +369,7 @@ main {
   + div
   + input
   + div
-  .carusel__item:hover
+  .cat:hover
   .description {
   position: absolute;
   top: 50%;
@@ -397,7 +383,7 @@ main {
   color: white;
 }
 
-.list:checked
+.list-switcher:checked
   ~ .carusel
   input:checked
   + div
@@ -405,7 +391,7 @@ main {
   + div
   + input
   + div
-  .carusel__item:hover
+  .cat:hover
   .description
   .name {
   display: block;
@@ -413,7 +399,7 @@ main {
   font-size: 30px;
 }
 
-.list:checked
+.list-switcher:checked
   ~ .carusel
   input:checked
   + div
@@ -421,13 +407,13 @@ main {
   + div
   + input
   + div
-  .carusel__item:hover
+  .cat:hover
   .description
   .descriptionFull {
   display: none;
 }
 
-.list:checked
+.list-switcher:checked
   ~ .carusel
   input:checked
   + div
@@ -435,7 +421,7 @@ main {
   + div
   + input
   + div
-  .carusel__item:hover
+  .cat:hover
   .description
   .status {
   display: none;
@@ -447,7 +433,7 @@ main {
 
  */
 
-.list:checked
+.list-switcher:checked
   ~ .carusel
   input:checked
   + div
@@ -455,7 +441,7 @@ main {
   + div
   + input
   + div
-  .carusel__item:hover
+  .cat:hover
   .label-modal {
   display: block;
 }
@@ -500,7 +486,7 @@ main {
   text-align: center;
 }
 
-.list:checked
+.list-switcher:checked
   ~ .carusel
   input:checked
   + div
@@ -508,7 +494,7 @@ main {
   + div
   + input
   + div
-  .carusel__item:hover
+  .cat:hover
   .box
   .label-full {
   position: absolute;
@@ -520,7 +506,7 @@ main {
   height: 100%;
 }
 
-.list:checked ~ .carusel .carusel__arrow {
+.list-switcher:checked ~ .carusel .carusel__arrow {
   position: relative;
   z-index: 1;
 
