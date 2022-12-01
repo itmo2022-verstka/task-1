@@ -1,165 +1,390 @@
-
 body {
-    margin: 50px 0 0 0;
+  margin: 50px 0 0 0;
 }
 
 main {
-    padding-top: 20px;
-    text-align: center;
-    margin-bottom: 100px;
+  margin-bottom: 100px;
+  padding-top: 20px;
+
+  text-align: center;
 }
 
 header {
-    z-index: 999;
-    padding: 5px;
-    background-color: snow;
-    border-bottom: 1px lightgray solid;
-    font-size: 32px;
-    text-align: center;
-    font-family: "PT Sans Narrow", sans-serif;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+
+  padding: 5px;
+
+  border-bottom: 1px lightgray solid;
+
+  background-color: snow;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 32px;
+  text-align: center;
 }
 
 header .name {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 header .name:first-letter {
-    color: red;
+  color: red;
 }
 
 footer {
-    padding: 20px;
-    background-color: snow;
-    border-top: 1px lightgray solid;
-    font-family: "Arial", monospace;
-    font-size: 14px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  padding: 20px;
+
+  border-top: 1px lightgray solid;
+
+  background-color: snow;
+  font-family: 'Arial', monospace;
+  font-size: 14px;
 }
 
 footer .email-us {
-    color: dimgrey;
-}
-
-footer .left {
-    text-align: left;
+  color: dimgrey;
 }
 
 footer .right {
-    text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  white-space: nowrap;
+}
+
+footer .right-box {
+  position: relative;
+  float: right;
+
+  height: 90px;
+}
+
+footer .left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  white-space: nowrap;
+}
+
+footer .left .text {
+  margin-top: 10px;
+}
+
+footer .left-box {
+  position: relative;
+  float: left;
+
+  height: 90px;
 }
 
 footer .link {
-    color: #4c4cd8;
+  color: #4c4cd8;
+  line-height: 14px;
+  text-decoration: none;
+  vertical-align: text-bottom;
+}
+
+footer .icon::first-letter {
+  font-size: 25px;
+  line-height: 14px;
+  vertical-align: text-bottom;
 }
 
 .box {
-    text-align: left;
-    margin: 0 25px 25px 0;
-    font-family: "Arial", monospace;
-    color: dimgrey;
+  margin: 0 25px 25px 0;
+
+  color: dimgrey;
+  font-family: 'Arial', monospace;
+  text-align: left;
 }
 
 .box .description {
-    padding: 0 10px;
-    font-family: "Arial", monospace;
-    color: dimgrey;
+  padding: 0 10px;
+
+  color: dimgrey;
+  font-family: 'Arial', monospace;
 }
 
 .cat-images {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .hide-on-default {
-    display: none;
+  display: none;
 }
 
 .img-wrapper {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+
+  overflow: hidden;
 }
 
 .to-gallery {
-    position: fixed;
-    top: 60px;
-    padding-left: 20px;
-    font-size: 50px;
+  position: fixed;
+  top: 60px;
+
+  padding-left: 20px;
+
+  font-size: 50px;
 }
 
+input[type='radio'] {
+  position: relative;
+
+  padding-left: 12px;
+
+  appearance: none;
+}
+
+input[type='radio']:before {
+  position: absolute;
+
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+
+  background-color: lightgray;
+  content: '';
+}
+
+input[type='radio']:checked:before {
+  background-color: darkgrey;
+}
 
 #to-gallery-input:checked ~ main {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 #to-gallery-input:checked ~ main .box-container .box .view-in-blocks {
-    display: none;
+  display: none;
 }
 
 #to-gallery-input:checked ~ main .box-container {
-    margin-top: 100px;
-    white-space: nowrap;
+  margin-top: 100px;
+
+  white-space: nowrap;
 }
 
 #to-gallery-input:checked ~ main .box-container .box .img-wrapper {
-    width: 400px;
+  width: 400px;
 }
 
 #to-gallery-input:checked ~ main .slide1:checked ~ .box-container {
-    margin-left: 429px;
+  margin-left: 429px;
 }
 
 #to-gallery-input:checked ~ main .slide8:checked ~ .box-container {
-    margin-left: -429px;
+  margin-left: -429px;
 }
 
-#to-gallery-input:checked ~ main .slide1:checked ~ .box-container .box:nth-child(1):hover .img-wrapper .model,
-#to-gallery-input:checked ~ main .slide2:checked ~ .box-container .box:nth-child(2):hover .img-wrapper .model,
-#to-gallery-input:checked ~ main .slide3:checked ~ .box-container .box:nth-child(3):hover .img-wrapper .model,
-#to-gallery-input:checked ~ main .slide4:checked ~ .box-container .box:nth-child(4):hover .img-wrapper .model,
-#to-gallery-input:checked ~ main .slide5:checked ~ .box-container .box:nth-child(5):hover .img-wrapper .model,
-#to-gallery-input:checked ~ main .slide6:checked ~ .box-container .box:nth-child(6):hover .img-wrapper .model,
-#to-gallery-input:checked ~ main .slide7:checked ~ .box-container .box:nth-child(7):hover .img-wrapper .model,
-#to-gallery-input:checked ~ main .slide8:checked ~ .box-container .box:nth-child(8):hover .img-wrapper .model {
-    display: inline-block;
+#to-gallery-input:checked
+  ~ main
+  .slide1:checked
+  ~ .box-container
+  .box:nth-child(1):hover
+  .img-wrapper
+  .model,
+#to-gallery-input:checked
+  ~ main
+  .slide2:checked
+  ~ .box-container
+  .box:nth-child(2):hover
+  .img-wrapper
+  .model,
+#to-gallery-input:checked
+  ~ main
+  .slide3:checked
+  ~ .box-container
+  .box:nth-child(3):hover
+  .img-wrapper
+  .model,
+#to-gallery-input:checked
+  ~ main
+  .slide4:checked
+  ~ .box-container
+  .box:nth-child(4):hover
+  .img-wrapper
+  .model,
+#to-gallery-input:checked
+  ~ main
+  .slide5:checked
+  ~ .box-container
+  .box:nth-child(5):hover
+  .img-wrapper
+  .model,
+#to-gallery-input:checked
+  ~ main
+  .slide6:checked
+  ~ .box-container
+  .box:nth-child(6):hover
+  .img-wrapper
+  .model,
+#to-gallery-input:checked
+  ~ main
+  .slide7:checked
+  ~ .box-container
+  .box:nth-child(7):hover
+  .img-wrapper
+  .model,
+#to-gallery-input:checked
+  ~ main
+  .slide8:checked
+  ~ .box-container
+  .box:nth-child(8):hover
+  .img-wrapper
+  .model {
+  display: inline-block;
 }
 
-#to-gallery-input:checked ~ main .slide1:checked ~ .box-container .box:nth-child(1):hover .img-wrapper label .cat-images,
-#to-gallery-input:checked ~ main .slide2:checked ~ .box-container .box:nth-child(2):hover .img-wrapper label .cat-images,
-#to-gallery-input:checked ~ main .slide3:checked ~ .box-container .box:nth-child(3):hover .img-wrapper label .cat-images,
-#to-gallery-input:checked ~ main .slide4:checked ~ .box-container .box:nth-child(4):hover .img-wrapper label .cat-images,
-#to-gallery-input:checked ~ main .slide5:checked ~ .box-container .box:nth-child(5):hover .img-wrapper label .cat-images,
-#to-gallery-input:checked ~ main .slide6:checked ~ .box-container .box:nth-child(6):hover .img-wrapper label .cat-images,
-#to-gallery-input:checked ~ main .slide7:checked ~ .box-container .box:nth-child(7):hover .img-wrapper label .cat-images,
-#to-gallery-input:checked ~ main .slide8:checked ~ .box-container .box:nth-child(8):hover .img-wrapper label .cat-images {
-    filter: brightness(50%)
+#to-gallery-input:checked
+  ~ main
+  .slide1:checked
+  ~ .box-container
+  .box:nth-child(1):hover
+  .img-wrapper
+  label
+  .cat-images,
+#to-gallery-input:checked
+  ~ main
+  .slide2:checked
+  ~ .box-container
+  .box:nth-child(2):hover
+  .img-wrapper
+  label
+  .cat-images,
+#to-gallery-input:checked
+  ~ main
+  .slide3:checked
+  ~ .box-container
+  .box:nth-child(3):hover
+  .img-wrapper
+  label
+  .cat-images,
+#to-gallery-input:checked
+  ~ main
+  .slide4:checked
+  ~ .box-container
+  .box:nth-child(4):hover
+  .img-wrapper
+  label
+  .cat-images,
+#to-gallery-input:checked
+  ~ main
+  .slide5:checked
+  ~ .box-container
+  .box:nth-child(5):hover
+  .img-wrapper
+  label
+  .cat-images,
+#to-gallery-input:checked
+  ~ main
+  .slide6:checked
+  ~ .box-container
+  .box:nth-child(6):hover
+  .img-wrapper
+  label
+  .cat-images,
+#to-gallery-input:checked
+  ~ main
+  .slide7:checked
+  ~ .box-container
+  .box:nth-child(7):hover
+  .img-wrapper
+  label
+  .cat-images,
+#to-gallery-input:checked
+  ~ main
+  .slide8:checked
+  ~ .box-container
+  .box:nth-child(8):hover
+  .img-wrapper
+  label
+  .cat-images {
+  filter: brightness(50%);
 }
 
-#to-gallery-input:checked ~ main .slide1:checked ~ .box-container .box:nth-child(1):hover .img-wrapper .name,
-#to-gallery-input:checked ~ main .slide2:checked ~ .box-container .box:nth-child(2):hover .img-wrapper .name,
-#to-gallery-input:checked ~ main .slide3:checked ~ .box-container .box:nth-child(3):hover .img-wrapper .name,
-#to-gallery-input:checked ~ main .slide4:checked ~ .box-container .box:nth-child(4):hover .img-wrapper .name,
-#to-gallery-input:checked ~ main .slide5:checked ~ .box-container .box:nth-child(5):hover .img-wrapper .name,
-#to-gallery-input:checked ~ main .slide6:checked ~ .box-container .box:nth-child(6):hover .img-wrapper .name,
-#to-gallery-input:checked ~ main .slide7:checked ~ .box-container .box:nth-child(7):hover .img-wrapper .name,
-#to-gallery-input:checked ~ main .slide8:checked ~ .box-container .box:nth-child(8):hover .img-wrapper .name {
-    pointer-events: none;
-    display: inline;
-    color: snow;
-    z-index: 999;
-    font-size: 40px;
-    position: absolute;
-    margin-top: 25%;
-    text-align: center;
-    vertical-align: top;
-    right: 0;
-    left: 0;
+#to-gallery-input:checked
+  ~ main
+  .slide1:checked
+  ~ .box-container
+  .box:nth-child(1):hover
+  .img-wrapper
+  .name,
+#to-gallery-input:checked
+  ~ main
+  .slide2:checked
+  ~ .box-container
+  .box:nth-child(2):hover
+  .img-wrapper
+  .name,
+#to-gallery-input:checked
+  ~ main
+  .slide3:checked
+  ~ .box-container
+  .box:nth-child(3):hover
+  .img-wrapper
+  .name,
+#to-gallery-input:checked
+  ~ main
+  .slide4:checked
+  ~ .box-container
+  .box:nth-child(4):hover
+  .img-wrapper
+  .name,
+#to-gallery-input:checked
+  ~ main
+  .slide5:checked
+  ~ .box-container
+  .box:nth-child(5):hover
+  .img-wrapper
+  .name,
+#to-gallery-input:checked
+  ~ main
+  .slide6:checked
+  ~ .box-container
+  .box:nth-child(6):hover
+  .img-wrapper
+  .name,
+#to-gallery-input:checked
+  ~ main
+  .slide7:checked
+  ~ .box-container
+  .box:nth-child(7):hover
+  .img-wrapper
+  .name,
+#to-gallery-input:checked
+  ~ main
+  .slide8:checked
+  ~ .box-container
+  .box:nth-child(8):hover
+  .img-wrapper
+  .name {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 999;
+
+  display: inline;
+
+  margin-top: 25%;
+
+  color: snow;
+  font-size: 40px;
+  pointer-events: none;
+  text-align: center;
+  vertical-align: top;
 }
 
 #to-gallery-input:checked ~ main .slide1:checked ~ .box-container .box:nth-child(1) .img-wrapper,
@@ -170,7 +395,7 @@ footer .link {
 #to-gallery-input:checked ~ main .slide6:checked ~ .box-container .box:nth-child(6) .img-wrapper,
 #to-gallery-input:checked ~ main .slide7:checked ~ .box-container .box:nth-child(7) .img-wrapper,
 #to-gallery-input:checked ~ main .slide8:checked ~ .box-container .box:nth-child(8) .img-wrapper {
-    width: 600px;
+  width: 600px;
 }
 
 .slide1:checked ~ .box-container .box:nth-child(1),
@@ -196,7 +421,7 @@ footer .link {
 .slide6:checked ~ .box-container .box:nth-child(5),
 .slide7:checked ~ .box-container .box:nth-child(6),
 .slide8:checked ~ .box-container .box:nth-child(7) {
-    display: inline-block;
+  display: inline-block;
 }
 
 .slide1:checked ~ .box-container .box:nth-child(2) .img-wrapper .cat-images,
@@ -213,33 +438,38 @@ footer .link {
 .slide6:checked ~ .box-container .box:nth-child(5) .img-wrapper .cat-images,
 .slide7:checked ~ .box-container .box:nth-child(6) .img-wrapper .cat-images,
 .slide8:checked ~ .box-container .box:nth-child(7) .img-wrapper .cat-images {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 #to-gallery-input:not(:checked) ~ main .view-in-gallery {
-    display: none;
+  display: none;
 }
 
 #to-gallery-input:not(:checked) ~ main .box-container .box {
-    vertical-align: top;
-    border: 1px solid lightgray;
-    display: inline-block;
-    width: 250px;
-    height: 350px;
+  display: inline-block;
+
+  width: 250px;
+  height: 350px;
+
+  border: 1px solid lightgray;
+
+  vertical-align: top;
 }
 
 #to-gallery-input:not(:checked) ~ main .box-container .box .img-wrapper label .cat-images {
-    opacity: 1;
+  opacity: 1;
 }
 
 .model-boxes {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .open-modal1:checked ~ .model-box1,
@@ -250,62 +480,67 @@ footer .link {
 .open-modal6:checked ~ .model-box6,
 .open-modal7:checked ~ .model-box7,
 .open-modal8:checked ~ .model-box8 {
-    margin-top: 45px;
-    margin-bottom: 110px;
-    display: block;
-    text-align: center;
-    padding: 20px;
+  display: block;
+
+  margin-top: 45px;
+  margin-bottom: 110px;
+  padding: 20px;
+
+  text-align: center;
 }
 
-.open-modal1:checked ~ .model-box1 label,
-.open-modal2:checked ~ .model-box2 label,
-.open-modal3:checked ~ .model-box3 label,
-.open-modal4:checked ~ .model-box4 label,
-.open-modal5:checked ~ .model-box5 label,
-.open-modal6:checked ~ .model-box6 label,
-.open-modal7:checked ~ .model-box7 label,
-.open-modal8:checked ~ .model-box8 label {
-    position: absolute;
-    font-size: 60px;
-    color: snow;
-    display: inline-block;
-    right: 20px;
-    top: 0;
+.open-modal1:checked ~ .model-box1 .model-labels,
+.open-modal2:checked ~ .model-box2 .model-labels,
+.open-modal3:checked ~ .model-box3 .model-labels,
+.open-modal4:checked ~ .model-box4 .model-labels,
+.open-modal5:checked ~ .model-box5 .model-labels,
+.open-modal6:checked ~ .model-box6 .model-labels,
+.open-modal7:checked ~ .model-box7 .model-labels,
+.open-modal8:checked ~ .model-box8 .model-labels {
+  position: absolute;
+  top: 0;
+  right: -120px;
+
+  display: inline-block;
+
+  color: snow;
+  font-size: 60px;
 }
 
 .card {
-    margin: auto;
-    white-space: nowrap;
-    height: 600px;
-    width: 900px;
-    align-content: center;
-    text-align: center;
-    color: snow;
+  position: relative;
+
+  align-content: center;
+
+  width: 900px;
+  height: 600px;
+  margin: auto;
+
+  color: snow;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .card .img-wrapper {
-    vertical-align: middle;
-    display: inline-block;
-    width: 800px;
-    margin-right: 100px;
-    height: auto;
+  display: inline-block;
+
+  width: 800px;
+  height: auto;
+  margin-right: 80px;
+
+  vertical-align: middle;
 }
 
 .card .text-block {
-    width: 180px;
-    white-space: normal;
-    vertical-align: middle;
-    text-align: left;
-    display: inline-block;
+  display: inline-block;
+
+  width: 180px;
+
+  text-align: left;
+  vertical-align: middle;
+  white-space: normal;
 }
 
 .card .description {
-    padding: 10px 0;
+  padding: 10px 0;
 }
-
-
-
-
-
-
-
