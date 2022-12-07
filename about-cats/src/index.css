@@ -27,16 +27,21 @@ header p {
   margin: 0;
 }
 
+header p::first-letter {
+  color: red;
+}
+
+
 /* ====================== КНОПКА =============================*/
 
-label img {
+#change_layout_img {
   margin: 60px 0 0 3%;
   width: 5%;
   aspect-ratio: 1/1;
   object-fit: contain;
 }
 
-label img:hover {
+#change_layout_img:hover {
   cursor: pointer;
 }
 
@@ -58,11 +63,14 @@ input[type="checkbox"] {
 
 #gallery {
   width: 100%;
+  aspect-ratio: 4/3;
   padding: 0 2.5% 2.5%;
   z-index: 1;
+  margin-bottom: 200px;
 }
 
 .post {
+  position: relative;
   border: 1px double #ddd;
   aspect-ratio: 3/4;
   width: 23%;
@@ -96,7 +104,16 @@ input[type="checkbox"] {
   font-size: 2vmax;
 }
 
+.status {
+  display: block;
+  margin-top: 20px;
+}
+
 @media only screen and (max-width: 900px) {
+  #gallery {
+    aspect-ratio: 1/1;
+  }
+
   .post {
     width: 28.33333%;
     margin: 2.5%;
@@ -112,6 +129,10 @@ input[type="checkbox"] {
 }
 
 @media only screen and (max-width: 700px) {
+  #gallery {
+    aspect-ratio: 1/2.2;
+  }
+
   .post {
     width: 45%;
     margin: 2.5%;
@@ -403,19 +424,13 @@ input[type="radio"] {
   background: #ff8b44;
 }
 
-/* ====================== CLEARFIX =============================*/
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* ====================== НОГИ =============================*/
 
 
 footer {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  background-color: white;
   bottom: 0;
   color: #888;
   padding: 20px;
@@ -439,7 +454,12 @@ footer .left {
   left: 0;
   bottom: 0;
 
+  text-align: start;
   color: #000;
+}
+
+footer .left p {
+  vertical-align: text-top;
 }
 
 footer .right {
@@ -451,11 +471,9 @@ footer .right {
   color: #000;
 }
 
-footer img {
+footer .left img {
+  float: left;
+  position: relative;
   height: 18px;
   margin-right: 5px;
-}
-
-.red {
-  color: red;
 }
