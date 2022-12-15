@@ -1,1 +1,340 @@
-/* TODO */
+.header {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 32px;
+
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: lightgray solid 1px;
+  text-align: center;
+}
+
+.header::first-letter {
+  color: red;
+}
+
+.footer {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+
+  position: fixed;
+  z-index: 400;
+  left: 0;
+  bottom: 0;
+  border-top: lightgray solid 1px;
+  width: 100%;
+  background-color: white;
+}
+
+.wrapper {
+  position: fixed;
+  width: 100%;
+  height: 60%;
+  margin: 0;
+  padding: 0;
+  transition: all 1s ease-out;
+  text-align: left;
+  white-space: nowrap;
+  top: 150px;
+}
+
+.wrapper .container {
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.wrapper .wrapper-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  filter: brightness(100%);
+  transition: all 700ms ease-in-out;
+}
+
+.cat-name {
+  display: none;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+
+  font-size: 46px;
+  color: lightgoldenrodyellow;
+}
+
+.description-image {
+  float: left;
+
+  margin: 5% 5% 0 10%;
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+}
+
+.description-text {
+  width: 90%;
+  margin: 5% 5% 0 0;
+  padding: 0 30px;
+  text-align: left;
+  vertical-align: top;
+  color: lightgoldenrodyellow;
+  font-size: x-large;
+}
+
+.description-cat-name {
+  text-align: center;
+  font-size: xxx-large;
+}
+
+.radio-1:checked ~ .wrapper {
+  left: 24%;
+}
+.radio-2:checked ~ .wrapper {
+  left: -24%;
+}
+.radio-3:checked ~ .wrapper {
+  left: -74%;
+}
+.radio-4:checked ~ .wrapper {
+  left: -123%;
+}
+.radio-5:checked ~ .wrapper {
+  left: -173%;
+}
+
+.button-1, .button-2, .button-3, .button-4, .button-5 {
+  display: inline-block;
+  overflow: hidden;
+
+  margin: -0.5%;
+  transform: scale(0.8);
+  width: 50%;
+  transition: all 1s ease-in-out;
+  background-position: center center;
+  background-size: cover;
+}
+
+.radio-1:checked ~ .wrapper .button-1,
+.radio-2:checked ~ .wrapper .button-2,
+.radio-3:checked ~ .wrapper .button-3,
+.radio-4:checked ~ .wrapper .button-4,
+.radio-5:checked ~ .wrapper .button-5 {
+  transform: scale(1);
+}
+
+.radio-1:checked ~ .wrapper .button-1 .wrapper-image,
+.radio-2:checked ~ .wrapper .button-2 .wrapper-image,
+.radio-3:checked ~ .wrapper .button-3 .wrapper-image,
+.radio-4:checked ~ .wrapper .button-4 .wrapper-image,
+.radio-5:checked ~ .wrapper .button-5 .wrapper-image {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.radio-1:checked ~ .wrapper .button-1:hover .cat-name,
+.radio-2:checked ~ .wrapper .button-2:hover .cat-name,
+.radio-3:checked ~ .wrapper .button-3:hover .cat-name,
+.radio-4:checked ~ .wrapper .button-4:hover .cat-name,
+.radio-5:checked ~ .wrapper .button-5:hover .cat-name {
+  display: block;
+}
+
+.radio-1:checked ~ .wrapper .button-1:hover .wrapper-image,
+.radio-2:checked ~ .wrapper .button-2:hover .wrapper-image,
+.radio-3:checked ~ .wrapper .button-3:hover .wrapper-image,
+.radio-4:checked ~ .wrapper .button-4:hover .wrapper-image,
+.radio-5:checked ~ .wrapper .button-5:hover .wrapper-image {
+  filter: brightness(50%);
+}
+
+.switcher {
+  display: none;
+}
+
+.wrapper .checkbox-label,
+.wrapper .radio-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.radio-1:checked ~ .wrapper .radio-label-1,
+.radio-2:checked ~ .wrapper .radio-label-2,
+.radio-3:checked ~ .wrapper .radio-label-3,
+.radio-4:checked ~ .wrapper .radio-label-4,
+.radio-5:checked ~ .wrapper .radio-label-5 {
+  z-index: 90;
+}
+
+.wrapper .radio-label {
+  z-index: 100;
+}
+
+.wrapper .checkbox-label {
+  z-index: 95;
+}
+
+.footer .contacts {
+  margin-left: 8px;
+}
+
+.footer .contacts .mail::before {
+  content: '';
+  display: inline-block;
+  background-size: cover;
+  background-image: url(images/mail.png);
+  width: 16px;
+  height: 10px;
+}
+
+.footer .contacts .mail,
+.footer .copyright .copyright-link {
+  color: #4c4cd8;
+}
+
+.choice {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+}
+
+.radio-label {
+  position: absolute;
+  display: inline-block;
+
+  bottom: 0;
+}
+
+.description-cards {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  backdrop-filter: brightness(10%);
+  display: none;
+  z-index: 1000;
+}
+
+.card-1,
+.card-2,
+.card-3,
+.card-4,
+.card-5 {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: 95%;
+  padding: 0;
+  border: 0;
+  backdrop-filter: brightness(5%);
+  display: none;
+  z-index: 1000;
+  opacity: 0;
+}
+
+.description-check {
+  position: absolute;
+  top: 5%;
+  left: 95%;
+  display: block;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+  border-radius: 100%;
+  background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%);
+}
+.checkbox-1:checked ~ .card-1,
+.checkbox-2:checked ~ .card-2,
+.checkbox-3:checked ~ .card-3,
+.checkbox-4:checked ~ .card-4,
+.checkbox-5:checked ~ .card-5 {
+  display: inline;
+}
+
+.control-group {
+  position: fixed;
+  left: 40%;
+  top: 80%;
+
+  width: 20%;
+  height: 20%;
+}
+
+.change-control-1,
+.change-control-2,
+.change-control-3,
+.change-control-4,
+.change-control-5 {
+  position: relative;
+  display: inline-block;
+
+  margin: 15px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid black;
+  background-color: lightgray;
+  border-radius: 50%;
+  z-index: 5;
+  cursor: pointer;
+  aspect-ratio: 1/1;
+  transform: scale(0.85);
+}
+
+.change-control-1:hover,
+.change-control-2:hover,
+.change-control-3:hover,
+.change-control-4:hover,
+.change-control-5:hover {
+  background-color: gray;
+}
+
+.radio-1:checked ~ .wrapper .control-group .change-control-1 {
+  transform: scale(1);
+  filter: brightness(60%);
+}
+
+.radio-2:checked ~ .wrapper .control-group .change-control-2 {
+  transform: scale(1);
+  filter: brightness(60%);
+}
+
+.radio-3:checked ~ .wrapper .control-group .change-control-3 {
+  transform: scale(1);
+  filter: brightness(60%);
+}
+
+.radio-4:checked ~ .wrapper .control-group .change-control-4 {
+  transform: scale(1);
+  filter: brightness(60%);
+}
+
+.radio-5:checked ~ .wrapper .control-group .change-control-5 {
+  transform: scale(1);
+  filter: brightness(60%);
+}
+
+.copyright {
+  position: fixed;
+  z-index: 600;
+
+  right: 0;
+  bottom: 0;
+  margin-right: 8px;
+  margin-bottom: 12px;
+}
