@@ -5,11 +5,11 @@
     <title>01-about-cats</title>
     <link rel="stylesheet" href="./index.css">
   </head>
-  <body>
-    <header>
+  <body class="common">
+    <header class="header-block">
       <div class="caption">Mурмаркет</div>
     </header>
-    <main>
+    <main class="market-block">
       <div class="cats-block">
         <label for="mode-choose">
           <img src="img/nav/gallery.png" alt="">
@@ -33,28 +33,13 @@
           </div>
 
           <div class="cat">
-            <img class="photo" src="img/cats/bora-bora-cat.png" alt="Бора-бора">
+            <img class="photo" src="img/cats/borodach-cat.png" alt="Бородач">
             <article class="cat-resume">
               <h3>Бора-бора</h3>
               <p>
-                Возраст: около 6 месяцев <br>
-                Порода: нет <br>
-                Болезни: нет
-              </p>
-              <p>
-                Статус: ищет хозяина
-              </p>
-            </article>
-          </div>
-
-          <div class="cat">
-            <img class="photo" src="img/cats/bora-bora-cat.png" alt="Бора-бора">
-            <article class="cat-resume">
-              <h3>Бора-бора</h3>
-              <p>
-                Возраст: около 6 месяцев <br>
-                Порода: нет <br>
-                Болезни: нет
+                Самый крутой кот на свете! <br>
+                Хороший мальчик. <br>
+                Очень хороший!
               </p>
               <p>
                 Статус: ищет хозяина
@@ -64,51 +49,6 @@
 
           <div class="cat">
             <img class="photo" src="img/cats/leo-cat.png" alt="Лео">
-            <article class="cat-resume">
-              <h3>Лео</h3>
-              <p>
-                Ещё один кот. <br>
-                Любит, когда гладят. <br>
-                (А кто не любит)
-              </p>
-              <p>
-                Статус: ищет хозяина
-              </p>
-            </article>
-          </div>
-
-          <div class="cat">
-            <img class="photo" src="img/cats/bora-bora-cat.png" alt="Бора-бора">
-            <article class="cat-resume">
-              <h3>Бора-бора</h3>
-              <p>
-                Возраст: около 6 месяцев <br>
-                Порода: нет <br>
-                Болезни: нет
-              </p>
-              <p>
-                Статус: ищет хозяина
-              </p>
-            </article>
-          </div>
-
-          <div class="cat">
-            <img class="photo" src="img/cats/bora-bora-cat.png" alt="Бора-бора">
-            <article class="cat-resume">
-              <h3>Лео</h3>
-              <p>
-                Ещё один кот. <br>
-                Любит, когда гладят. <br>
-                (А кто не любит)
-              </p>
-              <p>
-                Статус: ищет хозяина
-              </p>
-            </article>
-          </div>
-
-          <div class="cat">
-            <img class="photo" src="img/cats/bora-bora-cat.png" alt="Бора-бора">
             <article class="cat-resume">
               <h3>Лео</h3>
               <p>
@@ -204,32 +144,36 @@
                   </label>
                 </nav>
 
-                <article class="text-block for-window-cat-1">
-                  <h4>Бора-бора</h4>
-                  <p>
-                    Возраст: около 6 месяцев <br>
-                    Порода: нет <br>
-                    Болезни: нет
-                  </p>
-                </article>
+                <div class="content-block">
+                  <article class="text-block for-window-cat-1">
+                    <h4>Бора-бора</h4>
+                    <p>
+                      Возраст: около 6 месяцев <br>
+                      Порода: нет <br>
+                      Болезни: нет
+                    </p>
+                  </article>
 
-                <article class="text-block for-window-cat-2">
-                  <h4>Бородач</h4>
-                  <p>
-                    Самый крутой кот на свете! <br>
-                    Хороший мальчик. <br>
-                    Очень хороший!
-                  </p>
-                </article>
+                  <article class="text-block for-window-cat-2">
+                    <h4>Бородач</h4>
+                    <p>
+                      Самый крутой кот на свете! <br>
+                      Хороший мальчик. <br>
+                      Очень хороший!
+                    </p>
+                  </article>
 
-                <article class="text-block for-window-cat-3">
-                  <h4>Лео</h4>
-                  <p>
-                    Ещё один кот. <br>
-                    Любит, когда гладят. <br>
-                    (А кто не любит)
-                  </p>
-                </article>
+                  <article class="text-block for-window-cat-3">
+                    <h4>Лео</h4>
+                    <p>
+                      Ещё один кот. <br>
+                      Любит, когда гладят. <br>
+                      (А кто не любит)
+                    </p>
+                  </article>
+                </div>
+
+
               </div>
             </div>
           </div>
@@ -237,12 +181,12 @@
 
       </div>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="footer-content">
         <div class="contacts">
-          <p>Напишите нам: <br>
-          <a class="mail-contact" href="#">cats@babuli.ru</a> <br>
-          <a class="mail-contact" href="#">vnuchek@babuli.ru</a></p>
+          <div>Напишите нам: </div>
+          <a href="mailto:some@mail.ru" class="mail-contact">cats@babuli.ru</a>
+          <a href="mailto:some@mail.ru" class="mail-contact">vnuchek@babuli.ru</a>
         </div>
         <div class="reference">
           <p> &copy; 2018 OOO «<a href="#">Бабушкины Котятки</a>» </p>

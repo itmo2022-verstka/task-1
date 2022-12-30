@@ -5,11 +5,11 @@
   font-size: 16px;
 }
 
-body {
+.common {
   margin: 0;
 }
 
-header {
+.header-block {
   z-index: 1000;
   position: fixed;
   top: 0;
@@ -23,15 +23,15 @@ header {
   display: flex;
 }
 
-header .caption {
+.header-block .caption {
   margin: auto;
 }
 
-header .caption:first-letter {
+.header-block .caption:first-letter {
   color: red;
 }
 
-main {
+.market-block {
   margin-top: 4rem;
   margin-bottom: 5.25rem;
   padding: 1rem;
@@ -187,12 +187,38 @@ main {
   justify-content: space-between;
 }
 
-.window-cat .nav-block {
+.window-cat .picture-block {
+  flex-grow: 0
+}
+
+.window-cat .picture-block .photo {
+  height: 25rem;
+  width: auto;
+}
+
+.window-cat .info-block {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-cat .info-block .nav-block {
   display: flex;
   justify-content: flex-end;
 }
 
-.window-cat .text-block {
+.window-cat .info-block .content-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 80%;
+  height: 100%;
+}
+
+.window-cat .info-block .content-block .text-block {
   margin: 0.25rem;
   color: white;
 }
@@ -203,8 +229,7 @@ main {
   display: none;
 }
 
-
-footer {
+.footer {
   z-index: 1000;
   background-color: white;
   border-top: var(--standart-border);
@@ -224,22 +249,26 @@ footer {
   justify-content: space-between;
 }
 
-footer a:link {
+.footer a:link {
   text-decoration: none;
   color: #4c4cd8;
 }
 
-footer .contacts {
+.footer .contacts {
   display: flex;
   flex-direction: column;
 }
 
-footer .reference {
+.footer .reference {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-footer .mail-contact::before {
-  content: url("img/mail.png");
+.footer .mail-contact {
+  background-image: url("img/mail.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+
+  padding-left: calc(18px + 0.25rem); /* Or size of icon + spacing */
 }
