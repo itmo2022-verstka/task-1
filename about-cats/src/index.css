@@ -215,51 +215,51 @@ label[for='view'] {
 }
 
 #slide1:checked ~ .slides {
-  transform: translateX(550px);
+  transform: translateX(30vw);
 }
 
 #slide2:checked ~ .slides {
-  transform: translateX(300px);
+  transform: translateX(calc(30vw - 300px));
 }
 
 #slide3:checked ~ .slides {
-  transform: translateX(0px);
+  transform: translateX(calc(30vw - 650px));
 }
 
 #slide4:checked ~ .slides {
-  transform: translateX(-300px);
+  transform: translateX(calc(30vw - 1000px));
 }
 
 #slide5:checked ~ .slides {
-  transform: translateX(-600px);
+  transform: translateX(calc(30vw - 1400px));
 }
 
 #slide6:checked ~ .slides {
-  transform: translateX(-900px);
+  transform: translateX(calc(30vw - 1800px));
 }
 
 #slide7:checked ~ .slides {
-  transform: translateX(-1300px);
+  transform: translateX(calc(30vw - 2200px));
 }
 
 #slide8:checked ~ .slides {
-  transform: translateX(-1700px);
+  transform: translateX(calc(30vw - 2500px));
 }
 
 #slide9:checked ~ .slides {
-  transform: translateX(-2100px);
+  transform: translateX(calc(30vw - 2900px));
 }
 
 #slide10:checked ~ .slides {
-  transform: translateX(-2400px);
+  transform: translateX(calc(30vw - 3200px));
 }
 
 #slide11:checked ~ .slides {
-  transform: translateX(-2800px);
+  transform: translateX(calc(30vw - 3500px));
 }
 
 #slide12:checked ~ .slides {
-  transform: translateX(-3300px);
+  transform: translateX(calc(30vw - 3800px));
 }
 
 #slide1:checked ~ .slides #slide_1 img,
