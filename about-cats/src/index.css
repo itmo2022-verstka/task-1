@@ -29,9 +29,7 @@ body {
 .content {
   overflow: hidden;
 
-  min-height: 1000px;
-
-  margin: 0 20px;
+  margin-bottom: 100px;
 }
 
 .img-container img {
@@ -57,14 +55,14 @@ body {
 }
 
 .content .menu img {
-  margin: 10px 0;
+  margin: 10px 20px;
 }
 
-ul {
+.cat-passports {
   padding: 0;
 }
 
-li {
+.cat-passport {
   display: inline-block;
 
   text-align: left;
@@ -76,6 +74,8 @@ li {
 
 .cat-list {
   display: block;
+
+  margin: 0 20px;
 }
 
 .to-list {
@@ -86,7 +86,7 @@ li {
   display: block;
 }
 
-.cat-passports li {
+.cat-passports .cat-passport {
   float: left;
 
   overflow: hidden;
@@ -103,38 +103,38 @@ li {
   aspect-ratio: 7/8;
 }
 
-.cat-passports li:nth-child(4n + 4) {
+.cat-passport:nth-child(4n + 4) {
   margin-right: 0;
 }
 
 @media screen and (max-width: 1360px) {
-  .cat-passports li {
+  .cat-passports .cat-passport {
     width: 31.8%;
     margin-right: 2%;
   }
-  .cat-passports li:nth-child(4n + 4) {
+  .cat-passports .cat-passport:nth-child(4n + 4) {
     margin-right: 2%;
   }
-  .cat-passports li:nth-child(3n + 3) {
+  .cat-passports .cat-passport:nth-child(3n + 3) {
     margin-right: 0;
   }
 }
 
 @media screen and (max-width: 1050px) {
-  .cat-passports li {
+  .cat-passports .cat-passport {
     width: 48.5%;
     margin-right: 2%;
   }
-  .cat-passports li:nth-child(3n + 3) {
+  .cat-passports .cat-passport:nth-child(3n + 3) {
     margin-right: 2%;
   }
-  .cat-passports li:nth-child(2n + 2) {
+  .cat-passports .cat-passport:nth-child(2n + 2) {
     margin-right: 0;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .cat-passports li {
+  .cat-passports .cat-passport {
     width: 99.2%;
   }
 }
@@ -154,17 +154,17 @@ li {
   font-family: sans-serif;
 }
 
-.cat-passport .info h2 {
+.cat-passport .info .cat-name {
   margin: 16px 0;
 }
 
-.footer p {
+.footer .footer-row {
   display: block;
 
   margin: 5px 0;
 }
 
-.mid-content p {
+.mid-content .name {
   position: absolute;
   top: 0;
   right: 0;
@@ -185,12 +185,12 @@ li {
   text-align: center;
 }
 
-.cat-passport .info p {
+.cat-passport .info .cat-description {
   color: gray;
 }
 
 .footer {
-  position: relative;
+  position: fixed;
   bottom: 0;
 
   width: 100%;
@@ -199,6 +199,8 @@ li {
   border-width: 1px 0;
   border-style: solid;
   border-color: darkgrey;
+
+  background: white;
 
   font-family: Arial, sans-serif;
   font-size: 14px;
@@ -212,7 +214,7 @@ li {
   margin: 10px 20px;
 }
 
-.footer-text-left a {
+.footer-text-left .footer-link {
   display: block;
 
   margin: 5px 0;
@@ -231,7 +233,7 @@ li {
   margin: 10px 20px;
 }
 
-.footer-text-right a {
+.footer-text-right .footer-link {
   color: #4c4cd8;
 }
 
@@ -240,8 +242,7 @@ li {
 
   display: none;
 
-  width: 95%;
-  margin: 0 20px;
+  width: 100%;
 
   aspect-ratio: 4/1;
 }
@@ -262,14 +263,14 @@ li {
   display: inline-block;
 
   width: 36%;
-  margin: auto 4% auto 0;
+  margin: 0 2% 0 0;
 
   aspect-ratio: 3/2;
 
   background: #000;
 }
 
-.mid-content:hover p {
+.mid-content:hover .name {
   display: block;
 }
 
@@ -288,7 +289,7 @@ li {
 }
 
 .arrow-prev {
-  margin-right: 4%;
+  margin: 0 2%;
 }
 
 .show-item {
@@ -390,4 +391,12 @@ li {
 
 .to-show-item-5:target .item-5 .show-item {
   display: block;
+}
+
+.to-item-1:target .content,
+.to-item-2:target .content,
+.to-item-3:target .content,
+.to-item-4:target .content,
+.to-item-5:target .content {
+  margin: 0;
 }
