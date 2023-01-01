@@ -1,1 +1,456 @@
-/* TODO */
+* {
+  margin: 0;
+  font-family: "helvetica", "Urbanist", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --postcardImgHeight: 300px;
+  --border_color: #8F8F8F
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  padding: 10px 0 10px 0;
+  font-size: 32px;
+  font-family: PT SansNarrow, serif;
+  text-align: center;
+  border-bottom: var(--border_color) 3px solid;
+}
+
+
+.header:first-letter {
+  color: red;
+}
+
+.view {
+  display: none;
+  order: 2;
+  margin: 0;
+}
+
+label[for='view'] {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  transition: 0.2s;
+  cursor: pointer;
+  font-size: 32px;
+}
+
+
+.view:checked + label {
+  transform: rotate(90deg);
+}
+
+.content {
+  height: calc(100vh - 160px);
+  max-width: 100%;
+  margin-left: 40px;
+  overflow-y: scroll;
+}
+
+.content .gallery {
+  padding: 0;
+}
+
+.postcard {
+  display: inline-block;
+  width: 45%;
+  max-width: 350px;
+  height: 400px;
+
+  margin: 20px;
+  border: var(--border_color) 2px solid;
+}
+
+.postcard .img-wrapper {
+  position: relative;
+  height: var(--postcardImgHeight);
+  width: 100%;
+  justify-content: center;
+
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  height: 100%;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  margin: auto;
+  border-radius: 10px;
+  font-size: 30px;
+  line-height: var(--postcardImgHeight);
+  vertical-align: middle;
+  text-align: center;
+  z-index: 2;
+}
+
+.postcard .img-wrapper:hover .overlay {
+  opacity: 1;
+}
+
+.postcard:hover {
+  box-shadow: 3px 3px lightgray, 3px -3px 3px lightgray;
+}
+
+.content img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+
+.description-wrapper {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.description-wrapper .name {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.description-wrapper .description {
+  font-size: 15px;
+}
+
+
+#view:not(:checked) ~ #slider {
+  display: none;
+}
+
+#view:checked ~ #gallery {
+  display: none;
+}
+
+
+#slider {
+  position: fixed;
+  width: 90%;
+  height: 60%;
+
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 7%;
+}
+
+
+#slider .slide {
+  width: 45%;
+  max-width: 350px;
+  position: relative;
+  height: var(--postcardImgHeight);
+  justify-content: center;
+  display: inline-block;
+}
+
+
+.slide {
+  border-radius: 10px;
+}
+
+.slide img {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  object-position: top;
+  border-radius: 10px;
+  opacity: 0.3;
+  object-fit: cover;
+}
+
+
+.imgs_slides {
+  width: 1500%;
+}
+
+.imgs_slides input {
+  display: none;
+}
+
+
+.navigation {
+  position: absolute;
+  width: 70%;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.navigation-btn {
+  border: 2px solid #8F8F8F;
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  aspect-ratio: 1 / 1;
+  margin: 3.33333%;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigation-btn:not(:last-child) {
+  margin-right: 15px;
+}
+
+.navigation-btn:hover {
+  background: #8F8F8F;
+}
+
+
+.slides {
+  transition: 1s;
+}
+
+#slide1:checked ~ .slides {
+  transform: translateX(550px);
+}
+
+#slide2:checked ~ .slides {
+  transform: translateX(300px);
+}
+
+#slide3:checked ~ .slides {
+  transform: translateX(0px);
+}
+
+#slide4:checked ~ .slides {
+  transform: translateX(-300px);
+}
+
+#slide5:checked ~ .slides {
+  transform: translateX(-600px);
+}
+
+#slide6:checked ~ .slides {
+  transform: translateX(-900px);
+}
+
+#slide7:checked ~ .slides {
+  transform: translateX(-1300px);
+}
+
+#slide8:checked ~ .slides {
+  transform: translateX(-1700px);
+}
+
+#slide9:checked ~ .slides {
+  transform: translateX(-2100px);
+}
+
+#slide10:checked ~ .slides {
+  transform: translateX(-2400px);
+}
+
+#slide11:checked ~ .slides {
+  transform: translateX(-2800px);
+}
+
+#slide12:checked ~ .slides {
+  transform: translateX(-3300px);
+}
+
+#slide1:checked ~ .slides #slide_1 img,
+#slide2:checked ~ .slides #slide_2 img,
+#slide3:checked ~ .slides #slide_3 img,
+#slide4:checked ~ .slides #slide_4 img,
+#slide5:checked ~ .slides #slide_5 img,
+#slide6:checked ~ .slides #slide_6 img,
+#slide7:checked ~ .slides #slide_7 img,
+#slide8:checked ~ .slides #slide_8 img,
+#slide9:checked ~ .slides #slide_9 img,
+#slide10:checked ~ .slides #slide_10 img,
+#slide11:checked ~ .slides #slide_11 img,
+#slide12:checked ~ .slides #slide_12 img {
+  opacity: 1;
+}
+
+#slide1:checked ~ .slides #slide_1:hover .overlay,
+#slide2:checked ~ .slides #slide_2:hover .overlay,
+#slide3:checked ~ .slides #slide_3:hover .overlay,
+#slide4:checked ~ .slides #slide_4:hover .overlay,
+#slide5:checked ~ .slides #slide_5:hover .overlay,
+#slide6:checked ~ .slides #slide_6:hover .overlay,
+#slide7:checked ~ .slides #slide_7:hover .overlay,
+#slide8:checked ~ .slides #slide_8:hover .overlay,
+#slide9:checked ~ .slides #slide_9:hover .overlay,
+#slide10:checked ~ .slides #slide_10:hover .overlay,
+#slide11:checked ~ .slides #slide_11:hover .overlay,
+#slide12:checked ~ .slides #slide_12:hover .overlay {
+  opacity: 1;
+}
+
+#slide1:checked ~ .slides #slide_1:hover img,
+#slide2:checked ~ .slides #slide_2:hover img,
+#slide3:checked ~ .slides #slide_3:hover img,
+#slide4:checked ~ .slides #slide_4:hover img,
+#slide5:checked ~ .slides #slide_5:hover img,
+#slide6:checked ~ .slides #slide_6:hover img,
+#slide7:checked ~ .slides #slide_7:hover img,
+#slide8:checked ~ .slides #slide_8:hover img,
+#slide9:checked ~ .slides #slide_9:hover img,
+#slide10:checked ~ .slides #slide_10:hover img,
+#slide11:checked ~ .slides #slide_11:hover img,
+#slide12:checked ~ .slides #slide_12:hover img {
+  opacity: 0.1;
+}
+
+#slide1:checked ~ .slides #slide_1 a img,
+#slide2:checked ~ .slides #slide_2 a img,
+#slide3:checked ~ .slides #slide_3 a img,
+#slide4:checked ~ .slides #slide_4 a img,
+#slide5:checked ~ .slides #slide_5 a img,
+#slide6:checked ~ .slides #slide_6 a img,
+#slide7:checked ~ .slides #slide_7 a img,
+#slide8:checked ~ .slides #slide_8 a img,
+#slide9:checked ~ .slides #slide_9 a img,
+#slide10:checked ~ .slides #slide_10 a img,
+#slide11:checked ~ .slides #slide_11 a img,
+#slide12:checked ~ .slides #slide_12 a img {
+  z-index: 5;
+}
+
+.slide .btn-modal img {
+  z-index: 0;
+
+}
+
+.modal:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.modal:target:before {
+  display: block;
+}
+
+.modal-body {
+  display: inline-block;
+  height: 100%;
+}
+
+.modal-body img {
+  position: absolute;
+  width: 60%;
+
+  height: 100%;
+  left: 0;
+}
+
+.modal-body .description {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 0;
+  width: 38%;
+  height: 100%;
+}
+
+.modal-dialog {
+  color: white;
+  border-radius: 5px;
+  margin-left: -180px;
+  position: fixed;
+  left: 35%;
+  top: -100%;
+  z-index: 11;
+  width: 900px;
+  height: 500px;
+  -webkit-transform: translate(0, -500%);
+  -ms-transform: translate(0, -500%);
+  transform: translate(0, -500%);
+  -webkit-transition: -webkit-transform .5s ease-out;
+  -moz-transition: -moz-transform .5s ease-out;
+  -o-transition: -o-transform .5s ease-out;
+  transition: transform .5s ease-out
+}
+
+.modal-dialog p {
+  padding-bottom: 7px;
+}
+
+.modal:target .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  top: 25%
+}
+
+.btn-close {
+  color: #aaa;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  z-index: 12;
+}
+
+.btn-close:hover {
+  color: white;
+}
+
+#close {
+  display: none;
+}
+
+
+.footer {
+  font-family: Arial, serif;
+  border-top: var(--border_color) 3px solid;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.footer a {
+  color: #4c4cd8;
+}
+
+.footer a:visited {
+  color: #4c4cd8;
+}
+
+
+.contacts {
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+}
+
+.contact {
+  list-style-type: none;
+}
+
+.contacts-ul {
+  padding-left: 0;
+}
+
+.copyright {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+}
+
+
+
