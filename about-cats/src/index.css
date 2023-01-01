@@ -6,6 +6,8 @@ body {
   position: fixed;
 
   width: 100%;
+
+  background: white;
 }
 
 .has-border {
@@ -30,6 +32,8 @@ body {
   overflow: hidden;
 
   margin-bottom: 100px;
+
+  padding-top: 60px;
 }
 
 .img-container img {
