@@ -3,7 +3,7 @@ body {
 	margin: 0;
 }
 
-.header {
+header {
 	font-family: PT Sans Narrow;
 	font-size: 32px;
 	width: 100%;
@@ -21,11 +21,11 @@ body {
 	z-index: 5000;
 }
 
-.header:first-letter {
+header:first-letter {
 	color: red;
 }
 
-.footer {
+footer {
 	height: auto;
 	width: 100%;
 	background: #FFFFFF;
@@ -118,6 +118,7 @@ body {
 
 .change:hover {
 	transform: scale(1.05);
+	cursor: pointer;
 }
 
 #show:checked ~ label .change {
@@ -215,18 +216,8 @@ body {
 	inset: 0px 0px 0px 0px;
 }
 
-#check1,
-#check2,
-#check3,
-#check4,
-#check5,
-#check6,
-#radio1,
-#radio2,
-#radio3,
-#radio4,
-#radio5,
-#radio6 {
+.checkbox,
+.radiobox {
 	display: none;
 }
 
@@ -363,6 +354,7 @@ body {
 
 .exit-modal:hover {
 	font-weight: bold;
+	cursor: pointer;
 }
 
 .card-modal {
