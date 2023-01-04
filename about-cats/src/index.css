@@ -251,6 +251,7 @@
 }
 
 .desktop__card_img-modal {
+  object-fit: cover;
   position: absolute;
   width: 40vw;
   height: 58vh;
@@ -311,4 +312,10 @@
 
 .footer__href {
   color: #4c4cd8;
+  text-decoration: none;
+}
+
+.pochta {
+  width: 18px;
+  height: 18px;
 }
