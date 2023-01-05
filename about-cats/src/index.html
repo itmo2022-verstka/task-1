@@ -1,11 +1,226 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>01-about-cats</title>
-    <link rel="stylesheet" href="./index.css">
-  </head>
-  <body>
-    <!-- TODO -->
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>02-about-cats</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+	
+<body>
+  <header>
+    <div class="header"><span class="firstHeaderLetter">М</span>урмаркет</div>
+  </header>
+		
+	<input type="checkbox" id="show">
+	<label for="show"><h2 class="galleryButton">☰</h2></label>	
+		
+	<ul class="ul">
+		<li class="li">
+			<img class="image " src="img/cat1.jpeg" alt="Бора-бора">
+			<h2 class="name" title="Бора-бора">Бора-бора<br></h2>
+			<p class="card">
+				<b>Возраст</b>: около 6 месяцев<br>
+				<b>Порода</b>: нет<br>
+				<b>Болезни</b>: нет<br><br>
+				<b>Статус</b>: ищет хозяина<br>
+			</p>
+		</li>
+			
+		<li class="li">
+			<img class="image " src="img/cat2.jpg" alt="Бородач">
+			<h2 class="name" title="Бородач">Бородач<br></h2>
+			<p class="card">
+				<b>Возраст</b>: 1 месяц<br>
+				<b>Порода</b>: рыжик<br>
+				<b>Болезни</b>: нет<br><br>
+				<b>Статус</b>: ищет хозяина<br>
+			</p>
+		</li>
+			
+			<li class="li">
+				<img class="image " src="img/cat3.jpg" alt="Лео">
+				<h2 class="name" title="Лео">Лео<br></h2>
+				<p class="card">
+					<b>Возраст</b>: 1 год<br>
+					<b>Порода</b>: нет<br>
+					<b>Болезни</b>: нет<br><br>
+					<b>Статус</b>: ищет хозяина<br>
+				</p>
+			</li>
+			
+			<li class="li">
+				<img class="image " src="img/cat4.jpg" alt="Тучка">
+				<h2 class="name" title="Тучка">Тучка<br></h2>
+				<p class="card">
+					<b>Возраст</b>: около 7 месяцев<br>
+					<b>Порода</b>: шотландская<br>
+					<b>Болезни</b>: нет<br><br>
+					<b>Статус</b>: ищет хозяина<br>
+				</p>
+			</li>
+			
+			<li class="li">
+				<img class="image " src="img/cat5.jpeg" alt="Граф">
+				<h2 class="name" title="Граф">Граф<br></h2>
+				<p class="card">
+					<b>Возраст</b>: 1,5 года<br>
+					<b>Порода</b>: нет<br>
+					<b>Болезни</b>: нет<br><br>
+					<b>Статус</b>: ищет хозяина<br>
+				</p>
+			</li>
+		</ul>
+		
+		<div class="cats">
+      <input type="radio" name="radio" id="firstCat" class="firstCat">
+      <input type="radio" name="radio" id="secondCat" class="secondCat">
+      <input type="radio" name="radio" id="thirdCat" class="thirdCat" checked>
+      <input type="radio" name="radio" id="fourthCat" class="fourthCat">
+      <input type="radio" name="radio" id="fifthCat" class="fifthCat">
+      <div class="carousel">
+        <section class="first">
+          <label for="firstCat">
+            <img src="img/cat1.jpeg" alt="Бора-бора">
+          </label>
+          <div class="hiddenName">
+            <a href="#firstFullInfo">Бора-бора</a>
+          </div>
+        </section>
+        <section class="second">
+          <label for="secondCat">
+            <img src="img/cat2.jpg" alt="Бородач">
+          </label>
+          <div class="hiddenName">
+            <a href="#secondFullInfo">Бородач</a>
+          </div>
+        </section>
+        <section class="third">
+          <label for="thirdCat">
+            <img src="img/cat3.jpg" alt="Лео">
+          </label>
+          <div class="hiddenName">
+            <a href="#thirdFullInfo">Лео</a>
+          </div>
+        </section>
+        <section class="fourth">
+          <label for="fourthCat">
+            <img src="img/cat4.jpg" alt="Тучка">
+          </label>
+          <div class="hiddenName">
+            <a href="#fourthFullInfo">Тучка</a>
+          </div>
+        </section>
+        <section class="fifth">
+          <label for="fifthCat">
+            <img src="img/cat5.jpeg" alt="Граф">
+          </label>
+          <div class="hiddenName">
+            <a href="#fifthFullInfo">Граф</a>
+          </div>
+        </section>
+      </div>
+      <aside id="firstFullInfo" class="fullInfo">
+        <a href="#" class="close">×</a>
+        <img src="img/cat1.jpeg" class="fullCat" alt="Бора-бора">
+        <div class="catInformation">
+          <div title="Бора-бора" class="catInformationName"><a href="#"
+                                                          class="catInformationNameLink">Бора-бора</a></div>
+          <div class="catInformationText">
+            <b>Возраст</b>: около 6 месяцев<br>
+            <b>Порода</b>: нет<br>
+            <b>Болезни</b>: нет<br><br>
+            <b>Статус</b>: ищет хозяина<br><br>
+            <b>Информация</b>:<br>
+              Бора-бора - хороший котик, который очень любит сидеть в коробке<br> и оттуда изучать интересный мир вокруг него.
+          </div>
+        </div>
+      </aside>
+      <aside id="secondFullInfo" class="fullInfo">
+        <a href="#" class="close">×</a>
+        <img src="img/cat2.jpg" class="fullCat" alt="Бородач">
+        <div class="catInformation">
+          <div title="Бородач" class="catInformationName"><a href="#"
+                                                            class="catInformationNameLink">Бородач</a>
+          </div>
+          <div class="catInformationText">
+            <b>Возраст</b>: 1 месяц<br>
+            <b>Порода</b>: рыжик<br>
+            <b>Болезни</b>: нет<br><br>
+            <b>Статус</b>: ищет хозяина<br><br>
+            <b>Информация</b>:<br>
+              Бородач еще совсем малютка, но любит ласку и вкусно покушать.<br> Игривый котенок с красивыми голубыми глазами.
+          </div>
+        </div>
+      </aside>
+      <aside id="thirdFullInfo" class="fullInfo">
+        <a href="#" class="close">×</a>
+        <img src="img/cat3.jpg" class="fullCat" alt="Лео">
+        <div class="catInformation">
+          <div title="Лео" class="catInformationName"><a href="#"
+                                                            class="catInformationNameLink">Лео</a>
+          </div>
+          <div class="catInformationText">
+            <b>Возраст</b>: 1 год<br>
+            <b>Порода</b>: нет<br>
+            <b>Болезни</b>: нет<br><br>
+            <b>Статус</b>: ищет хозяина<br><br>
+            <b>Информация</b>:<br>
+              Лео отлично ловит мышей, и смотрит, как показывают рыбов.<br> Держит остальных котов в страхе, потому что может себе позволить.
+          </div>
+        </div>
+      </aside>
+      <aside id="fourthFullInfo" class="fullInfo">
+        <a href="#" class="close">×</a>
+        <img src="img/cat4.jpg" class="fullCat" alt="Тучка">
+        <div class="catInformation">
+          <div title="Тучка" class="catInformationName"><a href="#"
+                                                           class="catInformationNameLink">Тучка</a>
+          </div>
+          <div class="catInformationText">
+            <b>Возраст</b>: около 7 месяцев<br>
+            <b>Порода</b>: шотландская<br>
+            <b>Болезни</b>: нет<br><br>
+            <b>Статус</b>: ищет хозяина<br><br>
+            <b>Информация</b>:<br>
+              Тучку так зовут, потому что она всегда задумчиво лежит и смотрит вдаль.<br> Несмотря на то, что у этой кошчки зачастую <br>настроение погрустить, она очень добрая.
+          </div>
+        </div>
+      </aside>
+      <aside id="fifthFullInfo" class="fullInfo">
+        <a href="#" class="close">×</a>
+        <img src="img/cat5.jpeg" class="fullCat" alt="Граф">
+        <div class="catInformation">
+          <div title="Граф" class="catInformationName"><a href="#"
+                                                             class="catInformationNameLink">Граф</a>
+          </div>
+          <div class="catInformationText">
+            <b>Возраст</b>: 1,5 года<br>
+            <b>Порода</b>: нет<br>
+            <b>Болезни</b>: нет<br><br>
+            <b>Статус</b>: ищет хозяина<br><br>
+            <b>Информация</b>:<br>
+              Самый взрослый котик у нас, поэтому и смотрит на всех свысока. <br> Но ему можно, ведь он и правда красивый и умный.
+          </div>
+        </div>
+      </aside>
+    </div>
+		
+		
+		<footer>
+			<p class="contactinfo">Напишите нам:</p>
+			<span>
+				&nbsp;&#9993;
+				<a class="email" href="mailto:cats@babuli.ru">cats@babuli.ru</a>
+			</span>
+			<br>
+			<span>
+				&nbsp;&#9993;
+				<a class="email" href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+			</span>
+			<span class="company">
+				&copy; ООО &laquo;<a href="#">Бабушкины котятки</a>&raquo;
+			</span>
+		</footer>
+	
+	</body>
 </html>
