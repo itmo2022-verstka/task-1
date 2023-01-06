@@ -1,21 +1,37 @@
 .main-wrapper {
+  z-index: 0;
   width: 1000px;
   height: 100%;
-  margin: auto;
-  border: 1px solid grey;
+  margin: 10px auto 100px auto;
 }
 
+h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+}
+
+.mur-header-wrapper {
+  height: 80px;
+}
 
 .mur-header {
+  line-height: 80px;
+  background: white;
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid grey;
   font-family: "PT SansNarrow", serif;
   font-size: 32px;
   text-align: center;
-  border-bottom: 1px solid grey;
-  padding: 10px;
 }
 
 .mur-header .M-letter {
   color: red;
+  z-index: 10;
 }
 
 .cat-blocks-wrapper {
@@ -24,7 +40,6 @@
   padding-left: 150px;
   padding-right: 150px;
   margin: auto;
-  border-bottom: 1px solid grey;
 }
 
 .cat-box1:hover {
@@ -65,10 +80,17 @@
 .footer-wrapper {
   font-family: Arial, sans-serif;
   font-size: 14px;
-  margin: 20px;
+  margin-left: 20px;
+  position: fixed;
+  height: 80px;
+  bottom: 0;
+  padding-top: 15px;
+  border-top: 1px solid grey;
+  width: 100%;
+  background: white;
 }
 
-.footer-wrapper a {
+.footer-wrapper .footer-mail-link {
   color: #4c4cd8;
 }
 
@@ -78,6 +100,13 @@
 
 .footer-wrapper .footer-header {
   color: grey;
+}
+
+.footer-mail-link a{
+  padding-left: 20px;
+  display: block;
+  background: url("./img/mail.png") no-repeat 0 2px;
+  background-size: 16px 16px;
 }
 
 .carousel-wrapper {
@@ -368,6 +397,10 @@ input:checked + .slider:before {
 
 .switch-input:checked ~ .cat-blocks-wrapper {
   display: none;
+}
+
+.mur-header::first-letter {
+  color: red;
 }
 
 

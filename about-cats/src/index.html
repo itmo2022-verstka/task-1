@@ -6,131 +6,136 @@
   <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-<div class="main-wrapper">
-  <div class="mur-header"><span class="M-letter">М</span>урмаркет</div>
+<div class="super-wrapper">
+  <header>
+    <div class="mur-header-wrapper">
+      <div class="mur-header">Мурмаркет</div>
+    </div>
+  </header>
 
 
-  <input type="checkbox" class="switch-input">
+  <div class="main-wrapper">
+    <input type="checkbox" class="switch-input">
 
-  <div class="cat-blocks-wrapper">
-    <div class="cat-box1">
-      <div class="cat">
-        <img src="img/cat1.jpg" alt="Коби">
+    <div class="cat-blocks-wrapper">
+      <div class="cat-box1">
+        <div class="cat">
+          <img src="img/cat1.jpg" alt="Коби">
+        </div>
+        <div class="cat-info-wrapper">
+          <div class="cat-info">
+            <div class="cat-name"><h4>Бора-бора</h4></div>
+            <div class="cat-age">Возраст: около 6 месяцев</div>
+            <div class="cat-class">Порода: нет</div>
+            <div class="cat-issues">Болезни: нет</div>
+            <div class="cat-status">Статус: ищет хозяина</div>
+          </div>
+        </div>
       </div>
-      <div class="cat-info-wrapper">
-        <div class="cat-info">
-          <div class="cat-name">Бора-бора</div>
-          <div class="cat-age">Возраст: около 6 месяцев</div>
-          <div class="cat-class">Порода: нет</div>
-          <div class="cat-issues">Болезни: нет</div>
-          <div class="cat-status">Статус: ищет хозяина</div>
+      <div class="cat-box1">
+        <div class="cat">
+          <img src="img/cat2.jpg" alt="Коби">
+        </div>
+        <div class="cat-info-wrapper">
+          <div class="cat-info">
+            <div class="cat-name"><h4>Барсик</h4></div>
+            <div class="cat-age">Возраст: около 6 месяцев</div>
+            <div class="cat-class">Порода: нет</div>
+            <div class="cat-issues">Болезни: нет</div>
+            <div class="cat-status">Статус: ищет хозяина</div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-box1">
+        <div class="cat">
+          <img src="img/cat3.jpg" alt="Коби">
+        </div>
+        <div class="cat-info-wrapper">
+          <div class="cat-info">
+            <div class="cat-name"><h4>Тима</h4></div>
+            <div class="cat-age">Возраст: около 6 месяцев</div>
+            <div class="cat-class">Порода: нет</div>
+            <div class="cat-issues">Болезни: нет</div>
+            <div class="cat-status">Статус: ищет хозяина</div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-box1">
+        <div class="cat">
+          <img src="img/cat4.jpg" alt="Коби">
+        </div>
+        <div class="cat-info-wrapper">
+          <div class="cat-info">
+            <div class="cat-name"><h4>Цунами</h4></div>
+            <div class="cat-age">Возраст: около 6 месяцев</div>
+            <div class="cat-class">Порода: нет</div>
+            <div class="cat-issues">Болезни: нет</div>
+            <div class="cat-status">Статус: ищет хозяина</div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-box1">
+        <div class="cat">
+          <img src="img/cat5.jpg" alt="Коби">
+        </div>
+        <div class="cat-info-wrapper">
+          <div class="cat-info">
+            <div class="cat-name"><h4>Пушок</h4></div>
+            <div class="cat-age">Возраст: около 6 месяцев</div>
+            <div class="cat-class">Порода: нет</div>
+            <div class="cat-issues">Болезни: нет</div>
+            <div class="cat-status">Статус: ищет хозяина</div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="cat-box1">
-      <div class="cat">
-        <img src="img/cat2.jpg" alt="Коби">
+
+
+    <input type="radio" name="radio" id="cat1" class="firstCat">
+    <input type="radio" name="radio" id="cat2" class="secondCat">
+    <input type="radio" name="radio" id="cat3" class="thirdCat" checked>
+    <input type="radio" name="radio" id="cat4" class="fourthCat">
+    <input type="radio" name="radio" id="cat5" class="fifthCat">
+
+
+    <div class="carousel-wrapper">
+      <div class="carousel-img1">
+        <label class="btn" for="cat1"><img src="img/cat1.jpg" alt="cat"></label>
+        <a href="#cat-info1" class="cat-card-name1">Бора-бора</a>
       </div>
-      <div class="cat-info-wrapper">
-        <div class="cat-info">
-          <div class="cat-name">Барсик</div>
-          <div class="cat-age">Возраст: около 6 месяцев</div>
-          <div class="cat-class">Порода: нет</div>
-          <div class="cat-issues">Болезни: нет</div>
-          <div class="cat-status">Статус: ищет хозяина</div>
-        </div>
+      <div class="carousel-img2">
+        <label class="btn" for="cat2"><img src="img/cat2.jpg" alt="cat"></label>
+        <a href="#cat-info2" class="cat-card-name2">Барсик</a>
       </div>
-    </div>
-    <div class="cat-box1">
-      <div class="cat">
-        <img src="img/cat3.jpg" alt="Коби">
+      <div class="carousel-img3">
+        <label class="btn" for="cat3"><img src="img/cat3.jpg" alt="cat"></label>
+        <a href="#cat-info3" class="cat-card-name3">Тима</a>
       </div>
-      <div class="cat-info-wrapper">
-        <div class="cat-info">
-          <div class="cat-name">Тима</div>
-          <div class="cat-age">Возраст: около 6 месяцев</div>
-          <div class="cat-class">Порода: нет</div>
-          <div class="cat-issues">Болезни: нет</div>
-          <div class="cat-status">Статус: ищет хозяина</div>
-        </div>
+      <div class="carousel-img4">
+        <label class="btn" for="cat4"><img src="img/cat4.jpg" alt="cat"></label>
+        <a href="#cat-info4" class="cat-card-name4">Цунами</a>
       </div>
-    </div>
-    <div class="cat-box1">
-      <div class="cat">
-        <img src="img/cat4.jpg" alt="Коби">
-      </div>
-      <div class="cat-info-wrapper">
-        <div class="cat-info">
-          <div class="cat-name">Цунами</div>
-          <div class="cat-age">Возраст: около 6 месяцев</div>
-          <div class="cat-class">Порода: нет</div>
-          <div class="cat-issues">Болезни: нет</div>
-          <div class="cat-status">Статус: ищет хозяина</div>
-        </div>
+      <div class="carousel-img5">
+        <label class="btn" for="cat5"><img src="img/cat5.jpg" alt="cat"></label>
+        <a href="#cat-info5" class="cat-card-name5">Пушок</a>
       </div>
     </div>
-    <div class="cat-box1">
-      <div class="cat">
-        <img src="img/cat5.jpg" alt="Коби">
-      </div>
-      <div class="cat-info-wrapper">
-        <div class="cat-info">
-          <div class="cat-name">Пушок</div>
-          <div class="cat-age">Возраст: около 6 месяцев</div>
-          <div class="cat-class">Порода: нет</div>
-          <div class="cat-issues">Болезни: нет</div>
-          <div class="cat-status">Статус: ищет хозяина</div>
-        </div>
-      </div>
-    </div>
+
   </div>
 
-
-  <input type="radio" name="radio" id="cat1" class="firstCat">
-  <input type="radio" name="radio" id="cat2" class="secondCat">
-  <input type="radio" name="radio" id="cat3" class="thirdCat" checked>
-  <input type="radio" name="radio" id="cat4" class="fourthCat">
-  <input type="radio" name="radio" id="cat5" class="fifthCat">
-
-
-  <div class="carousel-wrapper">
-    <div class="carousel-img1">
-      <label class="btn" for="cat1"><img src="img/cat1.jpg" alt="cat"></label>
-      <a href="#cat-info1" class="cat-card-name1">Бора-бора</a>
-    </div>
-    <div class="carousel-img2">
-      <label class="btn" for="cat2"><img src="img/cat2.jpg" alt="cat"></label>
-      <a href="#cat-info2" class="cat-card-name2">Барсик</a>
-    </div>
-    <div class="carousel-img3">
-      <label class="btn" for="cat3"><img src="img/cat3.jpg" alt="cat"></label>
-      <a href="#cat-info3" class="cat-card-name3">Тима</a>
-    </div>
-    <div class="carousel-img4">
-      <label class="btn" for="cat4"><img src="img/cat4.jpg" alt="cat"></label>
-      <a href="#cat-info4" class="cat-card-name4">Цунами</a>
-    </div>
-    <div class="carousel-img5">
-      <label class="btn" for="cat5"><img src="img/cat5.jpg" alt="cat"></label>
-      <a href="#cat-info5" class="cat-card-name5">Пушок</a>
-    </div>
-  </div>
-
-
+  <div><br></div>
   <footer>
     <div class="footer-wrapper">
       <div class="footer-header">Напишите нам:</div>
       <div class="footer-links">
-        <div class="footer-mail-link"><a href="grisha.serebrov@mail.ru">grisha.serebrov@mail.ru</a>
+        <div class="footer-mail-link"><a href="mailto:grisha.serebrov@mail.ru">grisha.serebrov@mail.ru</a>
         </div>
-        <div class="footer-mail-link"><a href="grisha.serebrov@mail.ru">grisha.serebrov@mail.ru</a>
+        <div class="footer-mail-link"><a href="mailto:grisha.serebrov@mail.ru">grisha.serebrov@mail.ru</a>
         </div>
       </div>
     </div>
   </footer>
-
 </div>
-
 
 
 
@@ -143,7 +148,9 @@
     <div class="cat-description">
       <div>Имя: Бора-бора</div>
       <div>Дружелюбный, ласковый, ручной</div>
-      <div> С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой</div>
+      <div> С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять
+        сразу в паре с его сестричкой
+      </div>
     </div>
   </div>
 </aside>
@@ -157,7 +164,9 @@
     <div class="cat-description">
       <div>Имя: Барсик</div>
       <div>Дружелюбный, ласковый, ручной</div>
-      <div> С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой</div>
+      <div> С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять
+        сразу в паре с его сестричкой
+      </div>
     </div>
   </div>
 </aside>
@@ -171,7 +180,9 @@
     <div class="cat-description">
       <div>Имя: Тима</div>
       <div>Дружелюбный, ласковый, ручной</div>
-      <div> С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой</div>
+      <div> С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять
+        сразу в паре с его сестричкой
+      </div>
     </div>
   </div>
 </aside>
@@ -185,7 +196,9 @@
     <div class="cat-description">
       <div>Имя: Цунами</div>
       <div>Дружелюбный, ласковый, ручной</div>
-      <div> С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой</div>
+      <div> С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять
+        сразу в паре с его сестричкой
+      </div>
     </div>
   </div>
 </aside>
@@ -199,7 +212,9 @@
     <div class="cat-description">
       <div>Имя: Пушок</div>
       <div>Дружелюбный, ласковый, ручной</div>
-      <div> С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять сразу в паре с его сестричкой</div>
+      <div> С другими котами в дружных отношениях, можно взять в пару к домашнему питомцу, или взять
+        сразу в паре с его сестричкой
+      </div>
     </div>
   </div>
 </aside>
