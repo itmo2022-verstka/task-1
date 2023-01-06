@@ -3,16 +3,15 @@
   font-size: 32px;
 
   position: fixed;
-  z-index: 500;
   top: 0;
   left: 0;
   width: 100%;
-  border-bottom: lightgray solid 1px;
+  border-bottom: #d3d3d3ff solid 1px;
   text-align: center;
 }
 
 .header::first-letter {
-  color: red;
+  color: #ff0000ff;
 }
 
 .footer {
@@ -20,12 +19,50 @@
   font-size: 14px;
 
   position: fixed;
-  z-index: 400;
   left: 0;
   bottom: 0;
-  border-top: lightgray solid 1px;
+  border-top: #d3d3d3ff solid 1px;
   width: 100%;
-  background-color: white;
+  background-color: #ffffffff;
+}
+
+#layout-checkbox:checked ~ .carousel {
+  display: none;
+}
+
+#layout-checkbox:not(:checked) ~ .images-list {
+  display: none;
+}
+
+.images-list {
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.images-list-card {
+  position: relative;
+  width: 25%;
+  float: left;
+  margin: 10px 10px 0;
+  border: 1px double #d3d3d3ff;
+}
+
+.images-list-card:hover {
+  box-shadow: 5px 5px 3px #808080ff;
+}
+
+.images-list-card-image {
+  object-fit: contain;
+  width: 100%;
+}
+
+.images-list-card-description {
+  color: #808080ff;
+  margin: 5px
+}
+
+.images-list-card-name {
+  font-size: 24px;
+  margin: 5px
 }
 
 .wrapper {
@@ -38,6 +75,7 @@
   text-align: left;
   white-space: nowrap;
   top: 150px;
+  font-family: "PT Sans Narrow", sans-serif;
 }
 
 .wrapper .container {
@@ -66,31 +104,36 @@
   transform:translate(-50%,-50%);
 
   font-size: 46px;
-  color: lightgoldenrodyellow;
+  color: #fafad2ff;
+}
+
+.card {
+  position: relative;
 }
 
 .description-image {
-  float: left;
-
-  margin: 5% 5% 0 10%;
   width: 40%;
-  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
   object-fit: cover;
 }
 
 .description-text {
-  width: 90%;
-  margin: 5% 5% 0 0;
-  padding: 0 30px;
-  text-align: left;
-  vertical-align: top;
-  color: lightgoldenrodyellow;
-  font-size: x-large;
+  width: 45%;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  color: #fafad2ff;
+  font-size: 24px;
+  font-family: "PT Sans Narrow", sans-serif;
 }
 
 .description-cat-name {
   text-align: center;
-  font-size: xxx-large;
+  font-size: 48px;
 }
 
 .radio-1:checked ~ .wrapper {
@@ -113,7 +156,6 @@
   display: inline-block;
   overflow: hidden;
 
-  margin: -0.5%;
   transform: scale(0.8);
   width: 50%;
   transition: all 1s ease-in-out;
@@ -156,6 +198,11 @@
 
 .switcher {
   display: none;
+}
+
+.layout-switch-image {
+  margin-top: 35px;
+  transform: rotate(90deg);
 }
 
 .wrapper .checkbox-label,
@@ -215,34 +262,20 @@
   bottom: 0;
 }
 
-.description-cards {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  border: 0;
-  backdrop-filter: brightness(10%);
-  display: none;
-  z-index: 1000;
-}
-
 .card-1,
 .card-2,
 .card-3,
 .card-4,
 .card-5 {
-  position: absolute;
+  position: fixed;
   top: 5%;
   left: 0;
   width: 100%;
-  height: 95%;
+  height: 90%;
   padding: 0;
   border: 0;
   backdrop-filter: brightness(5%);
   display: none;
-  z-index: 1000;
   opacity: 0;
 }
 
@@ -254,9 +287,9 @@
   box-sizing: border-box;
   width: 40px;
   height: 40px;
-  border: 3px solid black;
+  border: 3px solid #000000FF;
   border-radius: 100%;
-  background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%);
+  background: linear-gradient(-45deg, transparent 0%, transparent 46%, #ffffffff 46%,  #ffffffff 56%,transparent 56%, transparent 100%), linear-gradient(45deg, transparent 0%, transparent 46%, #ffffffff 46%,  #ffffffff 56%,transparent 56%, transparent 100%);
 }
 .checkbox-1:checked ~ .card-1,
 .checkbox-2:checked ~ .card-2,
@@ -264,6 +297,7 @@
 .checkbox-4:checked ~ .card-4,
 .checkbox-5:checked ~ .card-5 {
   display: inline;
+  opacity: 1;
 }
 
 .control-group {
@@ -287,10 +321,9 @@
   padding: 5px;
   width: 30px;
   height: 30px;
-  border: 3px solid black;
-  background-color: lightgray;
+  border: 3px solid #000000ff;
+  background-color: #d3d3d3ff;
   border-radius: 50%;
-  z-index: 5;
   cursor: pointer;
   aspect-ratio: 1/1;
   transform: scale(0.85);
@@ -301,7 +334,7 @@
 .change-control-3:hover,
 .change-control-4:hover,
 .change-control-5:hover {
-  background-color: gray;
+  background-color: #808080ff;
 }
 
 .radio-1:checked ~ .wrapper .control-group .change-control-1 {
@@ -331,7 +364,6 @@
 
 .copyright {
   position: fixed;
-  z-index: 600;
 
   right: 0;
   bottom: 0;

@@ -10,110 +10,180 @@
       <span class="title">Мурмаркет</span>
     </header>
 
-    <input type="checkbox" class="switcher checkbox-1" id="checkbox-1" name="description">
-    <input type="checkbox" class="switcher checkbox-2" id="checkbox-2" name="description">
-    <input type="checkbox" class="switcher checkbox-3" id="checkbox-3" name="description">
-    <input type="checkbox" class="switcher checkbox-4" id="checkbox-4" name="description">
-    <input type="checkbox" class="switcher checkbox-5" id="checkbox-5" name="description">
+    <input type="checkbox" class="switcher" id="layout-checkbox" name="layout-switch" checked>
+    <label for="layout-checkbox">
+      <img src="./images/menu.png" class="layout-switch-image" alt="layout">
+    </label>
 
-    <input type="radio" class="switcher radio-1" id="radio-1" name="choice" checked>
-    <input type="radio" class="switcher radio-2" id="radio-2" name="choice">
-    <input type="radio" class="switcher radio-3" id="radio-3" name="choice">
-    <input type="radio" class="switcher radio-4" id="radio-4" name="choice">
-    <input type="radio" class="switcher radio-5" id="radio-5" name="choice">
-    <div class="wrapper">
-      <div class="button-1">
-        <div class="container">
-          <img src="./images/cat-1.jpg" class="wrapper-image" alt="Барсик">
-          <span class="cat-name">Барсик</span>
+    <div class="images-list">
+      <div class="images-list-card">
+        <img class="images-list-card-image" src="./images/cat-1.jpg" alt="Барсик">
+        <span class = "images-list-card-name">Барсик</span><br><br>
+        <div class = "images-list-card-description">
+          <span>
+            Возраст: 2 года<br>
+            Порода: нет<br>
+            Болезни: нет<br><br>
+            Статус: ищет хозяина
+          </span>
         </div>
-        <label class="radio-label radio-label-1" for="radio-1"></label>
-        <label class="checkbox-label" for="checkbox-1"></label>
       </div>
-
-      <div class="button-2">
-        <div class="container">
-          <img src="./images/cat-2.jpg" class="wrapper-image" alt="Леопольд">
-          <span class="cat-name">Леопольд</span>
+      <div class="images-list-card">
+        <img class="images-list-card-image" src="./images/cat-2.jpg" alt="Леопольд">
+        <span class = "images-list-card-name">Леопольд</span><br><br>
+        <div class = "images-list-card-description">
+          <span>
+            Возраст: 5 лет<br>
+            Порода: британец<br>
+            Болезни: нет<br><br>
+            Статус: ищет хозяина
+          </span>
         </div>
-        <label class="radio-label radio-label-2" for="radio-2"></label>
-        <label class="checkbox-label" for="checkbox-2"></label>
       </div>
-
-      <div class="button-3">
-        <div class="container">
-          <img src="images/cat-3.jpg" class="wrapper-image" alt="Том">
-          <span class="cat-name">Том</span>
+      <div class="images-list-card">
+        <img class="images-list-card-image" src="./images/cat-3.jpg" alt="Том">
+        <span class = "images-list-card-name">Том</span><br><br>
+        <div class = "images-list-card-description">
+          <span>
+            Возраст: 3 года<br>
+            Порода: персидская<br>
+            Болезни: нет<br><br>
+            Статус: ищет хозяина
+          </span>
         </div>
-        <label class="radio-label radio-label-3" for="radio-3"></label>
-        <label class="checkbox-label" for="checkbox-3"></label>
       </div>
-
-      <div class="button-4">
-        <div class="container">
-          <img src="./images/cat-4.jpg" class="wrapper-image" alt="Мурка">
-          <span class="cat-name">Мурка</span>
+      <div class="images-list-card">
+        <img class="images-list-card-image" src="./images/cat-4.jpg" alt="Мурка">
+        <span class = "images-list-card-name">Мурка</span><br><br>
+        <div class = "images-list-card-description">
+          <span>
+            Возраст: 2 года<br>
+            Порода: канадский сфинкс<br>
+            Болезни: нет<br><br>
+            Статус: ищет хозяина
+          </span>
         </div>
-        <label class="radio-label radio-label-4" for="radio-4"></label>
-        <label class="checkbox-label" for="checkbox-4"></label>
       </div>
-      <div class="button-5">
-        <div class="container">
-          <img src="./images/cat-5.jpg" class="wrapper-image" alt="Боня">
-          <span class="cat-name">Боня</span>
+      <div class="images-list-card">
+        <img class="images-list-card-image" src="./images/cat-5.jpg" alt="Боня">
+        <span class = "images-list-card-name">Боня</span><br><br>
+        <div class = "images-list-card-description">
+          <span>
+            Возраст: 1 год<br>
+            Порода: нет<br>
+            Болезни: нет<br><br>
+            Статус: ищет хозяина
+          </span>
         </div>
-        <label class="radio-label radio-label-5" for="radio-5"></label>
-        <label class="checkbox-label" for="checkbox-5"></label>
       </div>
-      <div class="control-group">
-        <label class="change-control-1" for="radio-1"></label>
-        <label class="change-control-2" for="radio-2"></label>
-        <label class="change-control-3" for="radio-3"></label>
-        <label class="change-control-4" for="radio-4"></label>
-        <label class="change-control-5" for="radio-5"></label>
-      </div>
-    </div>
-    <div class="card-1">
-      <img src="images/cat-1.jpg" class="description-image" alt="Барсик">
-      <article class="description-text">
-        <h1 class="description-cat-name">Барсик</h1>
-        Активный, любит бегать по ночам. Немного дрессирован, умеет просить еду (делает это постоянно). Возраст 2 года.
-      </article>
-      <label class="description-check" for="checkbox-1"></label>
-    </div>
-    <div class="card-2">
-      <img src="images/cat-2.jpg" class="description-image" alt="Леопольд">
-      <article class="description-text">
-        <h1 class="description-cat-name">Леопольд</h1>
-        Ласковый и спокойный. Любит сидеть на руках. Дружит с детьми.  Возраст 5 лет.
-      </article>
-      <label class="description-check" for="checkbox-2"></label>
-    </div>
-    <div class="card-3">
-      <img src="images/cat-3.jpg" class="description-image" alt="Том">
-      <article class="description-text">
-        <h1 class="description-cat-name">Том</h1>
-        Очень хитрый и сообразительный, самостоятельный. С другими животными не уживается.  Возраст 3 года.
-      </article>
-      <label class="description-check" for="checkbox-3"></label>
-    </div>
-    <div class="card-4">
-      <img src="images/cat-4.jpg" class="description-image" alt="Мурка">
-      <article class="description-text">
-        <h1 class="description-cat-name">Мурка</h1>
-        Боевая кошка, любит гонять собак и другую живность. Возраст 2 года.
-      </article>
-      <label class="description-check" for="checkbox-4"></label>
-    </div>
-    <div class="card-5">
-      <img src="images/cat-5.jpg" class="description-image" alt="Боня">
-      <article class="description-text">
-        <h1 class="description-cat-name">Боня</h1>
-        Любит спать. Умеет ловить мышей.  Возраст 1 год.
-      </article>
-      <label class="description-check" for="checkbox-5"></label>
     </div>
 
+    <div class="carousel">
+      <input type="checkbox" class="switcher checkbox-1" id="checkbox-1" name="description">
+      <input type="checkbox" class="switcher checkbox-2" id="checkbox-2" name="description">
+      <input type="checkbox" class="switcher checkbox-3" id="checkbox-3" name="description">
+      <input type="checkbox" class="switcher checkbox-4" id="checkbox-4" name="description">
+      <input type="checkbox" class="switcher checkbox-5" id="checkbox-5" name="description">
+
+      <input type="radio" class="switcher radio-1" id="radio-1" name="choice" checked>
+      <input type="radio" class="switcher radio-2" id="radio-2" name="choice">
+      <input type="radio" class="switcher radio-3" id="radio-3" name="choice">
+      <input type="radio" class="switcher radio-4" id="radio-4" name="choice">
+      <input type="radio" class="switcher radio-5" id="radio-5" name="choice">
+      <div class="wrapper">
+        <div class="button-1">
+          <div class="container">
+            <img src="./images/cat-1.jpg" class="wrapper-image" alt="Барсик">
+            <span class="cat-name">Барсик</span>
+          </div>
+          <label class="radio-label radio-label-1" for="radio-1"></label>
+          <label class="checkbox-label" for="checkbox-1"></label>
+        </div>
+
+        <div class="button-2">
+          <div class="container">
+            <img src="./images/cat-2.jpg" class="wrapper-image" alt="Леопольд">
+            <span class="cat-name">Леопольд</span>
+          </div>
+          <label class="radio-label radio-label-2" for="radio-2"></label>
+          <label class="checkbox-label" for="checkbox-2"></label>
+        </div>
+
+        <div class="button-3">
+          <div class="container">
+            <img src="images/cat-3.jpg" class="wrapper-image" alt="Том">
+            <span class="cat-name">Том</span>
+          </div>
+          <label class="radio-label radio-label-3" for="radio-3"></label>
+          <label class="checkbox-label" for="checkbox-3"></label>
+        </div>
+
+        <div class="button-4">
+          <div class="container">
+            <img src="./images/cat-4.jpg" class="wrapper-image" alt="Мурка">
+            <span class="cat-name">Мурка</span>
+          </div>
+          <label class="radio-label radio-label-4" for="radio-4"></label>
+          <label class="checkbox-label" for="checkbox-4"></label>
+        </div>
+        <div class="button-5">
+          <div class="container">
+            <img src="./images/cat-5.jpg" class="wrapper-image" alt="Боня">
+            <span class="cat-name">Боня</span>
+          </div>
+          <label class="radio-label radio-label-5" for="radio-5"></label>
+          <label class="checkbox-label" for="checkbox-5"></label>
+        </div>
+        <div class="control-group">
+          <label class="change-control-1" for="radio-1"></label>
+          <label class="change-control-2" for="radio-2"></label>
+          <label class="change-control-3" for="radio-3"></label>
+          <label class="change-control-4" for="radio-4"></label>
+          <label class="change-control-5" for="radio-5"></label>
+        </div>
+      </div>
+      <div class="card card-1">
+        <img src="images/cat-1.jpg" class="description-image" alt="Барсик">
+        <article class="description-text">
+          <h1 class="description-cat-name">Барсик</h1>
+          Активный, любит бегать по ночам. Немного дрессирован, умеет просить еду (делает это постоянно).<br><br>
+          Возраст 2 года.
+        </article>
+        <label class="description-check" for="checkbox-1"></label>
+      </div>
+      <div class="card-2">
+        <img src="images/cat-2.jpg" class="description-image" alt="Леопольд">
+        <article class="description-text">
+          <h1 class="description-cat-name">Леопольд</h1>
+          Ласковый и спокойный. Любит сидеть на руках. Дружит с детьми.<br><br>Возраст 5 лет.
+        </article>
+        <label class="description-check" for="checkbox-2"></label>
+      </div>
+      <div class="card-3">
+        <img src="images/cat-3.jpg" class="description-image" alt="Том">
+        <article class="description-text">
+          <h1 class="description-cat-name">Том</h1>
+          Очень хитрый и сообразительный, самостоятельный. С другими животными не уживается.<br><br>Возраст 3 года.
+        </article>
+        <label class="description-check" for="checkbox-3"></label>
+      </div>
+      <div class="card-4">
+        <img src="images/cat-4.jpg" class="description-image" alt="Мурка">
+        <article class="description-text">
+          <h1 class="description-cat-name">Мурка</h1>
+          Боевая кошка, любит гонять собак и другую живность.<br><br>Возраст 2 года.
+        </article>
+        <label class="description-check" for="checkbox-4"></label>
+      </div>
+      <div class="card-5">
+        <img src="images/cat-5.jpg" class="description-image" alt="Боня">
+        <article class="description-text">
+          <h1 class="description-cat-name">Боня</h1>
+          Любит спать. Умеет ловить мышей.<br><br>Возраст 1 год.
+        </article>
+        <label class="description-check" for="checkbox-5"></label>
+      </div>
+    </div>
     <footer class="footer">
       <div class="contacts">
         Напишите нам:
