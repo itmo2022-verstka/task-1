@@ -94,12 +94,10 @@ body {
   color: #4c4cd8;
 }
 
-.footer-wrapper div {
-  margin-bottom: 5px;
-}
 
 .footer-wrapper .footer-header {
   color: grey;
+  margin-bottom: 5px;
 }
 
 .footer-mail-link a{
