@@ -6,7 +6,7 @@ body {
 
   /* Header
   ============================ */
-  div.header-nav, footer {
+  .header-nav, footer {
     position: fixed;
 
     right: 0px;
@@ -15,30 +15,32 @@ body {
     background-color: rgb(255, 242, 234);
   }
 
-  div.header-nav {
+  .header-nav {
     top: 0px;
     border-bottom: 3px solid #aaa;
   }
 
-  div.header-nav p {
+  .header-nav p {
     text-align: center;
     
     margin: 8px 160px 8px 8px;
 
     font-size: 32px;
     font-family: "PT Sans Narrow";
-    
-    
+  }
+
+  .header-nav p::first-letter {
+    color: #F00;
   }
 
   /* Display mode checkbox
   ============================ */
   
-  div.gallery-slider {
+  .gallery-slider {
     display: none;
   }
 
-  label.toggle-btn {
+  .toggle-btn {
     display: inline-block;
     cursor: pointer;
 
@@ -57,25 +59,25 @@ body {
     height: 0;
   }
 
-  input[type="checkbox"]#toggle-view:checked ~ div.gallery-slider {
+  input[type="checkbox"]#toggle-view:checked ~ .gallery-slider {
     display: block;
   }
 
-  input[type="checkbox"]#toggle-view:checked ~ div.gallery-block {
+  input[type="checkbox"]#toggle-view:checked ~ .gallery-block {
     display: none;
   }
 
   /* Gallery cards container
   ============================ */
 
-  div.gallery-block {
+  .gallery-block {
     text-align: center;
     vertical-align: top;
   }
   
   /* Single gallery card
   ============================ */
-  div.gallery {
+  .gallery {
     border: 1px solid #aaa;
     display: inline-block;
 
@@ -84,7 +86,7 @@ body {
     width: 220px;
   }
   
-  div.gallery img {
+  .gallery img {
     object-fit: cover;
 
     width: 100%;
@@ -92,11 +94,16 @@ body {
 
   }
   
-  div.desc {
+  .desc {
+    font-size: 14px;
     text-align: justify;
   }
+  .desc h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
 
-  div.gallery:hover {
+  .gallery:hover {
     box-shadow: 4px 5px 10px rgba(0, 0, 0, .2);
     border: 1px solid #777;
   }
@@ -104,12 +111,12 @@ body {
   /* Gallery slider container
   ============================ */
 
-  div.gallery-slider {
+  .gallery-slider {
     text-align: center;
     vertical-align: top;
   }
 
-  div.slider-cat {
+  .slider-cat {
     display: inline-block;
     position: relative;
 
@@ -119,7 +126,7 @@ body {
     margin: 0px 10px 0px 10px;
   }
 
-  div.slider-cat img {
+  .slider-cat img {
     border-radius: 10px;
 
     width: 100%;
@@ -135,18 +142,18 @@ body {
     height: 0;
   }
 
-  label input[type=radio] + div.slider-cat img {
+  label input[type=radio] + .slider-cat img {
     cursor: pointer;
   }
 
-  label input[type="radio"]:checked + div.slider-cat img {
+  label input[type="radio"]:checked + .slider-cat img {
     height: 125%;
     opacity: 1;
   }
 
     /* Cat name overlay
   ============================ */
-  div.slider-cat div.cat-overlay {
+  .slider-cat .cat-overlay {
     position: absolute;
 
     top: 0;
@@ -163,7 +170,7 @@ body {
     background-color: #000;
   }
 
-  div.cat-overlay div.desc {
+  .cat-overlay .desc {
     position: absolute;
 
     top: 50%;
@@ -173,11 +180,11 @@ body {
     color: #fff;
   }
 
-  label input[type="radio"]:checked + div.slider-cat:hover div.cat-overlay {
+  label input[type="radio"]:checked + .slider-cat:hover .cat-overlay {
     opacity: 0.7;
   }
 
-  label input[type="radio"]:checked + div.slider-cat:hover a.button {
+  label input[type="radio"]:checked + .slider-cat:hover .button {
     display: block;
   }
 
@@ -185,11 +192,11 @@ body {
   /* Modal popup
  * =============================== */
 
-  a.button {
+  .button {
     display: none;
   }
 
-  div.overlay {
+  .overlay {
     position: fixed;
     top: 60px;
     bottom: 0;
@@ -200,12 +207,12 @@ body {
     opacity: 0;
   }
 
-  div.overlay:target {
+  .overlay:target {
     visibility: visible;
     opacity: 1;
   }
 
-  div.popup {
+  .popup {
     color: #fff;
     font-size: 20px;
 
@@ -216,11 +223,13 @@ body {
     overflow: auto;
   }
 
-  div.popup h2 {
+  .popup h2 {
+    text-align: right;
     margin-top: 0;
+    margin-right: 64px;
   }
 
-  div.popup a.close {
+  .popup .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -230,14 +239,14 @@ body {
     text-decoration: none;
   }
 
-  div.popup div.content {
+  .popup .content {
     margin: 10px;
     text-align: left;
     line-height: 140%;
     max-height: 30%;
   }
 
-  div.popup img {
+  .popup img {
     border-radius: 10px;
     float: left;
     margin: 16px;
@@ -260,11 +269,11 @@ body {
     padding-right: 30px;
   }
 
-  footer p.contacts {
+  footer .contacts {
     float: left;
   }
 
-  footer p.copyright {
+  footer .copyright {
     float: right;
   }
 
