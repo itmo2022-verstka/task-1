@@ -1,1 +1,315 @@
-/* TODO */
+.header-style {
+  opacity: 1;
+  background-color: #f7f7f7;
+  position: fixed;
+  font-family: 'PT Sans Narrow', serif;
+  font-size: 32px;
+  top: 0;
+  width: 100%;
+}
+
+.cat-card {
+  float: left;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 250px;
+}
+
+.cat-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.description-text {
+  color: #787878;
+}
+
+.cat-name {
+  font-size: 26px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  max-width: 200px;
+}
+
+.cat-picture {
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.cat-picture:hover {
+  border: #787878 3px solid;
+}
+
+.cat-name:hover {
+  color: red;
+}
+
+.cat-picture-container {
+  width: 250px;
+  height: 160px;
+}
+
+.description {
+  margin-left: 20px;
+  margin-bottom: 18px;
+}
+
+.menu-icon {
+  width: 26px;
+  position: fixed;
+  right: 12px;
+  top: 10px;
+}
+
+.tape-icon {
+  width: 26px;
+  position: fixed;
+  right: 48px;
+  top: 12px;
+}
+
+.ya-letter {
+  color: #ff3c1c;
+}
+
+.content-tape {
+  padding-top: 150px;
+}
+
+.carousel-tape {
+  height: 550px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.first-cat,
+.second-cat,
+.third-cat,
+.fourth-cat,
+.fifth-cat,
+.sixth-cat,
+.seventh-cat,
+.eighth-cat,
+.ninth-cat,
+.tenth-cat {
+  display: none;
+}
+
+label img {
+  transition-duration: 1s;
+  width: 400px;
+  opacity: 0.7;
+  object-fit: cover;
+}
+
+img {
+  vertical-align: middle;
+}
+
+section {
+  margin-top: 50px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 30%;
+  transition-duration: 1s;
+}
+
+.first-cat:checked ~ .carousel-tape section {
+  left: 40%;
+}
+
+.second-cat:checked ~ .carousel-tape section {
+  left: 10%;
+}
+
+.third-cat:checked ~ .carousel-tape section {
+  left: -20%;
+}
+
+.fourth-cat:checked ~ .carousel-tape section {
+  left: -50%;
+}
+
+.fifth-cat:checked ~ .carousel-tape section {
+  left: -85%;
+}
+
+.sixth-cat:checked ~ .carousel-tape section {
+  left: -120%;
+}
+
+.seventh-cat:checked ~ .carousel-tape section {
+  left: -150%;
+}
+
+.eighth-cat:checked ~ .carousel-tape section {
+  left: -180%;
+}
+
+.ninth-cat:checked ~ .carousel-tape section {
+  left: -210%;
+}
+
+.tenth-cat:checked ~ .carousel-tape section {
+  left: -240%;
+}
+
+.first-cat:checked ~ .carousel-tape .first-tape img,
+.second-cat:checked ~ .carousel-tape .second-tape img,
+.third-cat:checked ~ .carousel-tape .third-tape img,
+.fourth-cat:checked ~ .carousel-tape .fourth-tape img,
+.fifth-cat:checked ~ .carousel-tape .fifth-tape img,
+.sixth-cat:checked ~ .carousel-tape .sixth-tape img,
+.seventh-cat:checked ~ .carousel-tape .seventh-tape img,
+.eighth-cat:checked ~ .carousel-tape .eighth-tape img,
+.ninth-cat:checked ~ .carousel-tape .ninth-tape img,
+.tenth-cat:checked ~ .carousel-tape .tenth-tape img {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.first-cat:checked ~ .carousel-tape .first-tape .hidden-name,
+.second-cat:checked ~ .carousel-tape .second-tape .hidden-name,
+.third-cat:checked ~ .carousel-tape .third-tape .hidden-name,
+.fourth-cat:checked ~ .carousel-tape .fourth-tape .hidden-name,
+.fifth-cat:checked ~ .carousel-tape .fifth-tape .hidden-name,
+.sixth-cat:checked ~ .carousel-tape .sixth-tape .hidden-name,
+.seventh-cat:checked ~ .carousel-tape .seventh-tape .hidden-name,
+.eighth-cat:checked ~ .carousel-tape .eighth-tape .hidden-name,
+.ninth-cat:checked ~ .carousel-tape .ninth-tape .hidden-name,
+.tenth-cat:checked ~ .carousel-tape .tenth-tape .hidden-name {
+  visibility: visible;
+}
+
+.first-cat:checked ~ .carousel-tape .first-tape .hidden-name:hover,
+.second-cat:checked ~ .carousel-tape .second-tape .hidden-name:hover,
+.third-cat:checked ~ .carousel-tape .third-tape .hidden-name:hover,
+.fourth-cat:checked ~ .carousel-tape .fourth-tape .hidden-name:hover,
+.fifth-cat:checked ~ .carousel-tape .fifth-tape .hidden-name:hover,
+.sixth-cat:checked ~ .carousel-tape .sixth-tape .hidden-name:hover,
+.seventh-cat:checked ~ .carousel-tape .seventh-tape .hidden-name:hover,
+.eighth-cat:checked ~ .carousel-tape .eighth-tape .hidden-name:hover,
+.ninth-cat:checked ~ .carousel-tape .ninth-tape .hidden-name:hover,
+.tenth-cat:checked ~ .carousel-tape .tenth-tape .hidden-name:hover {
+  opacity: 1;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hidden-name {
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+.hidden-name a {
+  position: absolute;
+  text-align: center;
+  padding-top: 30%;
+  font-size: 25px;
+  width: 100%;
+  left: 0;
+  z-index: 100;
+  color: white;
+  text-decoration: none;
+}
+
+.full-info-tape {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  color: white;
+}
+
+.full-info-tape:target {
+  display: block;
+}
+
+.full-info-tape:not(:target) {
+  display: none;
+}
+
+.close-full-info-tape {
+  text-decoration: none;
+  float: right;
+  font-size: 20px;
+  color: white;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.cat-card-tape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.cat-card-tape img {
+  width: 550px;
+  float: left;
+  margin-right: 50px;
+}
+
+.card-info {
+  width: 900px;
+}
+
+.name {
+  font-size: 28px;
+}
+
+.card-info-text {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.card-info-text li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.footer-style {
+  opacity: 1;
+  background-color: #ffffff;
+  position: fixed;
+  font-family: 'Arial', serif;
+  font-size: 14px;
+  bottom: 0;
+  width: 100%;
+  border-top: 2px solid #dddddd;
+}
+
+.footer-style a {
+  color: #4c4cd8;
+  font-family: 'Arial', serif;
+  font-size: 14px;
+}
+
+.murmarket-default {
+  display: none;
+}
+.control-menu-a:target ~ .murmarket-default {
+  display: none;
+}
+#murmarket-table:target ~ .murmarket-table {
+  display: block;
+}
+#murmarket-table:target ~ .murmarket-tape {
+  display: none;
+}
+.murmarket-not-default:not(:target) {
+  display: block;
+}
