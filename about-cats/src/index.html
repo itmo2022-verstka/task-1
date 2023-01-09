@@ -6,6 +6,260 @@
     <link rel="stylesheet" href="./index.css">
   </head>
   <body>
-    <!-- TODO -->
+    <header class="header red-letter">
+      <span>Мурмаркет</span>
+    </header>
+
+    <input type="checkbox" class="format-switcher" id="switcher" checked>
+    <label class="switcher-label" for="switcher">&#9776;</label>
+
+    <ul class="cards-list">
+      <li class="card">
+        <img class="image card-img " src="img/cat-1.jpg" alt="Ириска">
+				<h2 class="card-name" title="Ириска">Ириска<br></h2>
+				<p class="card-description">
+					<b>Возраст</b>: 2 года<br>
+					<b>Порода</b>: порода<br>
+					<b>Болезни</b>: нет<br><br>
+					<b>Статус</b>: ищет хозяина<br>
+				</p>
+      </li>
+
+      <li class="card">
+        <img class="image card-img " src="img/cat-2.jpg" alt="Олли">
+				<h2 class="card-name" title="Олли">Олли<br></h2>
+				<p class="card-description">
+					<b>Возраст</b>: 6 месяцев<br>
+					<b>Порода</b>: порода<br>
+					<b>Болезни</b>: нет<br><br>
+					<b>Статус</b>: ищет хозяина<br>
+				</p>
+      </li>
+
+      <li class="card">
+        <img class="image card-img " src="img/cat-3.jpg" alt="Зуко">
+				<h2 class="card-name" title="Зуко">Зуко<br></h2>
+				<p class="card-description">
+					<b>Возраст</b>: 3 года<br>
+					<b>Порода</b>: Сомали<br>
+					<b>Болезни</b>: нет<br><br>
+					<b>Статус</b>: ищет хозяина<br>
+				</p>
+      </li>
+
+      <li class="card">
+        <img class="image card-img " src="img/cat-4.jpg" alt="Фитц">
+				<h2 class="card-name" title="Фитц">Фитц<br></h2>
+				<p class="card-description">
+					<b>Возраст</b>: 1.5 года<br>
+					<b>Порода</b>: Бурма<br>
+					<b>Болезни</b>: нет<br><br>
+					<b>Статус</b>: ищет хозяина<br>
+				</p>
+      </li>
+
+      <li class="card">
+        <img class="image card-img " src="img/cat-5.jpg" alt="Фëдор">
+				<h2 class="card-name" title="Фëдор">Фëдор<br></h2>
+				<p class="card-description">
+					<b>Возраст</b>: 3 года<br>
+					<b>Порода</b>: Британская<br>
+					<b>Болезни</b>: нет<br><br>
+					<b>Статус</b>: ищет хозяина<br>
+				</p>
+      </li>
+
+      <li class="card">
+        <img class="image card-img " src="img/cat-6.jpg" alt="Нисо">
+				<h2 class="card-name" title="Нисо">Нисо<br></h2>
+				<p class="card-description">
+					<b>Возраст</b>: 1 год<br>
+					<b>Порода</b>: порода<br>
+					<b>Болезни</b>: нет<br><br>
+					<b>Статус</b>: ищет хозяина<br>
+				</p>
+      </li>
+    </ul>
+
+    <div class="carousel">
+
+      <input type="radio" class="radiobox" name="cat-slider" id="slide-1">
+      <input type="radio" class="radiobox" name="cat-slider" id="slide-2">
+      <input type="radio" class="radiobox" name="cat-slider" id="slide-3">
+      <input type="radio" class="radiobox" name="cat-slider" id="slide-4" checked>
+      <input type="radio" class="radiobox" name="cat-slider" id="slide-5">
+      <input type="radio" class="radiobox" name="cat-slider" id="slide-6">
+
+      <input type="checkbox" class="checkbox" id="modal-1">
+			<input type="checkbox" class="checkbox" id="modal-2">
+			<input type="checkbox" class="checkbox" id="modal-3">
+			<input type="checkbox" class="checkbox" id="modal-4">
+			<input type="checkbox" class="checkbox" id="modal-5">
+			<input type="checkbox" class="checkbox" id="modal-6">
+
+      <div class="slider">
+        <div class="slide cat-slide-1">
+          <label class="checkbox-label" for="modal-1"></label>
+          <label class="radio-label radio-label-1" for="slide-1"></label>
+          <span class="slide-cat-name">Ириска</span>
+          <img class="slide-img" src="img/cat-1.jpg" alt="Ириска">
+        </div>
+
+        <div class="slide cat-slide-2">
+          <label class="checkbox-label" for="modal-2"></label>
+          <label class="radio-label radio-label-2" for="slide-2"></label>
+          <span class="slide-cat-name">Олли</span>
+          <img class="slide-img" src="img/cat-2.jpg" alt="Олли">
+        </div>
+
+        <div class="slide cat-slide-3">
+          <label class="checkbox-label" for="modal-3"></label>
+          <label class="radio-label radio-label-3" for="slide-3"></label>
+          <span class="slide-cat-name">Зуко</span>
+          <img class="slide-img" src="img/cat-3.jpg" alt="Зуко">
+        </div>
+
+        <div class="slide cat-slide-4">
+          <label class="checkbox-label" for="modal-4"></label>
+          <label class="radio-label radio-label-4" for="slide-4"></label>
+          <span class="slide-cat-name">Фитц</span>
+          <img class="slide-img" src="img/cat-4.jpg" alt="Фитц">
+        </div>
+
+        <div class="slide cat-slide-5">
+          <label class="checkbox-label" for="modal-5"></label>
+          <label class="radio-label radio-label-5" for="slide-5"></label>
+          <span class="slide-cat-name">Фёдор</span>
+          <img class="slide-img" src="img/cat-5.jpg" alt="Фёдор">
+        </div>
+
+        <div class="slide cat-slide-6">
+          <label class="checkbox-label" for="modal-6"></label>
+          <label class="radio-label radio-label-6" for="slide-6"></label>
+          <span class="slide-cat-name">Нисо</span>
+          <img class="slide-img" src="img/cat-6.jpg" alt="Нисо">
+        </div>
+      </div>
+
+      <div class="modal-window modal-cat-1">
+        <div class="modal-card">
+          <img class="modal-img" src="img/cat-1.jpg" alt="Ириска">
+          <label class="exit-modal" for="modal-1">&#9587;</label>
+          <div class="modal-description">
+            <h1 class="modal-cat-name">
+              Ириска
+            </h1>
+            <p class="modal-cat-description">
+              Спокойный, ласковый, добрый. <br>
+              Возраст: 2 года. <br>
+              Любит поесть и поспать. А кто не любит? <br>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-window modal-cat-2">
+        <div class="modal-card">
+          <img class="modal-img" src="img/cat-2.jpg" alt="Олли">
+          <label class="exit-modal" for="modal-2">&#9587;</label>
+          <div class="modal-description">
+            <h1 class="modal-cat-name">
+              Олли
+            </h1>
+            <p class="modal-cat-description">
+              Крохотный, весёлый и неаккуратный. <br>
+              Возраст: 6 месяцев. <br>
+              Иногда бывает извазюкается в еде и ходит так весь день, пока кто-нибудь не вытрет ему личико. <br>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-window modal-cat-3">
+        <div class="modal-card">
+          <img class="modal-img" src="img/cat-3.jpg" alt="Зуко">
+          <label class="exit-modal" for="modal-3">&#9587;</label>
+          <div class="modal-description">
+            <h1 class="modal-cat-name">
+              Зуко
+            </h1>
+            <p class="modal-cat-description">
+              Пушистый, аккуратный и любознательный. <br>
+              Возраст: 3 года. <br>
+              Если вы подумали, что это белка, то это не белка. Это - кот. Любит проводить время на свежем воздухе, но белки все равно не принимают его за своего. <br>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-window modal-cat-4">
+        <div class="modal-card">
+          <img class="modal-img" src="img/cat-4.jpg" alt="Фитц">
+          <label class="exit-modal" for="modal-4">&#9587;</label>
+          <div class="modal-description">
+            <h1 class="modal-cat-name">
+              Фитц
+            </h1>
+            <p class="modal-cat-description">
+              Серьезный, игривый, своенравный. <br>
+              Возраст: 1.5 года. <br>
+              На первый взгляд может показаться, что это не кот, а лев. Не дайте себя обмануть, котенок только и хочет чтобы Вы так думали. <br>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-window modal-cat-5">
+        <div class="modal-card">
+          <img class="modal-img" src="img/cat-5.jpg" alt="Фёдор">
+          <label class="exit-modal" for="modal-5">&#9587;</label>
+          <div class="modal-description">
+            <h1 class="modal-cat-name">
+              Фёдор
+            </h1>
+            <p class="modal-cat-description">
+              Симпатичный, ласковый, грациозный. <br>
+              Возраст: 3 года. <br>
+              Недавно узнал, что он самый красивый кот, после этого начал позировать для фотографий даже когда его не фотографируют. <br>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-window modal-cat-6">
+        <div class="modal-card">
+          <img class="modal-img" src="img/cat-6.jpg" alt="Нисо">
+          <label class="exit-modal" for="modal-6">&#9587;</label>
+          <div class="modal-description">
+            <h1 class="modal-cat-name">
+              Нисо
+            </h1>
+            <p class="modal-cat-description">
+              Ласковая, умная и очень красивая. <br>
+              Возраст: 1 год. <br>
+              Любит играть, бегать и скакать. Хорошо ладит с другими котами. Очень фотогеничная.<br>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <div class="contacts">
+			  <span>Напишите нам:</span>
+        <br>
+        <span>
+          &#9993; <a class="mail" href="mailto:cats@babuli.ru">cats@babuli.ru</a>
+        </span>
+        <br>
+        <span>
+          &#9993; <a class="mail" href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+        </span>
+      </div>
+			<div class="copyright">
+        &copy; 2022 ООО &laquo;<a class="footer-link" href="index.html">Бабушкины котятки</a>&raquo;
+      </div>
+		</footer>
   </body>
 </html>

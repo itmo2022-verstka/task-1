@@ -1,1 +1,315 @@
-/* TODO */
+/* header */
+.header {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 32px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #ffffffff;
+  border-bottom: #d3d3d3ff solid 1px;
+  text-align: center;
+  padding: 7px 0;
+}
+
+.red-letter::first-letter {
+  color: #ff0000ff;
+}
+
+/* footer */
+.footer {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background-color: #ffffffff;
+  border-top: #d3d3d3ff solid 1px;
+}
+
+.contacts, .copyright {
+	margin: 8px 10px;
+}
+
+.mail, .footer-link {
+	color: #4c4cd8;
+}
+
+.copyright {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+/* switch button */
+.switcher-label {
+  margin-top: 52px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  font-size: 50px;
+  display: inline-block;
+  transition: 0.25s;
+}
+
+.switcher-label:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#switcher {
+  display: none;
+}
+
+#switcher:checked ~ .carousel {
+  display: none;
+}
+
+#switcher:not(:checked) ~ .cards-list {
+  display: none;
+}
+
+#switcher:checked ~ .switcher-label {
+	transform: rotate(-90deg);
+}
+
+#switcher:checked ~ .switcher-label:hover {
+	transform: rotate(-90deg) scale(1.1);
+}
+
+/* cards */
+.cards-list {
+  text-align: center;
+  margin-top: 0;
+	margin-bottom: 90px;
+}
+
+.card {
+	display: inline-block;
+	width: 350px;
+	height: 500px;
+	font-family: sans-serif;
+	box-shadow: 0 0 6px rgba(0,0,0,0.5);
+	margin: 15px;
+	transition: 0.2s;
+}
+
+.card:hover {
+	box-shadow: 0 0 12px rgba(0,0,0,0.8);
+}
+
+.card-description {
+  text-align: left;
+  margin-left: 45px;
+}
+
+.card-img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+/* carousel */
+.carousel {
+  text-align: center;
+}
+
+.checkbox {
+  display: none;
+}
+
+.radiobox {
+  position: relative;
+  padding-left: 12px;
+  appearance: none;
+}
+
+.radiobox:before {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d3d3d3ff;
+  content: '';
+}
+
+.radiobox:checked:before {
+  background-color: #a9a9a9ff;
+}
+
+.slide-img {
+  height: 300px;
+	width: auto;
+	object-fit: cover;
+	object-position: center;
+  vertical-align: middle;
+	transition: 0.7s;
+}
+
+.slider {
+	margin-top: 50px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.slide {
+  position: relative;
+	display: inline-block;
+	margin-right: 10px;
+	opacity: 0.7;
+  transition: 1.4s;
+}
+
+.slide-cat-name {
+  display: none;
+}
+
+.checkbox-label,
+.radio-label {
+	position: absolute;
+	z-index: 500;
+
+  width: 100%;
+  height: 100%;
+}
+
+#slide-1:checked ~ .slider .cat-slide-1,
+#slide-2:checked ~ .slider .cat-slide-2,
+#slide-3:checked ~ .slider .cat-slide-3,
+#slide-4:checked ~ .slider .cat-slide-4,
+#slide-5:checked ~ .slider .cat-slide-5,
+#slide-6:checked ~ .slider .cat-slide-6 {
+  opacity: 1;
+}
+
+#slide-1:checked ~ .slider .cat-slide-1 .slide-img,
+#slide-2:checked ~ .slider .cat-slide-2 .slide-img,
+#slide-3:checked ~ .slider .cat-slide-3 .slide-img,
+#slide-4:checked ~ .slider .cat-slide-4 .slide-img,
+#slide-5:checked ~ .slider .cat-slide-5 .slide-img,
+#slide-6:checked ~ .slider .cat-slide-6 .slide-img {
+  height: 375px;
+	width: auto;
+}
+
+#slide-1:checked ~ .slider .slide {
+	left: calc(50% - 250px);
+}
+
+#slide-2:checked ~ .slider .slide {
+	left: calc(50% - 141px - 410px);
+}
+
+#slide-3:checked ~ .slider .slide {
+	left: calc(50% - 187.5px - 236px - 410px);
+}
+
+#slide-4:checked ~ .slider .slide {
+	left: calc(50% - 187.5px - 310px - 236px - 410px);
+}
+
+#slide-5:checked ~ .slider .slide {
+	left: calc(50% - 180.9px - 310px - 310px - 236px - 410px);
+}
+
+#slide-6:checked ~ .slider .slide {
+  left: calc(50% - 120px - 300px - 310px - 310px - 236px - 410px);
+}
+
+#slide-1:checked ~ .slider .cat-slide-1:hover,
+#slide-2:checked ~ .slider .cat-slide-2:hover,
+#slide-3:checked ~ .slider .cat-slide-3:hover,
+#slide-4:checked ~ .slider .cat-slide-4:hover,
+#slide-5:checked ~ .slider .cat-slide-5:hover,
+#slide-6:checked ~ .slider .cat-slide-6:hover {
+	background-color: black;
+}
+
+#slide-1:checked ~ .slider .cat-slide-1:hover .slide-img,
+#slide-2:checked ~ .slider .cat-slide-2:hover .slide-img,
+#slide-3:checked ~ .slider .cat-slide-3:hover .slide-img,
+#slide-4:checked ~ .slider .cat-slide-4:hover .slide-img,
+#slide-5:checked ~ .slider .cat-slide-5:hover .slide-img,
+#slide-6:checked ~ .slider .cat-slide-6:hover .slide-img {
+	opacity: 0.7;
+}
+
+#slide-1:checked ~ .slider .cat-slide-1:hover .slide-cat-name,
+#slide-2:checked ~ .slider .cat-slide-2:hover .slide-cat-name,
+#slide-3:checked ~ .slider .cat-slide-3:hover .slide-cat-name,
+#slide-4:checked ~ .slider .cat-slide-4:hover .slide-cat-name,
+#slide-5:checked ~ .slider .cat-slide-5:hover .slide-cat-name,
+#slide-6:checked ~ .slider .cat-slide-6:hover .slide-cat-name {
+	display: block;
+  position: absolute;
+	bottom: 20%;
+	font-size: xx-large;
+  z-index: 600;
+  width: 100%;
+  color: #ffffffff;
+  font-family: sans-serif;
+  pointer-events: none;
+  text-align: center;
+}
+
+#slide-1:checked ~ .slider .cat-slide-1 .checkbox-label,
+#slide-2:checked ~ .slider .cat-slide-2 .checkbox-label,
+#slide-3:checked ~ .slider .cat-slide-3 .checkbox-label,
+#slide-4:checked ~ .slider .cat-slide-4 .checkbox-label,
+#slide-5:checked ~ .slider .cat-slide-5 .checkbox-label,
+#slide-6:checked ~ .slider .cat-slide-6 .checkbox-label {
+	display: block;
+	z-index: 600;
+}
+
+/* modal window */
+#modal-1:checked ~ .modal-cat-1,
+#modal-2:checked ~ .modal-cat-2,
+#modal-3:checked ~ .modal-cat-3,
+#modal-4:checked ~ .modal-cat-4,
+#modal-5:checked ~ .modal-cat-5,
+#modal-6:checked ~ .modal-cat-6 {
+  visibility: visible;
+}
+
+.modal-window {
+	position: fixed;
+	margin-top: 0;
+	inset: 0;
+	z-index: 900;
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	white-space: normal;
+}
+
+.modal-card {
+	margin-top: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 820px;
+}
+
+.modal-img {
+  height: 400px;
+  float: left;
+}
+
+.modal-description {
+	color: #ffffffff;
+  font-size: 18px;
+	font-family: sans-serif;
+}
+
+.exit-modal {
+  color: #ffffffff;
+	font-size: xx-large;
+	float: right;
+}
+
+.exit-modal:hover {
+	cursor: pointer;
+}
