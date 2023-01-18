@@ -3,7 +3,7 @@ body {
 	margin: 0;
 }
 
-header {
+.custom-header {
     font-family: "PT SansNarrow", sans-serif;
 	font-size: 32px;
 	width: 100%;
@@ -21,14 +21,14 @@ header {
 	z-index: 1000;
 }
 
-header .firstHeaderLetter {
+.custom-header .firstHeaderLetter {
 	color: red;
 }
 
 footer {
 	height: auto;
 	width: 100%;
-	background: #FFFFFF;
+	background: #fff;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	font-family: Arial;
 	font-size: 14px;
@@ -69,13 +69,13 @@ footer {
 	display: none;
 }
 
-.ul {
+.cat-list {
 	text-align: left;
 	margin-bottom: 90px;
     padding: 0 6%;
 }
 
-.li {
+.cat-list-item {
 	display: inline-block;
 	width: 330px;
 	height: 500px;
@@ -87,7 +87,7 @@ footer {
 	transition: 0.2s;
 }
 
-.li:hover {
+.cat-list-item:hover {
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
@@ -95,7 +95,7 @@ footer {
 	display: none;
 }
 
-#show:checked ~ .ul {
+#show:checked ~ .cat-list {
 	display: none;
 }
 
@@ -276,6 +276,7 @@ a:hover {
     visibility: hidden;
     position: absolute;
     object-fit: cover;
+    object-position: center;
     width: 400px;
     height: 400px;
     opacity: 0;
@@ -319,10 +320,10 @@ a:hover {
 }
   
 .fullCat {
-    width: 600px;
-    height: 600px;
-    margin-top: 10%;
+    height: 80%;
+    margin-top: 5%;
     margin-left: 5%;
+    aspect-ratio: 1 / 1;
     float: left;
 	object-fit: cover;
 	object-position: center;
@@ -330,14 +331,20 @@ a:hover {
   
 .catInformation {
     color: rgb(255, 255, 255);
+    width: 40%;
+    margin-top: 5%;
+    margin-right: 10%;
     font-size: 20px;
     text-align: left;
-    margin: 300px 0;
     float: right;
 }
-  
-.fullInfo {
-    display: inline-block;
+
+.fullInfoBlock {
+    position: absolute;
+    height: 70%;
+    width: 80%;
+    top: 15%;
+    left: 10%;
 }
   
 .catInformationNameLink {
