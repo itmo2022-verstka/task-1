@@ -1,11 +1,126 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>01-about-cats</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <!-- TODO -->
+    <header>
+      <h1 class="title">Плейсхолдеры</h1>
+    </header>
+    <main>
+      <input type="checkbox" id="layout-carousel"/>
+      <section class="buttons">
+        <label class="button" for="layout-carousel" tabindex="0">
+          <!-- unjustified ban -->
+          <img src="./icons/menu.svg" alt="Switch layout"/>
+        </label>
+      </section>
+      <section class="list">
+        <article class="list-entry">
+          <div class="card-header">
+            <img class="entry-image" src="https://via.placeholder.com/150" alt="Плейсхолдер" />
+          </div>
+          <div class="card-body">
+            <h2>via.placeholder.com</h2>
+            <div class="description">
+              <p>Мнение: старый</p>
+              <p>Цвет: серый</p>
+              <p>Шрифт: Arial</p>
+              <p>Вердикт: 7/10</p>
+            </div>
+          </div>
+        </article>
+        <article class="list-entry">
+          <div class="card-header">
+            <img
+              class="entry-image"
+              src="https://www.fillmurray.com/640/360"
+              alt="Билл Миррей (rip сайт)"
+            />
+          </div>
+          <div class="card-body">
+            <h2>www.fillmurray.com</h2>
+            <div class="description">
+              <p>Мнение: Билл Мюррей</p>
+              <p>Цвет: Билл Мюррей</p>
+              <p>Шрифт: Билл Мюррей</p>
+              <p>Вердикт: Билл Мюррей</p>
+            </div>
+          </div>
+        </article>
+        <article class="list-entry">
+          <div class="card-header">
+            <img
+              class="entry-image"
+              src="https://dummyimage.com/640x360/fff/aaa"
+              alt="DummyImage placeholder"
+            />
+          </div>
+          <div class="card-body">
+            <h2>dummyimage.com</h2>
+            <div class="description">
+              <p>Мнение: тупо удобно</p>
+              <p>Цвет: белый (duh)</p>
+              <p>Шрифт: мЕнЯеТсЯ</p>
+              <p>Вердикт: 8/10</p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="carousel">
+        <input type="radio" id="sel1" name="carousel" checked/>
+        <input type="radio" id="sel2" name="carousel" />
+        <input type="radio" id="sel3" name="carousel" />
+        <input type="radio" id="sel4" name="carousel" />
+        <input type="radio" id="sel5" name="carousel" />
+        <div class="carousel-container">
+          <label class="carousel-entry" for="sel1">
+            <a href="#modal1" class="modal-opener">
+              <img src="https://via.placeholder.com/150" alt="another placeholder"/>
+            </a>
+          </label>
+          <label class="carousel-entry" for="sel2">
+            <a href="#modal2" class="modal-opener">
+              <img src="https://dummyimage.com/640x700/ff0/aaa" alt="DummyImage placeholder" />
+            </a>
+          </label>
+          <label class="carousel-entry" for="sel3">
+            <a href="#modal3" class="modal-opener">
+              <img src="https://via.placeholder.com/150" alt="DummyImage placeholder" />
+            </a>
+          </label>
+          <label class="carousel-entry" for="sel4">
+            <a href="#modal4" class="modal-opener">
+              <img src="https://dummyimage.com/30x360/0ff/aaa" alt="DummyImage placeholder" />
+            </a>
+          </label>
+          <label class="carousel-entry" for="sel5">
+            <a href="#modal5" class="modal-opener">
+              <img src="https://dummyimage.com/300x360/0ff/aaa" alt="DummyImage placeholder" />
+            </a>
+          </label>
+        </div>
+        <div class="carousel-buttons">
+          <label for="sel1"></label>
+          <label for="sel2"></label>
+          <label for="sel3"></label>
+          <label for="sel4"></label>
+          <label for="sel5"></label>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="contacts">
+        <p class="subtitle">Напишите нам:</p>
+        <p class="contact"><a href="mailto:cats@babuli.ru">cats@babuli.ru</a></p>
+        <p class="contact"><a href="mailto:cats@babuli.ru">cats@babuli.ru</a></p>
+      </section>
+      <section class="copyright">
+        &copy; <span class="s">2022</span> 2023 ООО &laquo;
+        <a href="https://www.youtube.com/watch?v=c3bpPoxY8R8">УСТАРЕВШИЕДАТЫ</a>&raquo;
+      </section>
+    </footer>
   </body>
 </html>
