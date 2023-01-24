@@ -47,6 +47,8 @@ header {
   position: sticky;
   top: 0;
 
+  z-index: 2;
+
   box-sizing: border-box;
   width: 100%;
 
@@ -68,6 +70,8 @@ header {
 }
 
 main {
+  position: relative;
+
   box-sizing: border-box;
   width: 100%;
 
@@ -216,6 +220,7 @@ footer {
 
 /* This trick of scroll-snap-type should work in all browsers from 2012 */
 /* and no need to calculate offsets */
+/* I liked it better than the solution with fixed widths for the pictures */
 .carousel-container {
   overflow-x: hidden;
   overflow-y: hidden;
@@ -232,6 +237,8 @@ footer {
 }
 
 .carousel-entry {
+  position: relative;
+
   display: inline-block;
 
   height: calc(var(--carousel-active-card-size) * 0.8);
@@ -264,10 +271,6 @@ footer {
 
 input[type='radio'] {
   display: none;
-}
-
-.modal-opener {
-  pointer-events: none;
 }
 
 #sel1:checked ~ .carousel-container .carousel-entry[for='sel1'],
@@ -309,10 +312,122 @@ input[type='radio'] {
   margin-left: auto;
 }
 
+.modal-opener {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  width: 100%;
+  height: 100%;
+
+  transition: opacity 0.2s ease-in-out;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0px 0px 6px 6px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 2rem;
+  opacity: 0;
+  text-align: center;
+}
+
+.modal-opener div {
+  display: table-cell;
+
+  vertical-align: middle;
+
+  word-break: break-all;
+}
+
+.modal-opener:hover {
+  opacity: 1;
+}
+
+/* Removing pointer events so that the modal doesn't open when scrolling the carousel */
 #sel1:checked ~ .carousel-container .carousel-entry[for='sel1'] .modal-opener,
 #sel2:checked ~ .carousel-container .carousel-entry[for='sel2'] .modal-opener,
 #sel3:checked ~ .carousel-container .carousel-entry[for='sel3'] .modal-opener,
 #sel4:checked ~ .carousel-container .carousel-entry[for='sel4'] .modal-opener,
 #sel5:checked ~ .carousel-container .carousel-entry[for='sel5'] .modal-opener {
+  display: table;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+
+  padding: 70px;
+
+  transition: opacity 0.2s ease-in-out;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.modal:target {
+  opacity: 1;
   pointer-events: unset;
+}
+
+.modal-content {
+  height: 70%;
+}
+
+.modal-description {
+  position: relative;
+
+  color: white;
+}
+
+.modal-description h2 {
+  margin: 0;
+  padding-top: 30px;
+
+  font-size: 2em;
+  font-weight: normal;
+  word-break: break-word;
+}
+
+.modal-picture {
+  float: left;
+
+  width: 300px;
+  height: 100%;
+
+  margin-right: 7px;
+}
+
+.modal-picture img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.modal-close {
+  position: absolute;
+  top: 70px;
+  right: 70px;
+
+  display: block;
+
+  width: 24px;
+  height: 24px;
+
+  background: url('./icons/cross.svg') no-repeat center center;
+
+  font-size: 2rem;
 }
