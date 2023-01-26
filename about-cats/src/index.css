@@ -180,10 +180,11 @@ img {
   
 section {
     margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
     display: inline-block;
     position: relative;
     text-align: center;
-    width: 30%;
     transition-duration: 1s;
 }
 
@@ -202,23 +203,23 @@ section {
 }
 
 .firstCat:checked ~ .carousel section {
-    left: 35%;
+    left: 37%;
 }
   
 .secondCat:checked ~ .carousel section {
-    left: 5%;
+    left: 10%;
 }
   
 .thirdCat:checked ~ .carousel section {
-    left: -25%;
+    left: -17%;
 }
   
 .fourthCat:checked ~ .carousel section {
-    left: -55%;
+    left: -44%;
 }
   
 .fifthCat:checked ~ .carousel section {
-    left: -85%;
+    left: -70%;
 }
   
 .firstCat:checked ~ .carousel .first img,
@@ -257,7 +258,7 @@ section {
 .carousel a {
     position: absolute;
     text-align: center;
-    padding-top: 50%;
+    padding-top: 40%;
     font-size: 25px;
     width: 100%;
     left: 0;
@@ -281,7 +282,7 @@ a:hover {
     height: 400px;
     opacity: 0;
     top: 0;
-    left: 50px;
+    left: 0;
 }
   
 .fullInfo {
