@@ -1,1 +1,373 @@
-/* TODO */
+:root {
+  --left-padding: 16px;
+  --content-width: calc(100% - var(--left-padding));
+  --cat-image-height: 300px;
+  --cat-image-width: 300px;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Чтобы заголовок не съезжал */
+}
+
+@font-face {
+  font-family: 'PT SansNarrow';
+  src: url('fonts/PT_Sans-Narrow-Web-Regular.ttf');
+}
+
+.murmarket-body {
+  margin: 0;
+  font-family: 'PT SansNarrow', sans-serif;
+  font-size: 32px;
+}
+
+.murmarket-header {
+  position: fixed;
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+  width: 100%;
+  z-index: 2;
+}
+
+.murmarket-title {
+  text-align: center;
+  font-size: inherit;
+  font-family: inherit;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.murmarket-title:first-letter {
+  color: red;
+}
+
+/* ------------------ */
+
+.murmarket-content {
+  position: relative;
+  padding-left: var(--left-padding);
+  top: 65px;
+}
+
+.mode-switch, .cat-checkbox {
+  display: none;
+}
+
+.mode-switch-label {
+  cursor: pointer;
+  font-size: 0;
+}
+
+.mode-switch:checked ~ .cats-block {
+  display: none;
+}
+
+.mode-switch:not(:checked) ~ .cats-block {
+  display: block;
+}
+
+.mode-switch:checked ~ .cats-carousel {
+  display: block;
+}
+
+.mode-switch:not(:checked) ~ .cats-carousel {
+  display: none;
+}
+
+/* ------------------ */
+
+.cats-block {
+  position: absolute;
+  margin-top: 20px;
+  width: var(--content-width);
+  overflow: scroll;
+  scroll-behavior: smooth;
+  z-index: 1;
+}
+
+.cats-block-item {
+  display: inline-block;
+  float: left;
+  margin-right: 150px;
+  margin-bottom: 70px;
+  width: min-content;
+  height: fit-content;
+  cursor: pointer;
+  font-size: 0;
+  transition: .4s;
+}
+
+.cats-block-item:hover {
+  box-shadow: rgba(0, 0, 0, 0.66) 1px 1px 5px;
+  transition: .4s;
+}
+
+.cat-image {
+  width: var(--cat-image-width);
+  height: calc(var(--cat-image-height) / 1.5);
+  object-fit: cover;
+  font-size: 0;
+  pointer-events: none;
+}
+
+.mode-switch:checked ~ .cats-carousel .cat-image {
+  width: var(--cat-image-width);
+  height: var(--cat-image-height);
+}
+
+.cat-text {
+  position: relative;
+  font-family: inherit;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-left: 1px solid rgba(211, 211, 211, 0.68);
+  border-right: 1px solid rgba(211, 211, 211, 0.68);
+}
+
+.cat-name {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: inherit;
+  color: black;
+}
+
+.cat-description {
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: inherit;
+  color: gray;
+}
+
+/* ------------------ */
+
+.cats-carousel {
+  position: absolute;
+  margin-top: 80px;
+  /* от центра экрана двигаем на ширину картинки, отступ и половину ширины следующей картинки */
+  margin-left: calc((var(--content-width) - var(--left-padding)) / 2 - 1.5 * var(--cat-image-width) - 150px);
+  width: var(--content-width);
+  z-index: 1;
+}
+
+.cat-carousel-item {
+  position: relative;
+  display: none;
+  float: left;
+  margin-right: 150px;
+  margin-top: calc(var(--cat-image-height) / 5);
+  margin-bottom: 70px;
+  width: min-content;
+  height: fit-content;
+  cursor: pointer;
+  font-size: 0;
+
+  -moz-user-select: none; /* чтобы убрать бесячее синее выделение */
+  -webkit-user-select: none;
+  user-select: none;
+  z-index: 1;
+}
+
+.cat-carousel-item .cat-image {
+  transition: .4s filter linear;
+  z-index: 1;
+}
+
+.cat-carousel-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  visibility: hidden;
+  font-size: 0;
+  transition: .4s linear;
+  opacity: 0;
+  z-index: 2;
+}
+
+#cat-1:checked ~ label[for="cat-1"] {
+  margin-left: calc(1.5 * var(--cat-image-width));
+}
+#cat-1:checked ~ label[for="cat-1"],
+#cat-2:checked ~ label[for="cat-2"],
+#cat-3:checked ~ label[for="cat-3"],
+#cat-4:checked ~ label[for="cat-4"],
+#cat-5:checked ~ label[for="cat-5"],
+#cat-6:checked ~ label[for="cat-6"],
+#cat-7:checked ~ label[for="cat-7"] {
+  display: inline-block;
+  margin-top: 0;
+  opacity: 100%;
+}
+
+#cat-1:checked ~ label[for="cat-1"]:hover .cat-image,
+#cat-2:checked ~ label[for="cat-2"]:hover .cat-image,
+#cat-3:checked ~ label[for="cat-3"]:hover .cat-image,
+#cat-4:checked ~ label[for="cat-4"]:hover .cat-image,
+#cat-5:checked ~ label[for="cat-5"]:hover .cat-image,
+#cat-6:checked ~ label[for="cat-6"]:hover .cat-image,
+#cat-7:checked ~ label[for="cat-7"]:hover .cat-image {
+  filter: brightness(60%);
+  transition: .4s filter linear;
+}
+
+/* было бы легче с less */
+#cat-1:checked ~ label[for="cat-1"]:hover .cat-carousel-name,
+#cat-2:checked ~ label[for="cat-2"]:hover .cat-carousel-name,
+#cat-3:checked ~ label[for="cat-3"]:hover .cat-carousel-name,
+#cat-4:checked ~ label[for="cat-4"]:hover .cat-carousel-name,
+#cat-5:checked ~ label[for="cat-5"]:hover .cat-carousel-name,
+#cat-6:checked ~ label[for="cat-6"]:hover .cat-carousel-name,
+#cat-7:checked ~ label[for="cat-7"]:hover .cat-carousel-name {
+  visibility: visible;
+  opacity: 100%;
+  transition: .4s linear;
+  font-size: 32px;
+}
+
+#cat-1:checked ~ label[for="cat-2"],
+#cat-2:checked ~ label[for="cat-1"], #cat-2:checked ~ label[for="cat-3"],
+#cat-3:checked ~ label[for="cat-2"], #cat-3:checked ~ label[for="cat-4"],
+#cat-4:checked ~ label[for="cat-3"], #cat-4:checked ~ label[for="cat-5"],
+#cat-5:checked ~ label[for="cat-4"], #cat-5:checked ~ label[for="cat-6"],
+#cat-6:checked ~ label[for="cat-5"], #cat-6:checked ~ label[for="cat-7"],
+#cat-7:checked ~ label[for="cat-6"] {
+  display: inline-block;
+  opacity: 70%;
+}
+
+/* ------------------ */
+
+.modal-checkbox {
+  display: none;
+}
+
+#cat-1:checked ~ label[for="cat-1"] .modal-label,
+#cat-2:checked ~ label[for="cat-2"] .modal-label,
+#cat-3:checked ~ label[for="cat-3"] .modal-label,
+#cat-4:checked ~ label[for="cat-4"] .modal-label,
+#cat-5:checked ~ label[for="cat-5"] .modal-label,
+#cat-6:checked ~ label[for="cat-6"] .modal-label,
+#cat-7:checked ~ label[for="cat-7"] .modal-label {
+  visibility: visible;
+}
+
+.modal-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--cat-image-width);
+  height: var(--cat-image-height);
+  cursor: pointer;
+  visibility: hidden;
+  z-index: 3;
+}
+
+#modal-cat-1:checked ~ #cat-modal-1,
+#modal-cat-2:checked ~ #cat-modal-2,
+#modal-cat-3:checked ~ #cat-modal-3,
+#modal-cat-4:checked ~ #cat-modal-4,
+#modal-cat-5:checked ~ #cat-modal-5,
+#modal-cat-6:checked ~ #cat-modal-6,
+#modal-cat-7:checked ~ #cat-modal-7 {
+  display: block;
+}
+
+.cat-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+}
+
+.cat-modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(2.5 * var(--cat-image-width));
+  height: var(--cat-image-height);
+  z-index: 2;
+}
+
+.cat-modal .modal-content .cat-image {
+  display: inline-block;
+  margin-right: 20px;
+  width: var(--cat-image-width);
+  height: var(--cat-image-height);
+  float: left;
+}
+
+.cat-modal-text {
+  height: inherit;
+  margin-top: 30px;
+  font-family: inherit;
+  font-size: 24px;
+  color: white;
+  text-align: left;
+}
+
+.cat-modal-name {
+  margin: 0;
+  padding-bottom: 15px;
+  font-weight: bold;
+  font-size: 32px;
+  color: white;
+}
+
+.cat-modal-description {
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: inherit;
+  color: white;
+}
+
+.modal-close-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+/* ------------------ */
+
+.murmarket-footer {
+  position: fixed;
+  bottom: 0;
+  padding-top: 10px;
+  padding-left: var(--left-padding);
+  border-top: 1px solid lightgray;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: gray;
+  line-height: 20px;
+  width: calc(100% - var(--left-padding));
+  height: 70px;
+  z-index: 2;
+}
+
+.murmarket-contacts {
+  position: relative;
+  text-align: left;
+}
+
+.murmarket-rights {
+  margin-right: 19px;
+  position: relative;
+  float: right;
+  text-align: right;
+}
+
+.murmarket-link {
+  text-decoration: none;
+  color: #4c4cd8;
+}

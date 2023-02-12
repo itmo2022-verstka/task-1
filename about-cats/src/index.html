@@ -5,7 +5,216 @@
     <title>01-about-cats</title>
     <link rel="stylesheet" href="./index.css">
   </head>
-  <body>
-    <!-- TODO -->
+  <body class="murmarket-body">
+    <header class="murmarket-header">
+      <h1 class="murmarket-title">Мурмаркет</h1>
+    </header>
+    <main class="murmarket-content">
+      <input type="checkbox" id="mode-switch" class="mode-switch">
+      <label for="mode-switch" class="mode-switch-label">
+        <img src="img/switch.png" alt="switch">
+      </label>
+      <div class="cats-block">
+        <div class="cats-block-item">
+          <img src="img/salem-smart.jpg" alt="Салем" class="cat-image">
+          <div class="cat-text">
+            <h2 class="cat-name">Салем</h2>
+            <p class="cat-description">Салем — самый умный кот в мире. Он умеет говорить на 5 языках, в том числе и на русском.</p>
+          </div>
+        </div>
+        <div class="cats-block-item">
+          <img src="img/salem-stylish.jpg" alt="Сэйлем" class="cat-image">
+          <div class="cat-text">
+            <h2 class="cat-name">Сэйлем</h2>
+            <p class="cat-description">Сэйлем — самый стильный кот в мире. Он любит одеваться в костюмы и шляться по улицам города.</p>
+          </div>
+        </div>
+        <div class="cats-block-item">
+          <img src="img/salem-angel.jpg" alt="Сэлем" class="cat-image">
+          <div class="cat-text">
+            <h2 class="cat-name">Сэлем</h2>
+            <p class="cat-description">Сэлем — самый ангельский кот в мире. Он всегда помогает людям и никогда не бросает их в беде.</p>
+          </div>
+        </div>
+        <div class="cats-block-item">
+          <img src="img/salem-sportsman.jpg" alt="Салим" class="cat-image">
+          <div class="cat-text">
+            <h2 class="cat-name">Салим</h2>
+            <p class="cat-description">Салим — самый спортивный кот в мире. Он любит заниматься спортом и выигрывать в соревнованиях.</p>
+          </div>
+        </div>
+        <div class="cats-block-item">
+          <img src="img/salem-cook.jpg" alt="Солим" class="cat-image">
+          <div class="cat-text">
+            <h2 class="cat-name">Солим</h2>
+            <p class="cat-description">Солим — самый кулинарный кот в мире. Он любит готовить и удивлять своих хозяев вкусными блюдами.</p>
+          </div>
+        </div>
+        <div class="cats-block-item">
+          <img src="img/salem-resting.jpg" alt="Cулим" class="cat-image">
+          <div class="cat-text">
+            <h2 class="cat-name">Сулим</h2>
+            <p class="cat-description">Сулим — самый отдыхающий кот в мире. Он любит отдыхать на пляже, пить коктейли и курить сигареты.</p>
+          </div>
+        </div>
+        <div class="cats-block-item">
+          <img src="img/salem-mafiozi.jpg" alt="Крёстный Сэлэм" class="cat-image">
+          <div class="cat-text">
+            <h2 class="cat-name">Крёстный Сэлэм</h2>
+            <p class="cat-description">Крёстный Сэлэм — самый мафиозный кот в мире. Он любит воровать и убивать людей.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cats-carousel">
+        <input type="radio" id="cat-1" class="cat-checkbox" name="cat" value="cat-1" checked="checked">
+        <input type="radio" id="cat-2" class="cat-checkbox" name="cat" value="cat-2">
+        <input type="radio" id="cat-3" class="cat-checkbox" name="cat" value="cat-3">
+        <input type="radio" id="cat-4" class="cat-checkbox" name="cat" value="cat-4">
+        <input type="radio" id="cat-5" class="cat-checkbox" name="cat" value="cat-5">
+        <input type="radio" id="cat-6" class="cat-checkbox" name="cat" value="cat-6">
+        <input type="radio" id="cat-7" class="cat-checkbox" name="cat" value="cat-7">
+        <label for="cat-1" class="cat-carousel-item">
+          <label for="modal-cat-1" class="modal-label"></label>
+          <img src="img/salem-smart.jpg" alt="Салем" class="cat-image">
+          <a class="cat-carousel-name">Салем</a>
+        </label>
+        <label for="cat-2" class="cat-carousel-item">
+          <label for="modal-cat-2" class="modal-label"></label>
+          <img src="img/salem-stylish.jpg" alt="Сэйлем" class="cat-image">
+          <a class="cat-carousel-name">Сэйлем</a>
+        </label>
+        <label for="cat-3" class="cat-carousel-item">
+          <label for="modal-cat-3" class="modal-label"></label>
+          <img src="img/salem-angel.jpg" alt="Сэлем" class="cat-image">
+          <a class="cat-carousel-name">Сэлем</a>
+        </label>
+        <label for="cat-4" class="cat-carousel-item">
+          <label for="modal-cat-4" class="modal-label"></label>
+          <img src="img/salem-sportsman.jpg" alt="Салим" class="cat-image">
+          <a class="cat-carousel-name">Салим</a>
+        </label>
+        <label for="cat-5" class="cat-carousel-item">
+          <label for="modal-cat-5" class="modal-label"></label>
+          <img src="img/salem-cook.jpg" alt="Солим" class="cat-image">
+          <a class="cat-carousel-name">Солим</a>
+        </label>
+        <label for="cat-6" class="cat-carousel-item">
+          <label for="modal-cat-6" class="modal-label"></label>
+          <img src="img/salem-resting.jpg" alt="Сулим" class="cat-image">
+          <a class="cat-carousel-name">Сулим</a>
+        </label>
+        <label for="cat-7" class="cat-carousel-item">
+          <label for="modal-cat-7" class="modal-label"></label>
+          <img src="img/salem-mafiozi.jpg" alt="Крёстный Сэлэм" class="cat-image">
+          <a class="cat-carousel-name">Крёстный Сэлэм</a>
+        </label>
+      </div>
+      <input type="checkbox" id="modal-cat-1" class="modal-checkbox">
+      <input type="checkbox" id="modal-cat-2" class="modal-checkbox">
+      <input type="checkbox" id="modal-cat-3" class="modal-checkbox">
+      <input type="checkbox" id="modal-cat-4" class="modal-checkbox">
+      <input type="checkbox" id="modal-cat-5" class="modal-checkbox">
+      <input type="checkbox" id="modal-cat-6" class="modal-checkbox">
+      <input type="checkbox" id="modal-cat-7" class="modal-checkbox">
+      <div class="cat-modal" id="cat-modal-1">
+        <div class="modal-content">
+          <img src="img/salem-smart.jpg" alt="Салем" class="cat-image">
+          <div class="cat-modal-text">
+            <h2 class="cat-modal-name">Салем</h2>
+            <p class="cat-modal-description">Салем — самый умный кот в мире. Он умеет говорить на 5 языках, в том числе и на русском.</p>
+          </div>
+          <label for="modal-cat-1" class="modal-close-label">
+            <img src="img/cross.png" alt="close">
+          </label>
+        </div>
+      </div>
+      <div class="cat-modal" id="cat-modal-2">
+        <div class="modal-content">
+          <img src="img/salem-stylish.jpg" alt="Сэйлем" class="cat-image">
+          <div class="cat-modal-text">
+            <h2 class="cat-modal-name">Сэйлем</h2>
+            <p class="cat-modal-description">Сэйлем — самый стильный кот в мире. Он любит одеваться в костюмы и шляться по улицам города.</p>
+          </div>
+          <label for="modal-cat-2" class="modal-close-label">
+            <img src="img/cross.png" alt="close">
+          </label>
+        </div>
+      </div>
+      <div class="cat-modal" id="cat-modal-3">
+        <div class="modal-content">
+          <img src="img/salem-angel.jpg" alt="Сэлем" class="cat-image">
+          <div class="cat-modal-text">
+            <h2 class="cat-modal-name">Сэлем</h2>
+            <p class="cat-modal-description">Сэлем — самый ангельский кот в мире. Он всегда помогает людям и никогда не бросает их в беде.</p>
+          </div>
+          <label for="modal-cat-3" class="modal-close-label">
+            <img src="img/cross.png" alt="close">
+          </label>
+        </div>
+      </div>
+      <div class="cat-modal" id="cat-modal-4">
+        <div class="modal-content">
+          <img src="img/salem-sportsman.jpg" alt="Салим" class="cat-image">
+          <div class="cat-modal-text">
+            <h2 class="cat-modal-name">Салим</h2>
+            <p class="cat-modal-description">Салим — самый спортивный кот в мире. Он любит заниматься спортом и выигрывать в соревнованиях.</p>
+          </div>
+          <label for="modal-cat-4" class="modal-close-label">
+            <img src="img/cross.png" alt="close">
+          </label>
+        </div>
+      </div>
+      <div class="cat-modal" id="cat-modal-5">
+        <div class="modal-content">
+          <img src="img/salem-cook.jpg" alt="Солим" class="cat-image">
+          <div class="cat-modal-text">
+            <h2 class="cat-modal-name">Солим</h2>
+            <p class="cat-modal-description">Солим — самый кулинарный кот в мире. Он любит готовить и удивлять своих хозяев вкусными блюдами.</p>
+          </div>
+          <label for="modal-cat-5" class="modal-close-label">
+            <img src="img/cross.png" alt="close">
+          </label>
+        </div>
+      </div>
+      <div class="cat-modal" id="cat-modal-6">
+        <div class="modal-content">
+          <img src="img/salem-resting.jpg" alt="Сулим" class="cat-image">
+          <div class="cat-modal-text">
+            <h2 class="cat-modal-name">Сулим</h2>
+            <p class="cat-modal-description">Сулим — самый отдыхающий кот в мире. Он любит отдыхать на пляже, пить коктейли и курить сигареты.</p>
+          </div>
+          <label for="modal-cat-6" class="modal-close-label">
+            <img src="img/cross.png" alt="close">
+          </label>
+        </div>
+      </div>
+      <div class="cat-modal" id="cat-modal-7">
+        <div class="modal-content">
+          <img src="img/salem-mafiozi.jpg" alt="Крёстный Сэлэм" class="cat-image">
+          <div class="cat-modal-text">
+            <h2 class="cat-modal-name">Крёстный Сэлэм</h2>
+            <p class="cat-modal-description">Крёстный Сэлэм — самый мафиозный кот в мире. Он любит воровать и убивать людей.</p>
+          </div>
+          <label for="modal-cat-7" class="modal-close-label">
+            <img src="img/cross.png" alt="close">
+          </label>
+        </div>
+      </div>
+    </main>
+    <footer class="murmarket-footer">
+      <a>Напишите нам:</a> <br>
+      <span class="murmarket-contacts">
+        <a href="mailto:cats@babuli.ru" target="_blank" class="murmarket-link">
+          <img src="img/mail.png" alt="mail"> cats@babuli.ru
+        </a>
+        <br>
+        <a href="mailto:vnuchek@babuli.ru" target="_blank" class="murmarket-link">
+          <img src="img/mail.png" alt="mail"> vnuchek@babuli.ru
+        </a>
+      </span>
+      <span class="murmarket-rights">
+        © 2023 OOO «<a href="https://clck.ru/33U89E" target="_blank" class="murmarket-link">Бабушкины котятки</a>»
+      </span>
+    </footer>
   </body>
 </html>
