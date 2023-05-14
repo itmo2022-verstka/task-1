@@ -1,1 +1,318 @@
-/* TODO */
+:root {
+  --border-color: #e0e0e0;
+  --link-color: #4c4cd8;
+  --background-color: #fff;
+  --subtitle-color: #9b9b9b;
+  --carousel-active-card-size: 500px;
+}
+
+@font-face {
+  font-family: 'PT SansNarrow';
+  font-style: normal;
+  font-weight: bold;
+  src: url('./fonts/ttf/PT_Sans-Narrow-Web-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PT SansNarrow';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/ttf/PT_Sans-Narrow-Web-Regular.ttf') format('truetype');
+}
+
+body {
+  border: 1px solid var(--border-color);
+
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+header,
+footer {
+  background-color: var(--background-color);
+}
+
+/* why is <s> banned? */
+/* I just wanted to make a joke... */
+.s {
+  text-decoration: line-through;
+}
+
+header {
+  position: sticky;
+  top: 0;
+
+  box-sizing: border-box;
+  width: 100%;
+
+  border-bottom: 1px solid var(--border-color);
+
+  font: 32px/1.5 'PT SansNarrow', sans-serif;
+
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+
+  font-weight: normal;
+}
+
+.title::first-letter {
+  color: red;
+}
+
+main {
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 20px;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+
+  padding: 7px;
+
+  border-top: 1px solid var(--border-color);
+}
+
+.subtitle {
+  margin: 0;
+
+  color: var(--subtitle-color);
+}
+
+.contact {
+  margin: 0;
+  margin-top: 5px;
+}
+
+.contact::before {
+  display: inline-block;
+
+  width: 1rem;
+  height: 1rem;
+  margin-right: 3px;
+
+  background-image: url('./icons/envelope.png');
+  background-size: contain;
+  content: '';
+}
+
+.copyright {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+
+  /* see padding of footer */
+}
+
+.list-entry {
+  display: inline-block;
+
+  box-sizing: border-box;
+
+  width: calc(50% - 10px - 2px);
+
+  border: 1px solid var(--border-color);
+}
+
+.list-entry:hover {
+  box-shadow: 0px 0px 2px 1px var(--border-color);
+}
+
+.card-header {
+  position: relative;
+}
+
+/* all this just to make the shadow on the image look nice */
+.list-entry:hover .card-header::after {
+  position: absolute;
+  top: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  box-shadow: inset 0px 0px 6px 6px rgba(0, 0, 0, 0.3);
+  content: '';
+}
+
+/* Yes, margin collapse exists, but it doesn't apply here */
+.list-entry:nth-last-child(2) {
+  margin-bottom: 20px;
+}
+
+/* Margin collapse doesn't work for horizontal margins */
+.list-entry:nth-child(odd) {
+  margin-right: 20px;
+}
+
+.entry-image {
+  display: block;
+  overflow: hidden;
+
+  width: 100%;
+  height: 100px;
+
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-body h2 {
+  margin: 0;
+  margin-bottom: 5px;
+
+  font-size: 1.5em;
+  font-weight: normal;
+  word-break: break-word;
+}
+
+.description p {
+  margin: 0;
+
+  color: var(--subtitle-color);
+  line-height: 1.5;
+}
+
+.description p:last-child {
+  margin-top: 7px;
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+
+.button {
+  cursor: pointer;
+}
+
+#layout-carousel {
+  display: none;
+}
+
+#layout-carousel:checked ~ .buttons {
+  display: none;
+}
+
+#layout-carousel:checked ~ .list {
+  display: none;
+}
+
+#layout-carousel:not(:checked) ~ .carousel {
+  display: none;
+}
+
+/* This trick of scroll-snap-type should work in all browsers from 2012 */
+/* and no need to calculate offsets */
+.carousel-container {
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+
+  white-space: nowrap;
+}
+
+.carousel-entry img {
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.carousel-entry {
+  display: inline-block;
+
+  height: calc(var(--carousel-active-card-size) * 0.8);
+
+  /* background-color: red; */
+  cursor: pointer;
+  opacity: 0.8;
+
+  vertical-align: middle;
+  white-space: normal;
+}
+
+.carousel-container::before {
+  display: inline-block;
+
+  width: 100%;
+  height: 100%;
+
+  content: '';
+}
+
+.carousel-container::after {
+  display: inline-block;
+
+  width: 100%;
+  height: 100%;
+
+  content: '';
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.modal-opener {
+  pointer-events: none;
+}
+
+#sel1:checked ~ .carousel-container .carousel-entry[for='sel1'],
+#sel2:checked ~ .carousel-container .carousel-entry[for='sel2'],
+#sel3:checked ~ .carousel-container .carousel-entry[for='sel3'],
+#sel4:checked ~ .carousel-container .carousel-entry[for='sel4'],
+#sel5:checked ~ .carousel-container .carousel-entry[for='sel5'] {
+  height: var(--carousel-active-card-size);
+
+  opacity: 1;
+
+  scroll-snap-align: center;
+}
+
+.carousel-buttons label {
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+#sel1:checked ~ .carousel-buttons label[for='sel1'],
+#sel2:checked ~ .carousel-buttons label[for='sel2'],
+#sel3:checked ~ .carousel-buttons label[for='sel3'],
+#sel4:checked ~ .carousel-buttons label[for='sel4'],
+#sel5:checked ~ .carousel-buttons label[for='sel5'] {
+  background-color: #c0c0c0;
+}
+
+.carousel-buttons {
+  width: fit-content;
+  margin-top: 5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#sel1:checked ~ .carousel-container .carousel-entry[for='sel1'] .modal-opener,
+#sel2:checked ~ .carousel-container .carousel-entry[for='sel2'] .modal-opener,
+#sel3:checked ~ .carousel-container .carousel-entry[for='sel3'] .modal-opener,
+#sel4:checked ~ .carousel-container .carousel-entry[for='sel4'] .modal-opener,
+#sel5:checked ~ .carousel-container .carousel-entry[for='sel5'] .modal-opener {
+  pointer-events: unset;
+}

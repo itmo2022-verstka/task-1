@@ -8,13 +8,14 @@
     "format": "prettier --write \"**/*.{js,css,json,yaml,yml,md}\""
   },
   "devDependencies": {
-    "@linthtml/linthtml": "0.2.7",
-    "@yandex-lms-ext/prettier-config": "1.0.2",
-    "@yandex-lms-ext/stylelint-config": "1.0.2",
-    "husky": "3.0.5",
-    "lint-staged": "9.3.0",
-    "prettier": "1.18.2",
-    "stylelint": "11.0.0"
+    "@linthtml/linthtml": "^0.2.7",
+    "@yandex-lms-ext/prettier-config": "^1.0.2",
+    "@yandex-lms-ext/stylelint-config": "^1.0.2",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.3.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^11.0.0",
+    "stylelint-config-prettier": "9.0.3"
   },
   "husky": {
     "hooks": {
